@@ -16,6 +16,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".StarProcessMainActivity"
+            android:label="@string/title_activity_star_process_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.MainActivity" />
+        </activity>
+        <activity
+            android:name=".IdeaBankMainActivity"
+            android:label="@string/title_activity_idea_bank_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.MainActivity" />
+        </activity>
+        <activity
+            android:name=".QuickIdeasMainActivity"
+            android:label="@string/title_activity_quick_ideas_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
