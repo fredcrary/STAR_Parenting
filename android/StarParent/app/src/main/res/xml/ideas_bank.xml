@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IdeaBankMainActivity xmlns:android="http://schemas.android.com/apk/res/android">
+    <ideas_bank>
+        <problem>
+            <title>Whining</title>
+            <age_group>1-35</age_group>
+            <description>Whining when things don’t go child’s way </description>
+            <goal>For children to use a pleasant voice when asking for something, and to accept 'No' gracefully when told 'No.'</goal>
+            <reality_check>
+                Whining is a very common complaint.  Some parents unintentionally teach childred to whine by ignoring them when they speak pleasantly.
+                Children learn to whine because it gets through to their parents.  You may want to notice what happens before the whining.
+                Children (and adults) often whine when tired, hungry, or stressed.
+            </reality_check>
+            <idea>
+                <star_point>Avoid problems</star_point>
+                <idea_text>Make sure child isn't whining because hungry or tired</idea_text>
+            </idea>
+            <idea>
+                <star_point>Respond to cooperation</star_point>
+                <idea_text>Withhold attention when the child whines.  Do not comment on whining or ask child to speak pleasantly</idea_text>
+            </idea>
+            <idea>
+                <star_point>Acknowledge feelings</star_point>
+                <idea_text>Say, "Sounds like you're frustrated that I won't give you a cookie right now."</idea_text>
+            </idea>
+            <idea>
+                <star_point>Set limits</star_point>
+                <idea_text>Make a clear rule.  "If you want something, ask pleasantly."</idea_text>
+            </idea>
+            <idea>
+                <star_point>Teach new skills</star_point>
+                <idea_text>Use a pleasant tone of voice when you are asking the child for something - even when you are rushed.</idea_text>
+            </idea>
+        </problem>
+    </ideas_bank>
+
+</IdeaBankMainActivity>
