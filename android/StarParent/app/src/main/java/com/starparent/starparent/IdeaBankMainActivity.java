@@ -1,6 +1,7 @@
 package com.starparent.starparent;
 
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
-
 
 public class IdeaBankMainActivity extends AppCompatActivity {
     private static final String TAG = "IdeaBankMain";
@@ -33,8 +33,7 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        TextView textView = new TextView(this);
-        setContentView(textView);
+        TextView textView = (TextView) findViewById(R.id.textView);
 
         //Do stuff!
         try {
@@ -59,9 +58,8 @@ public class IdeaBankMainActivity extends AppCompatActivity {
                 }
             }
             textView.setText(Html.fromHtml(htmlString.toString()));
-            Log.d(TAG, htmlString.toString());
+            textView.setMovementMethod(new ScrollingMovementMethod());
         }
-
     }
 
     //This should be usable in every ActivityClass
@@ -77,5 +75,4 @@ public class IdeaBankMainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 }

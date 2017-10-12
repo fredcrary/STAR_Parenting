@@ -24,9 +24,14 @@
         android:id="@+id/include" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="401dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TextView" />
+        android:layout_marginTop="60dp"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="true"
+        android:maxLines="1000"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
 
 </android.support.design.widget.CoordinatorLayout>
