@@ -1,5 +1,6 @@
 package com.starparent.starparent;
 
+import android.util.Log;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

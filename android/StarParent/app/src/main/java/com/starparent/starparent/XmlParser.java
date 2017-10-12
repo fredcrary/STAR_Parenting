@@ -21,8 +21,10 @@ public class XmlParser {
     private static final String TAG = "XmlParser";
     private static final String ns = null;
 
+
     //Pass me an InputStream containing valid XML.  I'm hungry!  om nom nom nom :{}
     public List parse(InputStream in, String tag) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Starting parsing");
         try {
             XmlPullParser parser = Xml.newPullParser();
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -35,6 +37,7 @@ public class XmlParser {
     }
 
     private List readFeed(XmlPullParser parser, String tag) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading a new feed, tag: " + tag);
         List entries = new ArrayList();
         parser.require(XmlPullParser.START_TAG, ns, tag);
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -56,6 +59,7 @@ public class XmlParser {
     }
 
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading IdeasBank xml");
         String title      = null;
         String ageGroup   = null;
         String desc       = null;
