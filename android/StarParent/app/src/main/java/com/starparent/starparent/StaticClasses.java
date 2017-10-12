@@ -1,5 +1,7 @@
 package com.starparent.starparent;
 
+import java.util.List;
+
 /**
  * Created by jeremy on 10/10/17.
  * This is a public class that allows us to define static classes the conform to the xml definitions
@@ -97,12 +99,16 @@ public class StaticClasses {
         public final String title;
         public final String ageGroup;       //TODO: Verify a) that this is actually a String and b) that it's necessary at all
         public final String description;
-        public final IdeasBankIdea idea;
-        protected IdeasBankProblem(String title, String ageGroup, String description, IdeasBankIdea idea) {
+        public final String goal;
+        public final String reality_check;
+        public final List<IdeasBankIdea> ideas;
+        protected IdeasBankProblem(String title, String ageGroup, String description, String goal, String reality_check, List<IdeasBankIdea> ideas) {
             this.title = title;
             this.ageGroup = ageGroup;
             this.description = description;
-            this.idea = idea;
+            this.goal = goal;
+            this.reality_check = reality_check;
+            this.ideas = ideas;
         }
     }
 
