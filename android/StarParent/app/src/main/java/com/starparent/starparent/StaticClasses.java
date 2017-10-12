@@ -1,5 +1,6 @@
 package com.starparent.starparent;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -95,13 +96,13 @@ public class StaticClasses {
             this.star_point = star_point;
         }
     }
-    public static class IdeasBankProblem {
+    public static class IdeasBankProblem implements Serializable {
         public final String title;
         public final String ageGroup;       //TODO: Verify a) that this is actually a String and b) that it's necessary at all
         public final String description;
         public final String goal;
         public final String reality_check;
-        public final List<IdeasBankIdea> ideas;
+        public static transient List<IdeasBankIdea> ideas;
         protected IdeasBankProblem(String title, String ageGroup, String description, String goal, String reality_check, List<IdeasBankIdea> ideas) {
             this.title = title;
             this.ageGroup = ageGroup;

@@ -6,4 +6,6 @@
     <string name="btn_star_process">STAR Process</string>
     <string name="btn_quick_ideas">Quick Ideas (Magic 8-Ball)</string>
     <string name="btn_idea_bank">Problems</string>
+    <string name="title_activity_problem">ProblemActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

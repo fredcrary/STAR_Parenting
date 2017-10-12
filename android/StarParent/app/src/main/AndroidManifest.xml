@@ -43,6 +43,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
+        <activity
+            android:name=".ProblemActivity"
+            android:label="@string/title_activity_problem"
+            android:parentActivityName=".IdeaBankMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.IdeaBankMainActivity" />
+        </activity>
     </application>
 
 </manifest>
