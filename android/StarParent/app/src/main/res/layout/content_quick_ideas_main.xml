@@ -8,4 +8,10 @@
     tools:context="com.starparent.starparent.QuickIdeasMainActivity"
     tools:showIn="@layout/activity_quick_ideas_main">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Shake to get a toast" />
+
 </android.support.constraint.ConstraintLayout>
