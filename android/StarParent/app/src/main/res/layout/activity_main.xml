@@ -9,43 +9,43 @@
     tools:layout_editor_absoluteX="0dp">
 
     <Button
-        android:id="@+id/btn_star_process_main"
+        android:id="@+id/btn_quick_ideas_main"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="36dp"
-        android:text="@string/title_activity_star_process_main"
+        android:text="@string/btn_quick_ideas"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_quick_ideas_main"
+        android:id="@+id/btn_problem_solver_main"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/btn_quick_ideas"
-        android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_star_process_main" />
-
-    <Button
-        android:id="@+id/btn_idea_bank_main"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/btn_idea_bank"
+        android:text="@string/btn_problem_solver"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_quick_ideas_main" />
+
+    <Button
+        android:id="@+id/btn_learn_about_main"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_learn_about"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_problem_solver_main" />
 
 
 </android.support.constraint.ConstraintLayout>

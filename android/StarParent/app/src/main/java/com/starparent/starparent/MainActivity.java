@@ -16,15 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //STAR Process Button
-        Button btn_star_process_main = (Button)findViewById(R.id.btn_star_process_main);
-        btn_star_process_main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, StarProcessMainActivity.class));
-            }
-        });
-
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);
         btn_quick_ideas_main.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +25,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Idea Bank / Issues List Button
-        Button btn_idea_bank_main = (Button)findViewById(R.id.btn_idea_bank_main);
+        //Problem Solver Button
+        Button btn_star_process_main = (Button)findViewById(R.id.btn_problem_solver_main);
+        btn_star_process_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProblemSolverMainActivity.class));
+            }
+        });
+
+        //Learn About Star Parenting Button
+        Button btn_idea_bank_main = (Button)findViewById(R.id.btn_learn_about_main);
         btn_idea_bank_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, IdeaBankMainActivity.class));
+                startActivity(new Intent(MainActivity.this, LearnAboutStarMainActivity.class));
             }
         });
     }
