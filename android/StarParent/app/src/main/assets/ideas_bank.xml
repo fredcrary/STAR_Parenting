@@ -5,7 +5,7 @@
         <age_group>toddler</age_group>
         <age_group>preschool</age_group>
         <age_group>school-age</age_group>
-        <description>&lt;b&gt;Two-and-a half-year-old&lt;/b&gt; daughter whines whenever she can't have what she wants. It can be a puzzle she can't quite do or my refusal to give her a cookie right before supper.&gt;br /&lt;&lt;b&gt;Five-year-old&lt;/b&gt; whines when he can't find the toy or book he wants.&gt;br /&lt;&lt;b&gt;Nine-year-old&lt;/b&gt; whines because he is hungry and wants a snack NOW, even though dinner is twenty minutes away.</description>
+        <description>&lt;b&gt;Two-and-a half-year-old&lt;/b&gt; daughter whines whenever she can't have what she wants. It can be a puzzle she can't quite do or my refusal to give her a cookie right before supper.&lt;br /&gt;&lt;b&gt;Five-year-old&lt;/b&gt; whines when he can't find the toy or book he wants.&lt;br /&gt;&lt;b&gt;Nine-year-old&lt;/b&gt; whines because he is hungry and wants a snack NOW, even though dinner is twenty minutes away.</description>
         <goal>For children to use a pleasant voice when asking for something, and to accept 'No' gracefully when told 'No.'</goal>
         <reality_check>Whining is a very common complaint. Some parents unintentionally teach children to whine by ignoring them when they speak pleasantly. Children learn to whine because it gets through to their parents. You may want to notice what happens before the whining. Children (and adults) often whine when tired, hungry, or stressed.</reality_check>
         <idea>
@@ -117,7 +117,7 @@
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Say,'You can whine only once a day.' Give child one whine ticket each morning. When he starts to whine, ask, 'Is this your one whine time?'</idea_text>
+            <idea_text>Say, 'You can whine only once a day.' Give child one whine ticket each morning. When he starts to whine, ask, 'Is this your one whine time?'</idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
@@ -153,7 +153,6 @@
             <star_point>Shaping</star_point>
         </idea>
     </problem>
-
     <problem>
         <title>Grocery store tantrums</title>
         <age_group>preschool</age_group>
