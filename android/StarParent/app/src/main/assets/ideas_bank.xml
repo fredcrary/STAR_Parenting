@@ -1,19 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE ideas_bank [<!ELEMENT ideas_bank (problem)*><!ELEMENT problem (title|age_group|description|goal|reality_check|idea)*><!ELEMENT title (#PCDATA)><!ELEMENT age_group (#PCDATA)><!ELEMENT description (#PCDATA)><!ELEMENT goal (i)*><!ELEMENT reality_check (i)*><!ELEMENT idea (idea_text|star_point)*><!ELEMENT idea_text (#PCDATA)><!ELEMENT star_point (#PCDATA)><!ELEMENT i (#PCDATA)>]>
 <ideas_bank>
     <problem>
-        <title>Whining when things don't go child's way</title>
+        <title>Whining when things don’t go child’s way</title>
         <age_group>toddler</age_group>
         <age_group>preschool</age_group>
         <age_group>school-age</age_group>
-        <description>&lt;b&gt;Two-and-a half-year-old&lt;/b&gt; daughter whines whenever she can't have what she wants. It can be a puzzle she can't quite do or my refusal to give her a cookie right before supper.&lt;br /&gt;&lt;b&gt;Five-year-old&lt;/b&gt; whines when he can't find the toy or book he wants.&lt;br /&gt;&lt;b&gt;Nine-year-old&lt;/b&gt; whines because he is hungry and wants a snack NOW, even though dinner is twenty minutes away.</description>
-        <goal>For children to use a pleasant voice when asking for something, and to accept 'No' gracefully when told 'No.'</goal>
-        <reality_check>Whining is a very common complaint. Some parents unintentionally teach children to whine by ignoring them when they speak pleasantly. Children learn to whine because it gets through to their parents. You may want to notice what happens before the whining. Children (and adults) often whine when tired, hungry, or stressed.</reality_check>
+        <description>
+            <example_age>toddler</example_age>
+            <example_text>daughter whines whenever she can’t have what she wants. It can be a puzzle she can’t quite do or my refusal to give her a cookie right before supper.</example_text>
+        </description>
+        <description>
+            <example_age>preschool</example_age>
+            <example_text>whines when he can’t find the toy or book he wants.</example_text>
+        </description>
+        <description>
+            <example_age>school-age</example_age>
+            <example_text>whines because he is hungry and wants a snack NOW, even though dinner is twenty minutes away.</example_text>
+        </description>
+        <goal>
+            For children to use a pleasant voice when asking for something, and to accept ‘No” gracefully when told “No.”
+        </goal>
+        <reality_check>
+            Whining is a very common complaint. Some parents unintentionally teach children to whine by ignoring them when they speak pleasantly. Children learn to whine because it gets through to their parents. You may want to notice what happens before the whining. Children (and adults) often whine when tired, hungry, or stressed.
+        </reality_check>
         <idea>
-            <idea_text>Make sure child isn't whining because hungry or tired.</idea_text>
+            <idea_text>
+                Make sure child isn’t whining because hungry or tired.
+            </idea_text>
             <star_point>Reduce stress</star_point>
         </idea>
         <idea>
-            <idea_text>Add fifteen minutes to prep time (dinner or departure) so you can respond thoughtfully when child whines.</idea_text>
+            <idea_text>
+                Add fifteen minutes to prep time (dinner or departure) so you can respond thoughtfully when child whines.
+            </idea_text>
             <star_point>Reduce stress</star_point>
         </idea>
         <idea>
@@ -21,11 +39,15 @@
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Schedule a nutritious snack so child doesn't get overly hungry.</idea_text>
+            <idea_text>
+                Schedule a nutritious snack so child doesn’t get overly hungry.
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Involve child in what you are doing (fixing dinner, changing the baby's diaper, etc.)</idea_text>
+            <idea_text>
+                Involve child in what you are doing (fixing dinner, changing the baby’s diaper, etc.)
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
@@ -33,27 +55,39 @@
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Change your expectations. When your toddler whines, take a deep breath and remind yourself that kids are just learning to control their responses.</idea_text>
+            <idea_text>
+                Change your expectations. When your toddler whines, take a deep breath and remind yourself that kids are just learning to control their responses.
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Import another person to cook or distract child (like older sib, or mother's helper).</idea_text>
+            <idea_text>
+                Import another person to cook or distract child (like older sib, or mother’s helper).
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You can speak pleasantly or whine elsewhere.'</idea_text>
+            <idea_text>
+                Say, “You can speak pleasantly or whine elsewhere.”
+            </idea_text>
             <star_point>Two yeses</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You can work the puzzle pleasantly here, or do it in your room and whine.'</idea_text>
+            <idea_text>
+                Say, “You can work the puzzle pleasantly here, or do it in your room and whine.”
+            </idea_text>
             <star_point>Two yeses</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'If you don't want to use your inside voice, you can whisper or sing.'</idea_text>
+            <idea_text>
+                Say, “If you don’t want to use your inside voice, you can whisper or sing.”
+            </idea_text>
             <star_point>Two yeses</star_point>
         </idea>
         <idea>
-            <idea_text>Withhold attention when the child whines. Do not comment on whining or ask child to speak pleasantly.</idea_text>
+            <idea_text>
+                Withhold attention when the child whines. Do not comment on whining or ask child to speak pleasantly.
+            </idea_text>
             <star_point>Attention</star_point>
         </idea>
         <idea>
@@ -61,214 +95,324 @@
             <star_point>Attention</star_point>
         </idea>
         <idea>
-            <idea_text>Plan 'quality time' each day.</idea_text>
+            <idea_text>Plan “quality time” each day.</idea_text>
             <star_point>Attention</star_point>
         </idea>
         <idea>
-            <idea_text>Praise the pleasant voice, 'That was a pleasant request - nice tone, medium volume, and polite words.'</idea_text>
+            <idea_text>
+                Praise the pleasant voice, “That was a pleasant request — nice tone, medium volume, and polite words.”
+            </idea_text>
             <star_point>Praise</star_point>
         </idea>
         <idea>
-            <idea_text>Notice and compliment the child when she accepts 'no' gracefully.</idea_text>
+            <idea_text>
+                Notice and compliment the child when she accepts “no” gracefully.
+            </idea_text>
             <star_point>Praise</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'I can understand you so much better when you use your words. Thank you!'</idea_text>
+            <idea_text>
+                Say, “I can understand you so much better when you use your words. Thank you!”
+            </idea_text>
             <star_point>Praise</star_point>
         </idea>
         <idea>
-            <idea_text>Reward your child when she speaks pleasantly in a situation when she usually whines. Give her a hug and a special non-whining sticker.</idea_text>
+            <idea_text>
+                Reward your child when she speaks pleasantly in a situation when she usually whines. Give her a hug and a special non-whining sticker.
+            </idea_text>
             <star_point>Rewards</star_point>
         </idea>
         <idea>
-            <idea_text>Each time you notice she increases the pleasantness of her voice reward her effort. You could use cooperation tickets, stickers, silly bands - something that is important to your child.</idea_text>
+            <idea_text>
+                Each time you notice she increases the pleasantness of her voice reward her effort. You could use cooperation tickets, stickers, silly bands — something that is important to your child.
+            </idea_text>
             <star_point>Rewards</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Sounds like you're frustrated that I won't give you a cookie right now.'</idea_text>
+            <idea_text>
+                Say, “Sounds like you’re frustrated that I won’t give you a cookie right now.”
+            </idea_text>
             <star_point>Active listening</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You're sad that the toy you want isn't here.'</idea_text>
+            <idea_text>
+                Say, “You’re sad that the toy you want isn’t here.”
+            </idea_text>
             <star_point>Active listening</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You feel left out when Momma plays with your little sister.'</idea_text>
+            <idea_text>
+                Say, “You feel left out when Momma plays with your little sister.”
+            </idea_text>
             <star_point>Active listening</star_point>
         </idea>
         <idea>
-            <idea_text>Listen to the child and respond with supportive statements like: 'Oh,' 'I see.'</idea_text>
+            <idea_text>
+                Listen to the child and respond with supportive statements like: “Oh,” “I see.”
+            </idea_text>
             <star_point>Simple listening</star_point>
         </idea>
         <idea>
-            <idea_text>Give in pretend. Say, 'Wouldn't it be fun if we had a magic wand? When you had trouble, you could tap the puzzle with the wand and the pieces would zoom back to their places.'</idea_text>
+            <idea_text>
+                Give in pretend. Say, “Wouldn’t it be fun if we had a magic wand? When you had trouble, you could tap the puzzle with the wand and the pieces would zoom back to their places.”
+            </idea_text>
             <star_point>Grant in fantasy</star_point>
         </idea>
         <idea>
-            <idea_text>Make a clear rule. 'If you want something, ask pleasantly.'</idea_text>
+            <idea_text>
+                Make a clear rule. “If you want something, ask pleasantly.”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Explain, 'When you ask pleasantly and get a 'No,' accept the 'No' gracefully.'</idea_text>
+            <idea_text>
+                Explain, “When you ask pleasantly and get a “No,” accept the ‘No’ gracefully.”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Clarify, 'Only nutritious snacks the hour before meals.'</idea_text>
+            <idea_text>
+                Clarify, “Only nutritious snacks the hour before meals.”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You can whine only once a day.' Give child one whine ticket each morning. When he starts to whine, ask, 'Is this your one whine time?'</idea_text>
+            <idea_text>
+                Say,”You can whine only once a day.” Give child one whine ticket each morning. When he starts to whine, ask, “Is this your one whine time?”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Explain, 'When you whine the answer is 'No'.'</idea_text>
+            <idea_text>Explain, “When you whine the answer is ‘No’.”</idea_text>
             <star_point>Consequences</star_point>
         </idea>
         <idea>
-            <idea_text>Clarify, 'When you whine, I will leave the room until you're pleasant.'</idea_text>
+            <idea_text>
+                Clarify, “When you whine, I will leave the room until you’re pleasant.”
+            </idea_text>
             <star_point>Consequences</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You want to use a whiny voice. I want you to speak pleasantly so I can understand you. What is a better way to get what you need?'</idea_text>
+            <idea_text>
+                Say, “You want to use a whiny voice. I want you to speak pleasantly so I can understand you. What is a better way to get what you need?”
+            </idea_text>
             <star_point>A better way</star_point>
         </idea>
         <idea>
-            <idea_text>Use a pleasant tone of voice when you are asking the child for something - even when you are rushed.</idea_text>
+            <idea_text>
+                Use a pleasant tone of voice when you are asking the child for something — even when you are rushed.
+            </idea_text>
             <star_point>Modeling</star_point>
         </idea>
         <idea>
-            <idea_text>Start to whine, change to a nice voice, and comment, 'I started to whine, but remembered to change to a pleasant voice.'</idea_text>
+            <idea_text>
+                Start to whine, change to a nice voice, and comment, “I started to whine, but remembered to change to a pleasant voice.”
+            </idea_text>
             <star_point>Modeling</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Oops, that was a whiney voice. Try again with a nice voice.'</idea_text>
+            <idea_text>
+                Say, “Oops, that was a whiney voice. Try again with a nice voice.”
+            </idea_text>
             <star_point>Re-do it right</star_point>
         </idea>
         <idea>
-            <idea_text>Divide learning into several steps. Tell the child to (1) take a deep breath, (2) think of words to use, and (3) then say what he is thinking in a pleasant voice.</idea_text>
+            <idea_text>
+                Divide learning into several steps. Tell the child to (1) take a deep breath, (2) think of words to use, and (3) then say what he is thinking in a pleasant voice.
+            </idea_text>
             <star_point>Shaping</star_point>
         </idea>
         <idea>
-            <idea_text>To teach the difference between a whiny voice and a pleasant voice you could break the task into three steps. (1) Notice tones in other people and discuss them. (2) Ask the child to notice when he or she is whining and change to a pleasant voice. (3) Invite her to start out with a peasant voice (and acknowledge her effort when she does).</idea_text>
+            <idea_text>
+                To teach the difference between a whiny voice and a pleasant voice you could break the task into three steps. (1) Notice tones in other people and discuss them. (2) Ask the child to notice when he or she is whining and change to a pleasant voice. (3) Invite her to start out with a peasant voice (and acknowledge her effort when she does).
+            </idea_text>
             <star_point>Shaping</star_point>
         </idea>
     </problem>
     <problem>
         <title>Grocery store tantrums</title>
         <age_group>preschool</age_group>
-        <description>I hate grocery shopping. If it's not one thing, it's another. If I put Jenny, 3&#189;, in the cart, she cries to get down. If I put her down, she runs away. The few times she stays near me, she begs for everything she sees.</description>
-        <goal>To be able to go grocery shopping with Jenny and have it be a pleasant experience. Specifically, to have Jenny stay in the cart or next to me to be safe while I am shopping. Looking at &lt;i&gt;values,&lt;/i&gt; courtesy and safety are important to me.</goal>
-        <reality_check>&lt;i&gt;Developmentally&lt;/i&gt; she is in the power and identity stage. Jenny wants to be her own person, and do what she wants. She often doesn't like to do what she is told. By &lt;i&gt;temperament&lt;/i&gt; Jenny is physically active, intense, and persistent. No matter how often I say 'no' she'll ask 'why' and keep trying the same thing, over and over again.</reality_check>
+        <description>
+            <example_age>preschool</example_age>
+            <example_text>I hate grocery shopping. If it’s not one thing, it’s another. If I put Jenny, 3½, in the cart, she cries to get down. If I put her down, she runs away. The few times she stays near me, she begs for everything she sees.</example_text>
+        </description>
+        <goal>
+            To be able to go grocery shopping with Jenny and have it be a pleasant experience. Specifically, to have Jenny stay in the cart or next to me to be safe while I am shopping. Looking at
+            <i>values,</i>
+            courtesy and safety are important to me.
+        </goal>
+        <reality_check>
+            <i>Developmentally</i>
+            she is in the power and identity stage. Jenny wants to be her own person, and do what she wants. She often doesn’t like to do what she is told. By
+            <i>temperament</i>
+            Jenny is physically active, intense, and persistent. No matter how often I say “no” she’ll ask “why” and keep trying the same thing, over and over again.
+        </reality_check>
         <idea>
-            <idea_text>Bring a small bag of toys for Jenny that she only gets to play with in the store.</idea_text>
+            <idea_text>
+                Bring a small bag of toys for Jenny that she only gets to play with in the store.
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Go in the morning, when she's more agreeable, instead of when she's tired.</idea_text>
+            <idea_text>
+                Go in the morning, when she’s more agreeable, instead of when she’s tired.
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You're the driver. Tell me which way to turn the cart and we'll drive around and find the items we need!'</idea_text>
+            <idea_text>
+                Say, “You’re the driver. Tell me which way to turn the cart and we’ll drive around and find the items we need!”
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Go as a family and make a game. Mom gives Dad and Jenny an item to hunt for. When they bring it back she gives them another item. When done they go for lunch or a treat together.</idea_text>
+            <idea_text>
+                Go as a family and make a game. Mom gives Dad and Jenny an item to hunt for. When they bring it back she gives them another item. When done they go for lunch or a treat together.
+            </idea_text>
             <star_point>Change things</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Jenny, you can go grocery shopping with me and stay in the cart or I can have a sitter come over and you can stay here.'</idea_text>
+            <idea_text>
+                Say, “Jenny, you can go grocery shopping with me and stay in the cart or I can have a sitter come over and you can stay here.”
+            </idea_text>
             <star_point>Two yeses</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'You can sit in the cart and eat a nutritious snack, or you can walk beside the cart and hand me items we need.'</idea_text>
+            <idea_text>
+                Say, “You can sit in the cart and eat a nutritious snack, or you can walk beside the cart and hand me items we need.”
+            </idea_text>
             <star_point>Two yeses</star_point>
         </idea>
         <idea>
-            <idea_text>Before you go grocery shopping, take her to the park to run off energy.</idea_text>
+            <idea_text>
+                Before you go grocery shopping, take her to the park to run off energy.
+            </idea_text>
             <star_point>Reduce stress</star_point>
         </idea>
         <idea>
-            <idea_text>When she wiggles and whines, take deep breaths and remain calm when you respond.</idea_text>
+            <idea_text>
+                When she wiggles and whines, take deep breaths and remain calm when you respond.
+            </idea_text>
             <star_point>Reduce stress</star_point>
         </idea>
         <idea>
-            <idea_text>Shop when you have someone to watch Jenny and can leave her at home.</idea_text>
+            <idea_text>
+                Shop when you have someone to watch Jenny and can leave her at home.
+            </idea_text>
             <star_point>Reduce stress</star_point>
         </idea>
         <idea>
-            <idea_text>Each time she gets something and puts it in the cart, give her a thumbs-up sign and ruffle her hair.</idea_text>
+            <idea_text>
+                Each time she gets something and puts it in the cart, give her a thumbs-up sign and ruffle her hair.
+            </idea_text>
             <star_point>Attention</star_point>
         </idea>
         <idea>
-            <idea_text>Reinforcing positive behavior at the grocery store with a treat from home that can be eaten in the cart. Start with a whole small box of kid crackers; then a container with a couple slices of fruit. If the problem behavior starts in the store, tell her you will put the snack away and it will only come out after a few minutes of good behavior. rw &amp;</idea_text>
+            <idea_text>
+                Reinforcing positive behavior at the grocery store with a treat from home that can be eaten in the cart. Start with a whole small box of kid crackers; then a container with a couple slices of fruit. If the problem behavior starts in the store, tell her you will put the snack away and it will only come out after a few minutes of good behavior.
+            </idea_text>
             <star_point>Consequences</star_point>
         </idea>
         <idea>
-            <idea_text>Jenny likes stickers. You can set up a system where she gets stickers when she sits calmly in the cart and/or walks pleasantly beside the cart. After she earns four stickers, she'll get an ice cream cone. You could do this two times and then taper off. She could earn only stickers, then just praise. And, eventually, you can drop the praise.</idea_text>
+            <idea_text>
+                Jenny likes stickers. You can set up a system where she gets stickers when she sits calmly in the cart and/or walks pleasantly beside the cart. After she earns four stickers, she’ll get an ice cream cone. You could do this two times and then taper off. She could earn only stickers, then just praise. And, eventually, you can drop the praise.
+            </idea_text>
             <star_point>Rewards</star_point>
         </idea>
         <idea>
-            <idea_text>When she helps you find something from shopping list, say, 'You are a good helper. It's easier to find all the items with your help.'</idea_text>
+            <idea_text>
+                When she helps you find something from shopping list, say, “You are a good helper. It’s easier to find all the items with your help.”
+            </idea_text>
             <star_point>Praise</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Wouldn't it be super if all the grocery items could understand our language? Then I could just call out their names and they would jump into our basket right away!'</idea_text>
+            <idea_text>
+                Say, “Wouldn’t it be super if all the grocery items could understand our language? Then I could just call out their names and they would jump into our basket right away!”
+            </idea_text>
             <star_point>Grant in fantasy</star_point>
         </idea>
         <idea>
-            <idea_text>Comment, 'Wouldn't it be wonderful if all the foods in the store came to life and played with you?'</idea_text>
+            <idea_text>
+                Comment, “Wouldn’t it be wonderful if all the foods in the store came to life and played with you?”
+            </idea_text>
             <star_point>Grant in fantasy</star_point>
         </idea>
         <idea>
-            <idea_text>When she does sit in the cart well, say, 'You must be very proud of yourself for staying in the cart all the time!'</idea_text>
+            <idea_text>
+                When she does sit in the cart well, say, “You must be very proud of yourself for staying in the cart all the time!”
+            </idea_text>
             <star_point>Active listening</star_point>
         </idea>
         <idea>
-            <idea_text>When Jenny says, 'Mom, I want out!' Respond with simple words like, 'Hmm,' 'Really,' 'I see,' and smile, and keep walking.</idea_text>
+            <idea_text>
+                When Jenny says, “Mom, I want out!” Respond with simple words like, “Hmm,” “Really,” “I see,” and smile, and keep walking.
+            </idea_text>
             <star_point>Simple listening</star_point>
         </idea>
         <idea>
-            <idea_text>When she gets restless, say, 'Looks like you feel bored sitting in the cart.'</idea_text>
+            <idea_text>
+                When she gets restless, say, “Looks like you feel bored sitting in the cart.”
+            </idea_text>
             <star_point>Active listening</star_point>
         </idea>
         <idea>
-            <idea_text>Clarify the rules: 'Jenny, at the grocery store, you either sit quietly in the cart or walk next to me pleasantly.'</idea_text>
+            <idea_text>
+                Clarify the rules: “Jenny, at the grocery store, you either sit quietly in the cart or walk next to me pleasantly.”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Remind Jenny, 'If you want to ride in the cart, you must sit still.'</idea_text>
+            <idea_text>
+                Remind Jenny, “If you want to ride in the cart, you must sit still.”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Explain the consequences. 'If you walk out of my sight in the grocery store, I will put you in the cart so I will know you are safe.'</idea_text>
+            <idea_text>
+                Explain the consequences. “If you walk out of my sight in the grocery store, I will put you in the cart so I will know you are safe.”
+            </idea_text>
             <star_point>Consequences</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Jenny, you may get out of the cart if you walk by me, otherwise you will have to go back in the cart.'</idea_text>
+            <idea_text>
+                Say, “Jenny, you may get out of the cart if you walk by me, otherwise you will have to go back in the cart.”
+            </idea_text>
             <star_point>Consequences</star_point>
         </idea>
         <idea>
-            <idea_text>Say, 'Jenny, I want you to sit in the cart quietly, you want to walk on your own and explore the store. What would be a better way?'</idea_text>
+            <idea_text>
+                Say, “Jenny, I want you to sit in the cart quietly, you want to walk on your own and explore the store. What would be a better way?”
+            </idea_text>
             <star_point>Clear rules</star_point>
         </idea>
         <idea>
-            <idea_text>Show her how you find each item on the shopping list.</idea_text>
+            <idea_text>
+                Show her how you find each item on the shopping list.
+            </idea_text>
             <star_point>Modeling</star_point>
         </idea>
         <idea>
-            <idea_text>Model decision making. Say, 'I really want a candy bar right now, but it's not on my list and it isn't good for me. So I'm not going to buy one, instead I'll get a healthy snack that is on our list.'</idea_text>
+            <idea_text>
+                Model decision making. Say, “I really want a candy bar right now, but it’s not on my list and it isn’t good for me. So I’m not going to buy one, instead I’ll get a healthy snack that is on our list.”
+            </idea_text>
             <star_point>Modeling</star_point>
         </idea>
         <idea>
-            <idea_text>You could teach her to use a shopping list. (1) Give Jenny a copy of the shopping list with pictures. When you get something show it to her to cross off the list. (2) Tell her you can only buy things on the list. Occasionally show her something that is not on the list for her to reject. (3) Give her a couple of items from the list to find.</idea_text>
+            <idea_text>
+                You could teach her to use a shopping list. (1) Give Jenny a copy of the shopping list with pictures. When you get something show it to her to cross off the list. (2) Tell her you can only buy things on the list. Occasionally show her something that is not on the list for her to reject. (3) Give her a couple of items from the list to find.
+            </idea_text>
             <star_point>Shaping</star_point>
         </idea>
         <idea>
-            <idea_text>When she whines, say, 'Whoops. That was a whiny voice. Try again in a pleasant voice.'</idea_text>
+            <idea_text>
+                When she whines, say, “Whoops. That was a whiny voice. Try again in a pleasant voice.”
+            </idea_text>
             <star_point>Re-do it right</star_point>
         </idea>
         <idea>
-            <idea_text>When she wanders away, say, 'Uh-oh, you forgot. Re-do it right and walk beside the cart.'</idea_text>
+            <idea_text>
+                When she wanders away, say, “Uh-oh, you forgot. Re-do it right and walk beside the cart.”
+            </idea_text>
             <star_point>Re-do it right</star_point>
         </idea>
     </problem>

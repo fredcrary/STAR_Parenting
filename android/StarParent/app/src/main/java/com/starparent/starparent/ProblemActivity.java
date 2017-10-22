@@ -24,17 +24,22 @@ public class ProblemActivity extends AppCompatActivity {
         if (b.getSerializable("problem") != null) {
             problem = (IdeasBankProblem) b.getSerializable("problem");
         }
-
         StringBuilder htmlString = new StringBuilder();
         htmlString.append("<h2>" + problem.title + "</h2>");
-        htmlString.append("<h4>Description: </h4>");
-        htmlString.append("<p>" + problem.description + "</p>");
+        htmlString.append("<h4>Age Groups: </h4>");
+        for (String age : problem.ageGroups) {
+            htmlString.append("<p>" + age + "</p>");
+        }
+        for (IdeasBankDescription description : problem.descriptions) {
+            htmlString.append("<h3>" + description.ageGroup + "</h3>");
+            htmlString.append("<p>" + description.text + "</p>");
+        }
         htmlString.append("<h4>Goal: </h4>");
         htmlString.append("<p>" + problem.goal + "</p>");
         htmlString.append("<h4>Reality Check: </h4>");
         htmlString.append("<p>" + problem.reality_check + "</p>");
         htmlString.append("<h3>Ideas: </h3>");
-        for (StaticClasses.IdeasBankIdea idea : problem.ideas) {
+        for (IdeasBankIdea idea : problem.ideas) {
             htmlString.append("<h4>" + idea.star_point + "</h4>");
             htmlString.append("<p>" + idea.idea_text + "</p>");
         }

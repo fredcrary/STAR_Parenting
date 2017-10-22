@@ -61,11 +61,12 @@ public class XmlParser {
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {
         Log.d(TAG, "Reading IdeasBank xml");
         String title      = null;
-        String ageGroup   = null;
         String desc       = null;
         String goal       = null;
         String reality    = null;
-        List<IdeasBankIdea> ideas = new ArrayList<>();
+        List<IdeasBankIdea> ideas       = new ArrayList<>();
+        List<IdeasBankDescription> examples = new ArrayList<>();
+        List<String> ageGroups          = new ArrayList<>();
 
         parser.require(XmlPullParser.START_TAG, ns, "problem");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -78,10 +79,10 @@ public class XmlParser {
                     title = readText(parser);
                     break;
                 case "age_group":
-                    ageGroup = readText(parser);
+                    ageGroups.add(readText(parser));
                     break;
                 case "description":
-                    desc = readText(parser);
+                    examples.add(readIdeasBankDescription(parser));
                     break;
                 case "goal":
                     goal = readText(parser);
@@ -96,7 +97,7 @@ public class XmlParser {
                     skip(parser);
             }
         }
-        return new IdeasBankProblem(title, ageGroup, desc, goal, reality, ideas);
+        return new IdeasBankProblem(title, ageGroups, examples, goal, reality, ideas);
     }
 
     private IdeasBankIdea readIdeaBankIdea(XmlPullParser parser)  throws XmlPullParserException, IOException {
@@ -120,6 +121,29 @@ public class XmlParser {
             }
         }
         return new IdeasBankIdea(idea_text, star_point);
+    }
+
+    private IdeasBankDescription readIdeasBankDescription(XmlPullParser parser) throws XmlPullParserException, IOException {
+        String ageGroup  = null;
+        String text      = null;
+        parser.require(XmlPullParser.START_TAG, ns, "description");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String name = parser.getName();
+            switch (name) {
+                case "example_age":
+                    ageGroup = readText(parser);
+                    break;
+                case "example_text":
+                    text = readText(parser);
+                    break;
+                default:
+                    skip(parser);
+            }
+        }
+        return new IdeasBankDescription(ageGroup, text);
     }
 
     // For the tags title and summary, extracts their text values.

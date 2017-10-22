@@ -96,17 +96,28 @@ public class StaticClasses {
             this.star_point = star_point;
         }
     }
+
+    //IdeasBankDescriptions are keyed against ageGroups and currently (temporarily?) are taking the place of the <description> String
+    public static class IdeasBankDescription {
+        public final String ageGroup;
+        public final String text;
+        protected IdeasBankDescription(String ageGroup, String text) {
+            this.ageGroup = ageGroup;
+            this.text = text;
+        }
+    }
+
     public static class IdeasBankProblem implements Serializable {
         public final String title;
-        public final String ageGroup;       //TODO: Verify a) that this is actually a String and b) that it's necessary at all
-        public final String description;
+        public final List<String> ageGroups;       //TODO: Verify a) that this is actually a String and b) that it's necessary at all
         public final String goal;
         public final String reality_check;
+        public static transient List<IdeasBankDescription> descriptions;
         public static transient List<IdeasBankIdea> ideas;
-        protected IdeasBankProblem(String title, String ageGroup, String description, String goal, String reality_check, List<IdeasBankIdea> ideas) {
+        protected IdeasBankProblem(String title, List<String> ageGroups, List<IdeasBankDescription> descriptions, String goal, String reality_check, List<IdeasBankIdea> ideas) {
             this.title = title;
-            this.ageGroup = ageGroup;
-            this.description = description;
+            this.ageGroups = ageGroups;
+            this.descriptions = descriptions;
             this.goal = goal;
             this.reality_check = reality_check;
             this.ideas = ideas;
