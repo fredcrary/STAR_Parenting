@@ -13,14 +13,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
+import com.starparent.starparent.StaticClasses.*;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
 
 public class QuickIdeasMainActivity extends AppCompatActivity {
+    //Standard constants
     private static final String TAG = "QuickIdeasMain";
+    private final String tag = "quick_ideas";
+    private final String xmlFileName = tag + ".xml";
+    private final String URL = "http://starparent.com/appdata/" + xmlFileName;
+
+    //Classes we need
+    Utils utils = new Utils();
+    InputStream stream = null;
+    XmlParser parser = new XmlParser();
 
     // The following are used for the shake detection
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+
+    protected List<QuickIdeaTools> quickIdeas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +48,12 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        try {
+            parseXml();
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
 
         // ShakeDetector initialization
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -45,8 +69,20 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         });
     }
 
-    public void handleShakeEvent(int count){
-        Toast.makeText(getApplicationContext(), "Shake is working. Number of shakes: " + count, Toast.LENGTH_SHORT).show();
+    private void handleShakeEvent(int count){
+        if (quickIdeas != null && !quickIdeas.isEmpty()) {
+            int index = getRandomNumber(quickIdeas.size());
+            Log.d(TAG, "index: " + index);
+            Log.d(TAG, "size : " + quickIdeas.size());
+            String toastText = quickIdeas.get(index).name + "\n" + quickIdeas.get(index).display;
+            Toast.makeText(getApplicationContext(), toastText, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Shake is working. Number of shakes: " + count, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private int getRandomNumber(int listSize) {
+        return (int) Math.floor(Math.random() * 101 % listSize);
     }
 
     @Override
@@ -61,5 +97,19 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         // Add the following line to unregister the Sensor Manager onPause
         mSensorManager.unregisterListener(mShakeDetector);
         super.onPause();
+    }
+
+    //This should be usable in every ActivityClass
+    private void parseXml() throws XmlPullParserException, IOException {
+        if (utils.isNetworkAvailable()) {
+            stream = parser.downloadUrl(URL);
+        } else {
+            stream = this.getAssets().open(xmlFileName);
+        }
+        try {
+            quickIdeas = parser.parse(stream, tag);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

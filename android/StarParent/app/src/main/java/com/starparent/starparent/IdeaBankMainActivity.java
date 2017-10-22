@@ -14,14 +14,19 @@ import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
 
 public class IdeaBankMainActivity extends AppCompatActivity {
+    //Standard constants
     private static final String TAG = "IdeaBankMain";
-    private final String URL = "http://starparent.com/appdata/ideas_bank.xml";
     private final String tag = "ideas_bank";
+    private final String xmlFileName = tag + ".xml";
+    private final String URL = "http://starparent.com/appdata/" + xmlFileName;
+
+    //Classes we need
+    Utils utils = new Utils();
     InputStream stream = null;
     XmlParser parser = new XmlParser();
+
+
     protected List<IdeasBankProblem> problems;
-    //TODO: When both data and network are reliable, check for network status and try to download from source
-    boolean isNetworkAvailable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +63,10 @@ public class IdeaBankMainActivity extends AppCompatActivity {
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        if (isNetworkAvailable) {
+        if (utils.isNetworkAvailable()) {
             stream = parser.downloadUrl(URL);
         } else {
-            stream = this.getAssets().open("ideas_bank.xml");
+            stream = this.getAssets().open(xmlFileName);
         }
         try {
             problems = parser.parse(stream, tag);

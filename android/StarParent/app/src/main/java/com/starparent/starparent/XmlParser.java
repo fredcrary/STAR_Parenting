@@ -38,7 +38,7 @@ public class XmlParser {
 
     private List readFeed(XmlPullParser parser, String tag) throws XmlPullParserException, IOException {
         Log.d(TAG, "Reading a new feed, tag: " + tag);
-        List entries = new ArrayList();
+        List entries = new ArrayList<>();
         parser.require(XmlPullParser.START_TAG, ns, tag);
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -48,33 +48,62 @@ public class XmlParser {
             // Look at the parent tags and pass the xml to the appropriate 'read' method.
             switch (tag) {
                 case "ideas_bank":
-                    entries = new ArrayList<>();
                     entries.add(readIdeasBank(parser));
+                    break;
+                case "quick_ideas":
+                    entries.add(readQuickIdeas(parser));
+                    break;
+
                 //TODO: Various other case statements
                 default:
-                    //Probably throw a log statement here...
+                    Log.d(TAG, "Unexpected XML tag, nothing to render.");
+                    break;
             }
         }
         return entries;
     }
 
+    private QuickIdeaTools readQuickIdeas(XmlPullParser parser)  throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading quick_ideas.xml");
+        String tool_name = null;
+        String display   = null;
+
+        parser.require(XmlPullParser.START_TAG, ns, "tool");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "display":
+                    display = readText(parser);
+                    break;
+                case "tool_name":
+                    tool_name = readText(parser);
+                    break;
+                default:
+                    skip(parser);
+            }
+        }
+        return new QuickIdeaTools(tool_name, display);
+    }
+
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {
-        Log.d(TAG, "Reading IdeasBank xml");
+        Log.d(TAG, "Reading ideas_bank.xml");
         String title      = null;
-        String desc       = null;
         String goal       = null;
         String reality    = null;
-        List<IdeasBankIdea> ideas       = new ArrayList<>();
+        List<IdeasBankIdea> ideas           = new ArrayList<>();
         List<IdeasBankDescription> examples = new ArrayList<>();
-        List<String> ageGroups          = new ArrayList<>();
+        List<String> ageGroups              = new ArrayList<>();
 
         parser.require(XmlPullParser.START_TAG, ns, "problem");
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
             }
-            String name = parser.getName();
-            switch (name) {
+            String tagName = parser.getName();
+            switch (tagName) {
                 case "title":
                     title = readText(parser);
                     break;
