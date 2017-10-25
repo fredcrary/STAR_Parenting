@@ -5,12 +5,12 @@ The STAR Parent Android App is a companion to the book STAR Parenting Tales and 
 
 ## Authors
 
-* **Mitch Thompson** - *Initial work* - [mitchthompson](https://github.com/mitchthompson)
-* **Jeremy Duke** - *Initial work* - [tekbot](https://github.com/tekbot)
-* **Travis Karpinsky** - *Initial work* - [tkarp87](https://github.com/tkarp87)
-* **Justin Simmons** - *Initial work* - [just255](https://github.com/just255)
-* **Mark Pfaff** - *Initial work* - [markpfaff](https://github.com/markpfaff)
-* **Rasa Rasiulyte** - *Initial work* - [rasyte](https://github.com/rasyte)
+* **Mitch Thompson** - *Initial mockups, Development* - [mitchthompson](https://github.com/mitchthompson)
+* **Jeremy Duke** - *Lead development, GitHub Management, Initial Mockups* - [tekbot](https://github.com/tekbot)
+* **Travis Karpinsky** - *Development* - [tkarp87](https://github.com/tkarp87)
+* **Justin Simmons** - *Team Lead, Development* - [just255](https://github.com/just255)
+* **Mark Pfaff** - *Team Lead, Initial mockups, Development* - [markpfaff](https://github.com/markpfaff)
+* **Rasa Rasiulyte** - *Development* - [rasyte](https://github.com/rasyte)
 
 ## License
 
