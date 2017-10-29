@@ -60,11 +60,11 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         }
 
         //Animation
-        final Animation animation;
-        animation = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.animation);
+        final Animation fade_in;
+        fade_in = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_in);
+
         final TextView animatedText = (TextView)findViewById(R.id.quick_ideas_text);
-        animatedText.startAnimation(animation);
 
         // fade in
         animatedText.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,12 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 animatedText.setVisibility(View.VISIBLE);
-                animatedText.startAnimation(animation);
+                animatedText.startAnimation(fade_in);
+                int index = getRandomNumber(quickIdeas.size());
+                Log.d(TAG, "index: " + index);
+                Log.d(TAG, "size : " + quickIdeas.size());
+                String idea = quickIdeas.get(index).name + "\n" + quickIdeas.get(index).display;
+                animatedText.setText(idea);
             }
         });
 
@@ -87,7 +92,12 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
             public void onShake(int count) {
                 handleShakeEvent(count);
                 animatedText.setVisibility(View.VISIBLE);
-                animatedText.startAnimation(animation);
+                animatedText.startAnimation(fade_in);
+                int index = getRandomNumber(quickIdeas.size());
+                Log.d(TAG, "index: " + index);
+                Log.d(TAG, "size : " + quickIdeas.size());
+                String idea = quickIdeas.get(index).name + "\n" + quickIdeas.get(index).display;
+                animatedText.setText(idea);
             }
         });
     }
