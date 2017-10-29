@@ -17,4 +17,5 @@
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points</string>
     <string name="title_activity_problem_solver">Problem Solver</string>
+    <string name="quick_ideas_text">Shake to get a toast</string>
 </resources>
