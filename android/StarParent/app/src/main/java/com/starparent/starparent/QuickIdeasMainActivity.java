@@ -12,9 +12,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.starparent.starparent.StaticClasses.*;
 
+import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -55,6 +59,23 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        //Animation
+        final Animation animation;
+        animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.animation);
+        final TextView animatedText = (TextView)findViewById(R.id.quick_ideas_text);
+        animatedText.startAnimation(animation);
+
+        // fade in
+        animatedText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                animatedText.setVisibility(View.VISIBLE);
+                animatedText.startAnimation(animation);
+            }
+        });
+
         // ShakeDetector initialization
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager
@@ -65,6 +86,8 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
             @Override
             public void onShake(int count) {
                 handleShakeEvent(count);
+                animatedText.setVisibility(View.VISIBLE);
+                animatedText.startAnimation(animation);
             }
         });
     }
