@@ -1,15 +1,21 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
 
@@ -25,6 +31,10 @@ public class IdeaBankMainActivity extends AppCompatActivity {
     InputStream stream = null;
     XmlParser parser = new XmlParser();
 
+    //Views we'll use
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     protected List<IdeasBankProblem> problems;
 
@@ -43,11 +53,27 @@ public class IdeaBankMainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        //Descriptive Text Container
+        TextView textView = (TextView) findViewById(R.id.textView);
+        StringBuilder htmlString = new StringBuilder();
+        htmlString.append("<h1>Ideas Bank</h1>");
+        htmlString.append("<p>A brief description of this pane and how it works.</p>");
+        htmlString.append("<p>Maybe even a second line of somewhat descriptive text.</p>");
+        textView.setText(Html.fromHtml(htmlString.toString()));
+
+        //List of parsed items Container
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
         if (problems != null) {
+            List <Button> btnList = new ArrayList<>();
             for (final IdeasBankProblem problem : problems) {
-                Button btn_problem = (Button) findViewById(R.id.btn_idea_bank_problem);
-                btn_problem.setText(problem.title);
-                btn_problem.setOnClickListener(new View.OnClickListener() {
+                Button btn = new Button(this);
+                btn.setText(problem.title);
+                btn.setVisibility(View.VISIBLE);
+                btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent i = new Intent(IdeaBankMainActivity.this, ProblemActivity.class);
@@ -57,7 +83,10 @@ public class IdeaBankMainActivity extends AppCompatActivity {
                         startActivity(i);
                     }
                 });
+                btnList.add(btn);
             }
+            adapter = new RecyclerViewAdapter(btnList);
+            recyclerView.setAdapter(adapter);
         }
     }
 
