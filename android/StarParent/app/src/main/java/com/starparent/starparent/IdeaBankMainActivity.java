@@ -1,7 +1,6 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -9,13 +8,8 @@ import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
