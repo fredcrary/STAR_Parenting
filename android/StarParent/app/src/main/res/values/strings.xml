@@ -17,6 +17,8 @@
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points</string>
     <string name="title_activity_problem_solver">Problem Solver</string>
+    <string name="toolbar_app_name">STAR Parenting</string>
+    <string name="quick_ideas_text">Shake to get a toast</string>
     <string name="learn_about_heading">What is Star Parenting?</string>
     <string name="learn_about_description">STAR Parenting is a method and a set of points and tools. STAR Parenting is a powerful, focused approach to child guidance. STAR Parenting gives you a problem-solving process,
         5 general strategies, and 15 practical tools. STAR Parenting can be used by parents, teachers, caregivers, counselors – anyone who works with children.</string>
