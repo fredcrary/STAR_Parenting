@@ -2,15 +2,21 @@ package com.starparent.starparent;
 
 import android.util.Log;
 import android.util.Xml;
+
+import com.starparent.starparent.StaticClasses.IdeasBankDescription;
+import com.starparent.starparent.StaticClasses.IdeasBankIdea;
+import com.starparent.starparent.StaticClasses.IdeasBankProblem;
+import com.starparent.starparent.StaticClasses.QuickIdeaTools;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import com.starparent.starparent.StaticClasses.*;
 
 /**
  * Mostly lifted from here: https://developer.android.com/training/basics/network-ops/xml.html
@@ -53,7 +59,9 @@ public class XmlParser {
                 case "quick_ideas":
                     entries.add(readQuickIdeas(parser));
                     break;
-
+                case "resources":
+                    entries.add(readResources(parser));
+                    break;
                 //TODO: Various other case statements
                 default:
                     Log.d(TAG, "Unexpected XML tag, nothing to render.");
@@ -86,6 +94,35 @@ public class XmlParser {
             }
         }
         return new QuickIdeaTools(tool_name, display);
+    }
+    private StaticClasses.ResourceEntry readResources(XmlPullParser parser)  throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading resources.xml");
+        String name = null;
+        String url   = null;
+        String link   = null;
+
+
+        parser.require(XmlPullParser.START_TAG, ns, "link");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "name":
+                    name = readText(parser);
+                    break;
+                case "url":
+                    url = readText(parser);
+                    break;
+                case "link":
+                    link = readText(parser);
+                    break;
+                default:
+                    skip(parser);
+            }
+        }
+        return new StaticClasses.ResourceEntry(name, url, link);
     }
 
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {

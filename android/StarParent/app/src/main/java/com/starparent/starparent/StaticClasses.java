@@ -128,9 +128,11 @@ public class StaticClasses {
     public static class ResourceEntry {
         public final String name;
         public final String url;
-        protected ResourceEntry(String name, String url) {
+        public final String link;
+        protected ResourceEntry(String name, String url, String link) {
             this.name = name;
             this.url  = url;
+            this.link  = link;
         }
     }
 }
