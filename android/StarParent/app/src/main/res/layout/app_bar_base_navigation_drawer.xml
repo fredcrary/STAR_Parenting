@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.starparent.starparent.IdeaBankMainActivity">
+    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,19 +20,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_idea_bank_main"
-        android:id="@+id/include" />
+    <include layout="@layout/content_base_navigation_drawer" />
 
-    <Button
-        android:id="@+id/btn_idea_bank_problem"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="60dp"
-        android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.design.widget.CoordinatorLayout>

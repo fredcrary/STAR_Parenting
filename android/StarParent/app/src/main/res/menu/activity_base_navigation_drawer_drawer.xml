@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tip"
+            android:title="Tips of the Day" />
+        <item
+            android:id="@+id/nav_about_star"
+            android:title="Learn about STAR" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="About this app" />
+    </group>
+
+    <item android:title="Problem Solver">
+        <menu>
+            <item
+                android:id="@+id/nav_quick_ideas"
+                android:title="Quick Ideas" />
+            <item
+                android:id="@+id/nav_guide"
+                android:title="Problem Solving Guide" />
+            <item
+                android:id="@+id/nav_bank"
+                android:title="Ideas Bank" />
+        </menu>
+    </item>
+
+    <item android:title="Process">
+        <menu>
+            <item
+                android:id="@+id/nav_parenting_proc"
+                android:title="STAR Parenting Process" />
+            <item
+                android:id="@+id/nav_points"
+                android:title="STAR Points" />
+            <item
+                android:id="@+id/nav_resources"
+                android:title="STAR Resources" />
+        </menu>
+    </item>
+</menu>

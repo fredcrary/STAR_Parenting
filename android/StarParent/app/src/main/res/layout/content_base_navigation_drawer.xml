@@ -5,13 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.starparent.starparent.QuickIdeasMainActivity"
-    tools:showIn="@layout/activity_quick_ideas_main">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Shake to get a toast" />
+    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity"
+    tools:showIn="@layout/app_bar_base_navigation_drawer">
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.starparent.starparent;
 
+import android.app.Activity;
 import android.text.Html;
 import android.util.Log;
 import android.content.Intent;
@@ -9,14 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseNavigationDrawerActivity {
     private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        onCreateDrawer();
 
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);
