@@ -1,5 +1,6 @@
 package com.starparent.starparent;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,7 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class LearnAboutStarMainActivity extends AppCompatActivity {
+public class LearnAboutStarMainActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -77,12 +77,14 @@
             android:name=".ProblemSolvingGuideActivity"
             android:label="@string/title_activity_problem_solving_guide"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.starparent.starparent.MainActivity" />
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.starparent.starparent.MainActivity" />
+
         <activity
             android:name=".AboutThisAppActivity"
             android:label="@string/title_activity_about_this_app"
@@ -95,6 +97,7 @@
             android:name=".StarPointsActivity"
             android:label="@string/title_activity_star_points"
             android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>

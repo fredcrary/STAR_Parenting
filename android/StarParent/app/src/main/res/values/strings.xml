@@ -27,5 +27,13 @@
     <string name="learn_about_points_btn">Star Points</string>
     <string name="learn_about_resources_btn">STAR Parenting Resources</string>
     <string name="learn_about_btn_description">We created some activites to help you get ideas about your child and common behaviors you are trying to understand and direct. Tap below to explore the STAR Parenting methods.</string>
+    <string name="title_activity_base_navigation_drawer">BaseNavigationDrawerActivity</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main_test">MainActivityTEST</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_test">TEST</string>
 </resources>
