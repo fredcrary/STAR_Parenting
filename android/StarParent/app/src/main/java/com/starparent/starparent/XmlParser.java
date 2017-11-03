@@ -219,7 +219,11 @@ public class XmlParser {
             result = parser.getText();
             parser.nextTag();
         }
-        return result;
+        return maybeReplaceTokens(result);
+    }
+
+    private String maybeReplaceTokens(String string) {
+        return string.replace("[", "<").replace("]", ">");
     }
 
     private void skip(XmlPullParser parser) throws XmlPullParserException, IOException {

@@ -22,6 +22,7 @@ public class IdeaBankMainActivity extends AppCompatActivity {
     private static final String TAG = "IdeaBankMain";
     private final String tag = "ideas_bank";
     private final String xmlFileName = tag + ".xml";
+//    private final String xmlFileName = tag + "_derp.xml";     For testing with latest data
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
     //Classes we need
