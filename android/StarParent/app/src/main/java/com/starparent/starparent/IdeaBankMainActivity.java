@@ -1,6 +1,5 @@
 package com.starparent.starparent;
 
-import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -8,14 +7,10 @@ import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-
 import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
 
@@ -68,25 +63,10 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         if (problems != null) {
-            List <Button> btnList = new ArrayList<>();
-            for (final IdeasBankProblem problem : problems) {
-                Button btn = new Button(this);
-                btn.setText(problem.title);
-                btn.setVisibility(View.VISIBLE);
-                btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(IdeaBankMainActivity.this, ProblemActivity.class);
-                        Bundle b = new Bundle();
-                        b.putSerializable("problem", problem);
-                        i.putExtras(b);
-                        startActivity(i);
-                    }
-                });
-                btnList.add(btn);
-            }
-            adapter = new RecyclerViewAdapter(btnList);
+            adapter = new RecyclerViewAdapter(problems, IdeaBankMainActivity.this);
             recyclerView.setAdapter(adapter);
+        } else {
+            //TODO: erm...display something here probably. :)
         }
     }
 
