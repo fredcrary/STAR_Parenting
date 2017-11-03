@@ -24,11 +24,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_marginTop="60dp"
         android:fadeScrollbars="false"
+        android:gravity="center_horizontal"
         android:isScrollContainer="true"
         android:maxLines="1000"
         android:paddingLeft="5dp"
@@ -39,7 +39,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
         android:scrollbars="vertical" />
+
+    <RadioGroup
+        android:layout_marginTop="200dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/toddler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="toddler" />
+
+        <RadioButton
+            android:id="@+id/preschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="preschool" />
+
+        <RadioButton
+            android:id="@+id/schoolage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="school-age" />
+
+        <RadioButton
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="all" />
+    </RadioGroup>
 
 
 </android.support.design.widget.CoordinatorLayout>

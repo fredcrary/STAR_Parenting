@@ -7,10 +7,13 @@ import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
 
@@ -43,7 +46,7 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         try {
-            parseXml();
+            problems = parseXml();
         } catch (XmlPullParserException  | IOException e) {
             e.printStackTrace();
         }
@@ -54,14 +57,19 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         htmlString.append("<h1>Ideas Bank</h1>");
         htmlString.append("<p>A brief description of this pane and how it works.</p>");
         htmlString.append("<p>Maybe even a second line of somewhat descriptive text.</p>");
+        htmlString.append("<h3>Choose age group: </h3>");
         textView.setText(Html.fromHtml(htmlString.toString()));
 
-        //List of parsed items Container
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        //Initial Layout should show everything (no filter)
+        updateRecycler(problems);
+    }
+
+    private void updateRecycler(List<IdeasBankProblem> problems) {
         if (problems != null) {
             adapter = new RecyclerViewAdapter(problems, IdeaBankMainActivity.this);
             recyclerView.setAdapter(adapter);
@@ -70,8 +78,41 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         }
     }
 
+    public void onRadioButtonClicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()) {
+            case R.id.toddler:
+                if (checked)
+                    updateRecycler(filterProblems("toddler"));
+                    break;
+            case R.id.preschool:
+                if (checked)
+                    updateRecycler(filterProblems("preschool"));
+                    break;
+            case R.id.schoolage:
+                if (checked)
+                    updateRecycler(filterProblems("school-age"));
+                    break;
+            case R.id.all:
+                if (checked)
+                    updateRecycler(problems);
+                break;
+        }
+    }
+
+    private List<IdeasBankProblem> filterProblems(String criteria) {
+        List<IdeasBankProblem> filteredProblems = new ArrayList<>();
+        for (IdeasBankProblem problem : problems) {
+            if (problem.ageGroups.contains(criteria)) {
+                filteredProblems.add(problem);
+            }
+        }
+        return filteredProblems;
+    }
+
     //This should be usable in every ActivityClass
-    private void parseXml() throws XmlPullParserException, IOException {
+    private List<IdeasBankProblem> parseXml() throws XmlPullParserException, IOException {
+        List<IdeasBankProblem> problems = new ArrayList<>();
         if (utils.isNetworkAvailable()) {
             stream = parser.downloadUrl(URL);
         } else {
@@ -82,5 +123,6 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return problems;
     }
 }
