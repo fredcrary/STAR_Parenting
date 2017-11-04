@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <entry>Crary, Elizabeth. &lt;i&gt;STAR Parenting Tales and Tools: Respectful Guidance Strategies to Increase Parenting Effectiveness &amp; Enjoyment&lt;/i&gt; Chicago, IL: Parenting Press.</entry>
-    <entry>
-        <link>
-            <url>http://starparent.com/</url>
-            <text>STAR Parenting web site</text>
-        </link>
-    </entry>
+  <entry>Crary, Elizabeth. [i]STAR Parenting Tales and Tools: Respectful Guidance Strategies to Increase Parenting Effectiveness &amp; Enjoyment[/i] Chicago, IL: Parenting Press.</entry>
+  <entry>[a href="http://starparent.com/"]STAR Parenting web site[/a]</entry>
 </resources>
+<!-- Modified November 02, 2017, Compiled November 02, 2017 -->

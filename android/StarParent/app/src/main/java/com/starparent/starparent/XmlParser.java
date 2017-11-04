@@ -3,11 +3,7 @@ package com.starparent.starparent;
 import android.util.Log;
 import android.util.Xml;
 
-import com.starparent.starparent.StaticClasses.IdeasBankDescription;
-import com.starparent.starparent.StaticClasses.IdeasBankIdea;
-import com.starparent.starparent.StaticClasses.IdeasBankProblem;
-import com.starparent.starparent.StaticClasses.QuickIdeaTools;
-
+import com.starparent.starparent.StaticClasses.*;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -95,34 +91,18 @@ public class XmlParser {
         }
         return new QuickIdeaTools(tool_name, display);
     }
-    private StaticClasses.ResourceEntry readResources(XmlPullParser parser)  throws XmlPullParserException, IOException {
+    private ResourceEntry readResources(XmlPullParser parser)  throws XmlPullParserException, IOException {
         Log.d(TAG, "Reading resources.xml");
-        String name = null;
-        String url   = null;
-        String link   = null;
-
-
-        parser.require(XmlPullParser.START_TAG, ns, "link");
-        while (parser.next() != XmlPullParser.END_TAG) {
-            if (parser.getEventType() != XmlPullParser.START_TAG) {
-                continue;
-            }
-            String tagName = parser.getName();
-            switch (tagName) {
-                case "name":
-                    name = readText(parser);
-                    break;
-                case "url":
-                    url = readText(parser);
-                    break;
-                case "link":
-                    link = readText(parser);
-                    break;
-                default:
-                    skip(parser);
-            }
+        String entry = null;
+        String tagName = parser.getName();
+        switch (tagName) {
+            case "entry":
+                entry = readText(parser);
+                break;
+            default:
+                skip(parser);
         }
-        return new StaticClasses.ResourceEntry(name, url, link);
+        return new ResourceEntry(entry);
     }
 
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {

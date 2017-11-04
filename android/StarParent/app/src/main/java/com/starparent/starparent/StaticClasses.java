@@ -126,13 +126,9 @@ public class StaticClasses {
 
     //Resource Entries are ill-defined in the spec.  This is a best guess, subject to change
     public static class ResourceEntry {
-        public final String name;
-        public final String url;
-        public final String link;
-        protected ResourceEntry(String name, String url, String link) {
-            this.name = name;
-            this.url  = url;
-            this.link  = link;
+        public final String entry;
+        protected ResourceEntry(String entry) {
+            this.entry = entry;
         }
     }
 }
