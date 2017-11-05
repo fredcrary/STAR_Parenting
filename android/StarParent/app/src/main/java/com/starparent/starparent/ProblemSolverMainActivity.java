@@ -15,7 +15,6 @@ public class ProblemSolverMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_problem_solver);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Process Button
         Button btn_quick_ideas = (Button)findViewById(R.id.btn_quick_ideas);

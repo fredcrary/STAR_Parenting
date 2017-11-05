@@ -19,7 +19,6 @@ public class LearnAboutStarMainActivity extends BaseNavigationDrawerActivity {
         setContentView(R.layout.activity_learn_about_star);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Process Button
         Button learn_about_process_btn = (Button)findViewById(R.id.learn_about_process_btn);

@@ -15,7 +15,6 @@ public class StarProcessMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_star_process_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 }

@@ -20,7 +20,6 @@ public class ProblemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_problem);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView textView = (TextView) findViewById(R.id.textView);
 
         Bundle b = getIntent().getExtras();

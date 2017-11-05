@@ -66,35 +66,4 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp" />
 
-    <TextView
-        android:id="@+id/textViewMain"
-        android:layout_width="0dp"
-        android:layout_height="495dp"
-        android:layout_marginTop="16dp"
-        android:fadeScrollbars="false"
-        android:isScrollContainer="true"
-        android:maxLines="1000"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_learn_about_main"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
-
-    <Button
-        android:id="@+id/btn_idea_bank_main"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="350dp"
-        android:text="@string/btn_idea_bank"
-        android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_learn_about_main"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
-
 </android.support.design.widget.CoordinatorLayout>

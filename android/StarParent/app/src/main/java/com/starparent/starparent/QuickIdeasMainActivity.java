@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.support.v4.widget.DrawerLayout;
 import android.util.FloatMath;
 import android.util.Log;
 import android.os.Bundle;
@@ -51,7 +52,6 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quick_ideas_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         try {
             parseXml();

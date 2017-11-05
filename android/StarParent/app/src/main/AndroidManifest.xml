@@ -16,24 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".StarProcessMainActivity"
-            android:label="@string/title_activity_star_process_main"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.starparent.starparent.MainActivity" />
-        </activity>
-        <activity
-            android:name=".IdeaBankMainActivity"
-            android:label="@string/title_activity_idea_bank_main"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.starparent.starparent.MainActivity" />
-        </activity>
+
+        <!-- Main / Home Screen buttons -->
         <activity
             android:name=".QuickIdeasMainActivity"
             android:label="@string/title_activity_quick_ideas_main"
@@ -52,15 +36,6 @@
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
         <activity
-            android:name=".ProblemActivity"
-            android:label="@string/title_activity_problem"
-            android:parentActivityName=".IdeaBankMainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.starparent.starparent.IdeaBankMainActivity" />
-        </activity>
-        <activity
             android:name=".LearnAboutStarMainActivity"
             android:label="@string/title_activity_learn_about_star"
             android:parentActivityName=".MainActivity"
@@ -69,22 +44,61 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
+        <!-- </ Main / Home Screen buttons > -->
+
+        <!-- Problem Solver Main Screen buttons -->
+        <!-- Quick Ideas Button /> -->
+        <activity
+            android:name=".StarPointsActivity"
+            android:label="@string/title_activity_star_points"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IdeaBankMainActivity"
+            android:label="@string/title_activity_idea_bank_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.MainActivity" />
+        </activity>
+            <!-- Generic IdeaBankProblem Activities -->
+            <activity
+                android:name=".ProblemActivity"
+                android:label="@string/title_activity_problem"
+                android:parentActivityName=".IdeaBankMainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.starparent.starparent.IdeaBankMainActivity" />
+            </activity>
+
+        <!-- Learn About Screen Buttons -->
+            <activity
+                android:name=".StarProcessMainActivity"
+                android:label="@string/title_activity_star_process_main"
+                android:parentActivityName=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.starparent.starparent.MainActivity" />
+            </activity>
+            <!-- StarPointsActivity /> -->
+            <activity
+                android:name=".StarResourcesActivity"
+                android:label="@string/title_activity_star_resources"
+                android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <!-- Currently only linked from drawer menu FIXME? -->
         <activity
             android:name=".TipOfTheDayActivity"
             android:label="@string/title_activity_tip_of_the_day"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ProblemSolvingGuideActivity"
             android:label="@string/title_activity_problem_solving_guide"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.starparent.starparent.MainActivity" />
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.starparent.starparent.MainActivity" />
-
         <activity
             android:name=".AboutThisAppActivity"
             android:label="@string/title_activity_about_this_app"
@@ -93,15 +107,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-        <activity
-            android:name=".StarResourcesActivity"
-            android:label="@string/title_activity_star_resources"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".StarPointsActivity"
-            android:label="@string/title_activity_star_points"
-            android:theme="@style/AppTheme.NoActionBar" />
-
     </application>
 
 </manifest>

@@ -8,11 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String TAG = "BaseNavigationDrawer";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        if (drawer != null && drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
@@ -67,39 +70,43 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        switch (id) {
+            //TOP NavMenu Block
+            case R.id.nav_tip:
+                startActivity(new Intent(this, TipOfTheDayActivity.class));
+                break;
+            case R.id.nav_about_star:
+                startActivity(new Intent(this, LearnAboutStarMainActivity.class));
+                break;
+            case R.id.nav_about:
+                startActivity(new Intent(this, AboutThisAppActivity.class));
+                break;
 
-        if (id == R.id.nav_about)
-        {
-            startActivity(new Intent(this, AboutThisAppActivity.class));
-        }
-        else if (id == R.id.nav_about_star)
-        {
-            startActivity(new Intent(this, LearnAboutStarMainActivity.class));
+            //Problem Solver
+            case R.id.nav_quick_ideas:
+                startActivity(new Intent(this, QuickIdeasMainActivity.class));
+                break;
+            case R.id.nav_guide:
+                startActivity(new Intent(this, ProblemSolvingGuideActivity.class));
+                break;
+            case R.id.nav_bank:
+                startActivity(new Intent(this, IdeaBankMainActivity.class));
+                break;
 
-        }
-        else if (id == R.id.nav_bank)
-        {
-            startActivity(new Intent(this, IdeaBankMainActivity.class));
-        }
-        else if (id == R.id.nav_guide)
-        {
-            startActivity(new Intent(this, ProblemSolvingGuideActivity.class));
-        }
-        else if (id == R.id.nav_parenting_proc)
-        {
-            startActivity(new Intent(this, LearnAboutStarMainActivity.class));
-        }
-        else if (id == R.id.nav_quick_ideas)
-        {
-            startActivity(new Intent(this, QuickIdeasMainActivity.class));
-        }
-        else if (id == R.id.nav_resources)
-        {
-            startActivity(new Intent(this, StarResourcesActivity.class));
-        }
-        else if (id == R.id.nav_tip)
-        {
-            startActivity(new Intent(this, TipOfTheDayActivity.class));
+            //Process
+            case R.id.nav_parenting_proc:
+                startActivity(new Intent(this, LearnAboutStarMainActivity.class));
+                break;
+            case R.id.nav_points:
+                startActivity(new Intent(this, StarPointsActivity.class));
+                break;
+            case R.id.nav_resources:
+                startActivity(new Intent(this, StarResourcesActivity.class));
+                break;
+
+            default:
+                Log.d(TAG, "Id not found in list?");
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

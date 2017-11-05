@@ -44,7 +44,6 @@ public class IdeaBankMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_idea_bank_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         try {
             problems = parseXml();
