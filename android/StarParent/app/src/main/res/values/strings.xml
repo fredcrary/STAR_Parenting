@@ -20,7 +20,7 @@
     <string name="about_app_version">App Version: 1.0</string>
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points</string>
-    <string name="problem_solver_description">Problem Solver description goes here</string>
+    <string name="problem_solver_description">Tools to help you work through issues as they happen</string>
     <string name="btn_problem_solving_guide">Problem Solving Guide</string>
 
     <string name="title_activity_problem_solver">Problem Solver</string>
