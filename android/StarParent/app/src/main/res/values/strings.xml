@@ -6,17 +6,25 @@
     <string name="btn_star_process">STAR Process</string>
     <string name="btn_quick_ideas">Quick Ideas (Magic 8-Ball)</string>
     <string name="btn_problem_solver">Problem Solver</string>
-    <string name="btn_idea_bank">Problems</string>
+    <string name="btn_idea_bank">Ideas Bank</string>
     <string name="btn_learn_about">Learn about STAR Parenting</string>
-    <string name="title_activity_problem">ProblemActivity</string>
+    <string name="title_activity_problem">Ideas Bank</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_learn_about_star">Learn About Star Parenting</string>
     <string name="title_activity_tip_of_the_day">Tip of the Day</string>
     <string name="title_activity_problem_solving_guide">Problem Solving Guide</string>
     <string name="title_activity_about_this_app">About This App</string>
+    <string name="about_team_acknowledgement">This app was designed and developed by Jeremy Duke, Mark Pfaff, Mitch Thompson, Rasa Rasiulyte, Travis Kapirsky, and Justin Simmons in the Application Development Program at North Seattle College. </string>
+    <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model</string>
+    <string name="about_book_acknowledgement">This app is based on and a companion to the book STAR Parenting Tales and Tools by Elizabeth Crary.</string>
+    <string name="about_app_version">App Version: 1.0</string>
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points</string>
+    <string name="problem_solver_description">Tools to help you work through issues as they happen</string>
+    <string name="btn_problem_solving_guide">Problem Solving Guide</string>
+
     <string name="title_activity_problem_solver">Problem Solver</string>
+
     <string name="quick_ideas_text">Shake to get a toast</string>
     <string name="learn_about_heading">What is Star Parenting?</string>
     <string name="learn_about_description">STAR Parenting is a method and a set of points and tools. STAR Parenting is a powerful, focused approach to child guidance. STAR Parenting gives you a problem-solving process,
