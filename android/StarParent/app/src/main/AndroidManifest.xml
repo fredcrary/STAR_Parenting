@@ -22,7 +22,7 @@
             android:name=".QuickIdeasMainActivity"
             android:label="@string/title_activity_quick_ideas_main"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
@@ -30,7 +30,7 @@
         <activity
             android:name=".ProblemSolverMainActivity"
             android:label="@string/title_activity_problem_solver"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />

@@ -16,9 +16,9 @@ public class LearnAboutStarMainActivity extends BaseNavigationDrawerActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn_about_star);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_learn_about_star, frameLayout);
+        setTitle("Learn About Star");
 
         //Process Button
         Button learn_about_process_btn = (Button)findViewById(R.id.learn_about_process_btn);

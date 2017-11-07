@@ -4,17 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class ProblemSolverMainActivity extends AppCompatActivity {
+public class ProblemSolverMainActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem_solver);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_problem_solver, frameLayout);
+        setTitle("Problem Solver");
 
         //Process Button
         Button btn_quick_ideas = (Button)findViewById(R.id.btn_quick_ideas);

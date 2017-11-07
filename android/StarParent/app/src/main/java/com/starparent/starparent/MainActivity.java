@@ -13,7 +13,8 @@ public class MainActivity extends BaseNavigationDrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
+        setTitle("Main");
 
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);

@@ -1,16 +1,10 @@
 package com.starparent.starparent;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.v4.widget.DrawerLayout;
-import android.util.FloatMath;
 import android.util.Log;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
@@ -18,15 +12,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.starparent.starparent.StaticClasses.*;
-
-import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class QuickIdeasMainActivity extends AppCompatActivity {
+public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity {
     //Standard constants
     private static final String TAG = "QuickIdeasMain";
     private final String tag = "quick_ideas";
@@ -49,9 +41,9 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quick_ideas_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        super.onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_quick_ideas_main, frameLayout);
+        setTitle("Quick Ideas");
 
         try {
             parseXml();
@@ -100,6 +92,7 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
                 animatedText.setText(idea);
             }
         });
+
     }
 
     private void handleShakeEvent(int count){
@@ -146,3 +139,4 @@ public class QuickIdeasMainActivity extends AppCompatActivity {
         }
     }
 }
+
