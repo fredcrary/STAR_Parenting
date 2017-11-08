@@ -27,6 +27,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
+        <activity android:name=".QuickIdeaSecondaryActivity"
+            android:label="@string/title_activity_quick_ideas_main"
+            android:parentActivityName=".QuickIdeasMainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.QuickIdeasMainActivity"/>
+        </activity>
         <activity
             android:name=".ProblemSolverMainActivity"
             android:label="@string/title_activity_problem_solver"

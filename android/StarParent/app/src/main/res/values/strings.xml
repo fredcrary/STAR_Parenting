@@ -45,4 +45,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_test">TEST</string>
     <string name="toolbar_app_name">STAR Parenting</string>
+    <string name="quick_idea_goal">Goal:</string>
+    <string name="quick_idea_how">How to use:</string>
+    <string name="quick_idea_examples">Examples:</string>
+    <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Tools >]]></string>
+    <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
 </resources>
