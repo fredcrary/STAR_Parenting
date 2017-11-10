@@ -27,13 +27,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-        <activity android:name=".QuickIdeaSecondaryActivity"
+        <activity
+            android:name=".QuickIdeaSecondaryActivity"
             android:label="@string/title_activity_quick_ideas_main"
             android:parentActivityName=".QuickIdeasMainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.starparent.starparent.QuickIdeasMainActivity"/>
+                android:value="com.starparent.starparent.QuickIdeasMainActivity" />
         </activity>
         <activity
             android:name=".ProblemSolverMainActivity"
@@ -54,6 +55,7 @@
         </activity>
         <!-- </ Main / Home Screen buttons > -->
 
+
         <!-- Problem Solver Main Screen buttons -->
         <!-- Quick Ideas Button /> -->
         <activity
@@ -69,40 +71,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-            <!-- Generic IdeaBankProblem Activities -->
-            <activity
-                android:name=".ProblemActivity"
-                android:label="@string/title_activity_problem"
-                android:parentActivityName=".IdeaBankMainActivity"
-                android:theme="@style/AppTheme.NoActionBar">
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.starparent.starparent.IdeaBankMainActivity" />
-            </activity>
+        <!-- Generic IdeaBankProblem Activities -->
+        <activity
+            android:name=".ProblemActivity"
+            android:label="@string/title_activity_problem"
+            android:parentActivityName=".IdeaBankMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.IdeaBankMainActivity" />
+        </activity>
 
         <!-- Learn About Screen Buttons -->
-            <activity
-                android:name=".StarProcessMainActivity"
-                android:label="@string/title_activity_star_process_main"
-                android:parentActivityName=".MainActivity"
-                android:theme="@style/AppTheme.NoActionBar">
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.starparent.starparent.MainActivity" />
-            </activity>
-            <!-- StarPointsActivity /> -->
-            <activity
-                android:name=".StarResourcesActivity"
-                android:label="@string/title_activity_star_resources"
-                android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".StarProcessMainActivity"
+            android:label="@string/title_activity_star_process_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.starparent.starparent.MainActivity" />
+        </activity>
+        <!-- StarPointsActivity /> -->
+        <activity
+            android:name=".StarResourcesActivity"
+            android:label="@string/title_activity_star_resources"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Currently only linked from drawer menu FIXME? -->
         <activity
             android:name=".TipOfTheDayActivity"
             android:label="@string/title_activity_tip_of_the_day"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".ProblemSolvingGuideActivity"
             android:label="@string/title_activity_problem_solving_guide"
@@ -115,6 +115,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
+        <activity android:name=".LearnAboutStarProcessActivity"></activity>
     </application>
 
 </manifest>

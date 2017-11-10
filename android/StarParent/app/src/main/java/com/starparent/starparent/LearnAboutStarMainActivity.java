@@ -25,7 +25,7 @@ public class LearnAboutStarMainActivity extends BaseNavigationDrawerActivity {
         learn_about_process_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LearnAboutStarMainActivity.this, StarProcessMainActivity.class));
+                startActivity(new Intent(LearnAboutStarMainActivity.this, LearnAboutStarProcessActivity.class));
             }
         });
 
