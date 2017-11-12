@@ -36,7 +36,7 @@
     <string name="learn_about_btn_description">We created some activites to help you get ideas about your child and common behaviors you are trying to understand and direct. Tap below to explore the STAR Parenting methods.</string>
     <string name="learn_about_process_title">The STAR Parenting Process</string>
     <string name="learn_about_process_desc">The process is based on the word S-T-A-R and helps you create a plan to resolve your problem. The process encourages you to consider: the child\'s developmental stage and experience, the child\'s temperament, your long-term goals for the child, and your values.</string>
-    <string name="learn_about_link_process_btn">Tap here to do the Star Process</string>
+    <string name="learn_about_points_title"><![CDATA[Star Points & Tools]]></string>
 
     <string name="title_activity_base_navigation_drawer">BaseNavigationDrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -53,4 +53,5 @@
     <string name="quick_idea_examples">Examples:</string>
     <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Tools >]]></string>
     <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
+    <string name="learn_about_points_desc">Parenting is easier when have many options. STAR Parenting offers you five strategies (points) and 15 parent-tested tools.</string>
 </resources>

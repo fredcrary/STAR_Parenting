@@ -34,11 +34,11 @@ public class LearnAboutStarMainActivity extends BaseNavigationDrawerActivity {
         learn_about_points_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LearnAboutStarMainActivity.this, StarPointsActivity.class));
+                startActivity(new Intent(LearnAboutStarMainActivity.this, LearnAboutStarPointsActivity.class));
             }
         });
 
-        //Points Button
+        //Resources Button
         Button learn_about_resources_btn = (Button)findViewById(R.id.learn_about_resources_btn);
         learn_about_resources_btn.setOnClickListener(new View.OnClickListener() {
             @Override
