@@ -115,7 +115,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-        <activity android:name=".LearnAboutStarProcessActivity"></activity>
+        <activity android:name=".LearnAboutStarProcessActivity" />
+        <activity android:name=".LearnAboutStarPointsActivity"></activity>
     </application>
 
 </manifest>
