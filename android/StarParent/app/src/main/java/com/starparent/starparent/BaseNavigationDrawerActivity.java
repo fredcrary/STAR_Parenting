@@ -101,7 +101,7 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
 
             //Process
             case R.id.nav_parenting_proc:
-                startActivity(new Intent(this, LearnAboutStarMainActivity.class));
+                startActivity(new Intent(this,StarProcessMainActivity.class));
                 break;
             case R.id.nav_points:
                 startActivity(new Intent(this, StarPointsActivity.class));

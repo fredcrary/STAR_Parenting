@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.starparent.starparent.StaticClasses.*;
 
-public class IdeaBankMainActivity extends AppCompatActivity {
+public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     //Standard constants
     private static final String TAG = "IdeaBankMain";
     private final String tag = "ideas_bank";
@@ -41,10 +41,9 @@ public class IdeaBankMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idea_bank_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_idea_bank_main, frameLayout);
+        setTitle("Ideas Bank");
         try {
             problems = parseXml();
         } catch (XmlPullParserException  | IOException e) {
