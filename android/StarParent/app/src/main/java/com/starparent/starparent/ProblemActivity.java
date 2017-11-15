@@ -6,9 +6,13 @@ import android.text.method.ScrollingMovementMethod;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
+
 import com.starparent.starparent.StaticClasses.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ProblemActivity extends AppCompatActivity {
@@ -23,18 +27,17 @@ public class ProblemActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textView);
 
         Bundle b = getIntent().getExtras();
-        if (b.getSerializable("problem") != null) {
+        if (b != null && b.getSerializable("problem") != null) {
             problem = (IdeasBankProblem) b.getSerializable("problem");
         }
-
         final String TAG = "Problem Activity: " + problem.title;
+
         //Star point to idea lookups
         List<IdeasBankIdea> avoidProblems  = new ArrayList<>();
         List<IdeasBankIdea> respondToCoop  = new ArrayList<>();
         List<IdeasBankIdea> setReasLimits  = new ArrayList<>();
         List<IdeasBankIdea> teachNewSkills = new ArrayList<>();
         List<IdeasBankIdea> ackFeelings    = new ArrayList<>();
-
         for (IdeasBankIdea idea : problem.ideas) {
             switch (idea.star_point) {
                 case "Change things":
@@ -68,6 +71,7 @@ public class ProblemActivity extends AppCompatActivity {
             }
         }
 
+        //Build the detailed TextView
         StringBuilder htmlString = new StringBuilder();
         htmlString.append("<h2>" + problem.title + "</h2>");
         for (IdeasBankDescription description : problem.descriptions) {
@@ -79,26 +83,44 @@ public class ProblemActivity extends AppCompatActivity {
         htmlString.append("<h4>Reality Check: </h4>");
         htmlString.append("<p>" + problem.reality_check + "</p>");
         htmlString.append("<h3>Ideas: </h3>");
-        htmlString.append("<h4>Avoid problems</h4>");
+
+        //Build the expandable TextViews
+        final List<String> expandableListTitle;
+        ExpandableListAdapter expandableListAdapter;
+        ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
+
+        List<String> avoid_problems_detail = new ArrayList<>();
+        List<String> respond_coop_detail = new ArrayList<>();
+        List<String> reas_limits_detail = new ArrayList<>();
+        List<String> new_skills_detail = new ArrayList<>();
+        List<String> ack_feelings_detail = new ArrayList<>();
         for (IdeasBankIdea idea : avoidProblems) {
-            htmlString.append("<p>" + idea.idea_text + " <b>" + idea.star_point + "</b></p>");
+            avoid_problems_detail.add(idea.idea_text + "\n" + idea.star_point);
         }
-        htmlString.append("<h4>Respond to cooperation</h4>");
         for (IdeasBankIdea idea : respondToCoop) {
-            htmlString.append("<p>" + idea.idea_text + " <b>" + idea.star_point + "</b></p>");
+            respond_coop_detail.add(idea.idea_text + "\n" + idea.star_point);
         }
-        htmlString.append("<h4>Set reasonable limits</h4>");
         for (IdeasBankIdea idea : setReasLimits) {
-            htmlString.append("<p>" + idea.idea_text + " <b>" + idea.star_point + "</b></p>");
+            reas_limits_detail.add(idea.idea_text + "\n" + idea.star_point);
         }
-        htmlString.append("<h4>Teach new skills</h4>");
         for (IdeasBankIdea idea : teachNewSkills) {
-            htmlString.append("<p>" + idea.idea_text + " <b>" + idea.star_point + "</b></p>");
+            new_skills_detail.add(idea.idea_text + "\n" + idea.star_point);
         }
-        htmlString.append("<h4>Acknowledge feelings</h4>");
         for (IdeasBankIdea idea : ackFeelings) {
-            htmlString.append("<p>" + idea.idea_text + " <b>" + idea.star_point + "</b></p>");
+            ack_feelings_detail.add(idea.idea_text + "\n" + idea.star_point);
         }
+
+        final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
+        expandableListDetail.put("Avoid problems", avoid_problems_detail);
+        expandableListDetail.put("Respond to cooperation", respond_coop_detail);
+        expandableListDetail.put("Set reasonable limits", reas_limits_detail);
+        expandableListDetail.put("Teach new skills", new_skills_detail);
+        expandableListDetail.put("Acknowledge feelings", ack_feelings_detail);
+
+        expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
+        expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
+        expandableListView.setAdapter(expandableListAdapter);
+
         textView.setText(Html.fromHtml(htmlString.toString()));
         textView.setMovementMethod(new ScrollingMovementMethod());
     }
