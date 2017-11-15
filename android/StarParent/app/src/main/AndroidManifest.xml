@@ -116,7 +116,8 @@
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
         <activity android:name=".LearnAboutStarProcessActivity" />
-        <activity android:name=".LearnAboutStarPointsActivity"></activity>
+        <activity android:name=".LearnAboutStarPointsActivity" />
+        <activity android:name=".SplashActivity" />
     </application>
 
 </manifest>

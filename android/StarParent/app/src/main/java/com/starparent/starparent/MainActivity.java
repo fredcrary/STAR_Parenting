@@ -43,5 +43,15 @@ public class MainActivity extends BaseNavigationDrawerActivity {
             }
         });
 
+        //Splash Button
+        Button btn_splash_screen = (Button)findViewById(R.id.btn_splash_screen);
+        btn_splash_screen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SplashActivity.class));
+            }
+        });
+
+
     }
 }
