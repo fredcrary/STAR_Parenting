@@ -7,15 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class ProblemSolvingGuideActivity extends AppCompatActivity {
+public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem_solving_guide);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_problem_solving_guide, frameLayout);
+        setTitle("Problem Solving Guide");
     }
 
 }

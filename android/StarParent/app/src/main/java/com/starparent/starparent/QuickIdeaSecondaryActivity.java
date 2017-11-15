@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class QuickIdeaSecondaryActivity extends AppCompatActivity {
+public class QuickIdeaSecondaryActivity extends BaseNavigationDrawerActivity {
     //Standard constants
     private static final String TAG = "QuickIdeasMain";
     private final String tag = "quick_ideas";
@@ -30,10 +30,9 @@ public class QuickIdeaSecondaryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quick_idea_secondary);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_quick_idea_secondary, frameLayout);
+        setTitle("Quick Ideas");
 
         try {
             parseXml();
@@ -47,15 +46,14 @@ public class QuickIdeaSecondaryActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         Bundle b = i.getExtras();
+
         if(b!=null){
             int index = (int)b.get("QuickIdea");
             String idea_title = quickIdeas.get(index).name;
             String idea_goal = quickIdeas.get(index).display;
             quick_idea_title.setText(idea_title);
             quick_idea_goal.setText("Goal: " + idea_goal);
-
         }
-
     }
 
     //This should be usable in every ActivityClass

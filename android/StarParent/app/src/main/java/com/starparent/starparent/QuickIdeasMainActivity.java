@@ -23,7 +23,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuickIdeasMainActivity extends AppCompatActivity{
+public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
     //Standard constants
     private static final String TAG = "QuickIdeasMain";
     private final String tag = "quick_ideas";
@@ -53,10 +53,9 @@ public class QuickIdeasMainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quick_ideas_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_quick_ideas_main, frameLayout);
+        setTitle("Quick Ideas");
 
         try {
             parseXml();

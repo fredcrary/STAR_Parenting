@@ -14,7 +14,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StarResourcesActivity extends AppCompatActivity {
+public class StarResourcesActivity extends BaseNavigationDrawerActivity {
     private final String tag = "resources";
     private final String xmlFileName = tag + ".xml";
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
@@ -29,9 +29,10 @@ public class StarResourcesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_star_resources);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_star_resources, frameLayout);
+        setTitle("Star Resources");
+
         TextView textView = (TextView) findViewById(R.id.textView);
         Log.d(TAG, "on create started");
 
@@ -66,5 +67,4 @@ public class StarResourcesActivity extends AppCompatActivity {
         }
         return entries;
     }
-
 }

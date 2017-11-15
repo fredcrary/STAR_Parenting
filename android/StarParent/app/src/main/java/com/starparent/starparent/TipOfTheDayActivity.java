@@ -7,15 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class TipOfTheDayActivity extends AppCompatActivity {
+public class TipOfTheDayActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tip_of_the_day);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_tip_of_the_day, frameLayout);
+        setTitle("Tip Of The Day");
     }
-
 }
