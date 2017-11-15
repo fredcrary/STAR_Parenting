@@ -6,14 +6,8 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.util.Log;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 import com.starparent.starparent.StaticClasses.*;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -62,7 +56,6 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
         } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
         }
-
 
         //Create buttons and onClick listeners
         Button btn_star_points =(Button)findViewById(R.id.btn_star_points);
@@ -223,11 +216,7 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        if (utils.isNetworkAvailable()) {
-            stream = parser.downloadUrl(URL);
-        } else {
-            stream = this.getAssets().open(xmlFileName);
-        }
+        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
             quickIdeas = parser.parse(stream, tag);
         } catch (IOException e) {

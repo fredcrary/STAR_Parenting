@@ -5,8 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -22,7 +20,6 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     private static final String TAG = "IdeaBankMain";
     private final String tag = "ideas_bank";
     private final String xmlFileName = tag + ".xml";
-//    private final String xmlFileName = tag + "_derp.xml";     For testing with latest data
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
     //Classes we need
@@ -45,7 +42,7 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
         getLayoutInflater().inflate(R.layout.activity_idea_bank_main, frameLayout);
         setTitle("Ideas Bank");
         try {
-            problems = parseXml();
+            parseXml();
         } catch (XmlPullParserException  | IOException e) {
             e.printStackTrace();
         }
@@ -110,18 +107,12 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     }
 
     //This should be usable in every ActivityClass
-    private List<IdeasBankProblem> parseXml() throws XmlPullParserException, IOException {
-        List<IdeasBankProblem> problems = new ArrayList<>();
-        if (utils.isNetworkAvailable()) {
-            stream = parser.downloadUrl(URL);
-        } else {
-            stream = this.getAssets().open(xmlFileName);
-        }
+    private void parseXml() throws XmlPullParserException, IOException {
+        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
             problems = parser.parse(stream, tag);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return problems;
     }
 }

@@ -1,8 +1,6 @@
 package com.starparent.starparent;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -11,7 +9,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 public class StarResourcesActivity extends BaseNavigationDrawerActivity {
@@ -37,7 +34,7 @@ public class StarResourcesActivity extends BaseNavigationDrawerActivity {
         Log.d(TAG, "on create started");
 
         try {
-            entries = parseXml();
+            parseXml();
         } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
         }
@@ -53,18 +50,12 @@ public class StarResourcesActivity extends BaseNavigationDrawerActivity {
     }
 
     //This should be usable in every ActivityClass
-    private List<StaticClasses.ResourceEntry> parseXml() throws XmlPullParserException, IOException {
-        List<StaticClasses.ResourceEntry> entries = new ArrayList<>();
-        if (utils.isNetworkAvailable()) {
-            stream = parser.downloadUrl(URL);
-        } else {
-            stream = this.getAssets().open(xmlFileName);
-        }
+    private void parseXml() throws XmlPullParserException, IOException {
+        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
             entries = parser.parse(stream, tag);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return entries;
     }
 }

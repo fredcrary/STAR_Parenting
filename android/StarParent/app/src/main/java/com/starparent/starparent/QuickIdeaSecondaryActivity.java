@@ -1,10 +1,7 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -58,11 +55,7 @@ public class QuickIdeaSecondaryActivity extends BaseNavigationDrawerActivity {
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        if (utils.isNetworkAvailable()) {
-            stream = parser.downloadUrl(URL);
-        } else {
-            stream = this.getAssets().open(xmlFileName);
-        }
+        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
             quickIdeas = parser.parse(stream, tag);
         } catch (IOException e) {
