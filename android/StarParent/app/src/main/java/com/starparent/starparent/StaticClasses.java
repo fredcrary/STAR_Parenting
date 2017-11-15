@@ -55,8 +55,8 @@ public class StaticClasses {
         public final String goal;
         public final String howToTitle;
         public final String howToText;
-        public final String[] examples;
-        protected PointsTutorialTool(String name, String goal, String howToTitle, String howToText, String[] examples) {
+        public final String examples;
+        protected PointsTutorialTool(String name, String goal, String howToTitle, String howToText, String examples) {
             this.name = name;
             this.goal = goal;
             this.howToTitle = howToTitle;
@@ -68,12 +68,12 @@ public class StaticClasses {
         public final String name;
         public final String goal;
         public final String explanation;
-        public final PointsTutorialTool tool;
-        protected PointsTutorialPoint(String name, String goal, String explanation, PointsTutorialTool tool) {
+        public final List<PointsTutorialTool> tools;
+        protected PointsTutorialPoint(String name, String goal, String explanation, List<PointsTutorialTool> tools) {
             this.name = name;
             this.goal = goal;
             this.explanation = explanation;
-            this.tool = tool;
+            this.tools = tools;
         }
     }
 

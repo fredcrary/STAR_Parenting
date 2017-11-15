@@ -58,6 +58,9 @@ public class XmlParser {
                 case "resources":
                     entries.add(readResources(parser));
                     break;
+                case "points_tutorial":
+                    entries.add(readPointsTutorial(parser));
+                    break;
                 //TODO: Various other case statements
                 default:
                     Log.d(TAG, "Unexpected XML tag, nothing to render.");
@@ -67,7 +70,76 @@ public class XmlParser {
         return entries;
     }
 
-    private QuickIdeaTools readQuickIdeas(XmlPullParser parser)  throws XmlPullParserException, IOException {
+    private PointsTutorialPoint readPointsTutorial(XmlPullParser parser) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading points_tutorial.xml");
+        String name = null;
+        String goal = null;
+        String explanation = null;
+        List<PointsTutorialTool> tools = null;
+
+        parser.require(XmlPullParser.START_TAG, ns, "point");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "name":
+                    name = readText(parser);
+                    break;
+                case "goal":
+                    goal = readText(parser);
+                    break;
+                case "explanation":
+                    explanation = readText(parser);
+                    break;
+                case "tool":
+                    tools.add(readPointsTutorialTool(parser));
+                    break;
+                default:
+                    break;
+            }
+        }
+        return new PointsTutorialPoint(name, goal, explanation, tools);
+    }
+
+    private PointsTutorialTool readPointsTutorialTool(XmlPullParser parser) throws XmlPullParserException, IOException {
+        String name = null;
+        String goal = null;
+        String howToTitle = null;
+        String howToText = null;
+        String examples = null;
+
+        parser.require(XmlPullParser.START_TAG, ns, "tool");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "name":
+                    name = readText(parser);
+                    break;
+                case "goal":
+                    goal = readText(parser);
+                    break;
+                case "how_to_title":
+                    howToTitle = readText(parser);
+                    break;
+                case "how_to_text":
+                    howToText = readText(parser);
+                    break;
+                case "examples":
+                    examples = readText(parser);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return new PointsTutorialTool(name, goal, howToTitle, howToText, examples);
+    }
+
+    private QuickIdeaTools readQuickIdeas(XmlPullParser parser) throws XmlPullParserException, IOException {
         Log.d(TAG, "Reading quick_ideas.xml");
         String tool_name = null;
         String display   = null;
