@@ -118,6 +118,7 @@
         <activity android:name=".LearnAboutStarProcessActivity" />
         <activity android:name=".LearnAboutStarPointsActivity" />
         <activity android:name=".SplashActivity" />
+        <activity android:name=".PS_Guide_StopFocus"></activity>
     </application>
 
 </manifest>
