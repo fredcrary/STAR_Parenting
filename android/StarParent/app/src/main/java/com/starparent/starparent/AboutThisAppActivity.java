@@ -1,8 +1,6 @@
 package com.starparent.starparent;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 public class AboutThisAppActivity extends BaseNavigationDrawerActivity {
 
@@ -12,5 +10,6 @@ public class AboutThisAppActivity extends BaseNavigationDrawerActivity {
         onCreateDrawer();
         getLayoutInflater().inflate(R.layout.activity_about_this_app, frameLayout);
         setTitle("About This App");
+
     }
 }

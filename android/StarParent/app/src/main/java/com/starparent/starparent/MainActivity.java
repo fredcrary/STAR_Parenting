@@ -14,7 +14,7 @@ public class MainActivity extends BaseNavigationDrawerActivity {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
         getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
-        setTitle("Main");
+        setTitle("STAR Parenting");
 
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);

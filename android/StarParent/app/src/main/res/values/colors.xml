@@ -2,7 +2,13 @@
 <resources>
     <color name="colorPrimary">#1e2d7a</color>
     <color name="colorPrimaryDark">#1e2d7a</color>
-    <color name="colorAccent">#ff5457</color>
+    <color name="colorAccent">#e06666</color>
     <color name="background_material_light">#f6f8fe</color>
-    <color name="colorLightBlue">#9ca8e5</color>
+    <color name="orangeBarBG">#FFF9A045</color>
+    <color name="greenBarBG">#93c47d</color>
+    <color name="blueBarBG">#6fa8dc</color>
+    <color name="yellowBarBG">#ffd966</color>
+    <color name="redBarBG">#e06666</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
 </resources>
