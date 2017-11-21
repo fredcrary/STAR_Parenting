@@ -18,7 +18,7 @@ public class ProblemSolverMainActivity extends BaseNavigationDrawerActivity {
         getLayoutInflater().inflate(R.layout.activity_problem_solver, frameLayout);
         setTitle("Problem Solver");
 
-        //Process Button
+        //Quick Ideas Button
         Button btn_quick_ideas = (Button)findViewById(R.id.btn_quick_ideas);
         btn_quick_ideas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +27,7 @@ public class ProblemSolverMainActivity extends BaseNavigationDrawerActivity {
             }
         });
 
-        //Points Button
+        //Ideas Bank Button
         Button btn_idea_bank = (Button)findViewById(R.id.btn_idea_bank);
         btn_idea_bank.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +36,7 @@ public class ProblemSolverMainActivity extends BaseNavigationDrawerActivity {
             }
         });
 
-        //Points Button
+        //Problem Solving Guide Button
         Button btn_problem_solving_guide = (Button)findViewById(R.id.btn_problem_solving_guide);
         btn_problem_solving_guide.setOnClickListener(new View.OnClickListener() {
             @Override

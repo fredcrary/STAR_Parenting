@@ -52,15 +52,5 @@ public class MainActivity extends BaseNavigationDrawerActivity {
             }
         });
 
-        //problem solving guide
-        Button btn_problem_solving_guide = (Button)findViewById(R.id.btn_problem_solving_guide);
-        btn_problem_solving_guide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProblemSolvingGuideActivity.class));
-            }
-        });
-
-
     }
 }
