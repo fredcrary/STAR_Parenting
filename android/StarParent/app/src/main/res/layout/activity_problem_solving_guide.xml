@@ -25,4 +25,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <include layout="@layout/content_problem_solving_guide" />
+
 </android.support.design.widget.CoordinatorLayout>

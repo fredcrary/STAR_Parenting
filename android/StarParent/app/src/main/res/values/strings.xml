@@ -54,4 +54,14 @@
     <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Tools >]]></string>
     <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
     <string name="learn_about_points_desc">Parenting is easier when have many options. STAR Parenting offers you five strategies (points) and 15 parent-tested tools.</string>
+
+
+    <string name="problem_solving_guide_title">Problem Solving Guide</string>
+    <string name="problem_solving_guide_intro">Introduction paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet orci massa. In eu rutrum lectus. Sed mattis eros vel iaculis bibendum. Pellentesque facilisis arcu nec tincidunt varius.</string>
+    <string name="ps_guide_background">Background: Describe last time the bahavior happened</string>
+    <string name="ps_guide_stop_text"><![CDATA[Stop & Focus]]></string>
+    <string name="ps_guide_next_btn">Next</string>
+    <string name="ps_guide_save_btn">Save</string>
+    <string name="ps_guide_previous_btn">Previous</string>
+    <string name="ps_guide_stop_title"><![CDATA[Stop & Focus]]></string>
 </resources>
