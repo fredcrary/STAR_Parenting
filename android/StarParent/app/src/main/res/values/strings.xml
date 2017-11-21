@@ -64,4 +64,18 @@
     <string name="ps_guide_save_btn">Save</string>
     <string name="ps_guide_previous_btn">Previous</string>
     <string name="ps_guide_stop_title"><![CDATA[Stop & Focus]]></string>
+    <string name="stop_focus"><![CDATA[Stop & Focus]]>&#160;&#160;</string>
+    <string name="collect_data">Collect Data</string>
+    <string name="age_of_child">Age of child</string>
+    <string name="problem_length">Length of the problem</string>
+    <string name="think_of_ideas">Think of Ideas&#160;&#160;</string>
+    <string name="avoid_the_problem">Avoid the Problem</string>
+    <string name="change_things">Change Things</string>
+    <string name="reduce_stress">Reduce Stress</string>
+    <string name="two_yeses">Two Yeses</string>
+    <string name="act_effectively">Act Effectively&#160;&#160;</string>
+    <string name="ideas">Ideas</string>
+    <string name="what_will_you_try_first">What will you try first?</string>
+    <string name="review_and_revise">Review and Revise&#160;&#160;</string>
+    <string name="what_went_well">What went well?</string>
 </resources>
