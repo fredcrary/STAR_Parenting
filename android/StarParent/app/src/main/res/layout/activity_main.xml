@@ -80,6 +80,14 @@
             android:layout_centerHorizontal="true"
             android:text="Splash" />
 
+        <Button
+            android:id="@+id/btn_problem_solving_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="PS Guide"
+             />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
