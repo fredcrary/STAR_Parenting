@@ -1,6 +1,8 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -32,6 +34,40 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //switch color of toolbar based on activity
+        String color = "#FF1E2D7A";
+        String activity = this.getClass().getSimpleName();
+        switch (activity) {
+            case "IdeaBankMainActivity":
+            case "LearnAboutStarMainActivity":
+            case "LearnAboutStarPointsActivity":
+                color = "#93c47d";
+                break;
+            case "ProblemSolverMainActivity":
+                color = "#FFF9A045";
+                break;
+            case "QuickIdeasMainActivity":
+                color = "#ffd966";
+                break;
+            case "LearnAboutStarProcessActivity":
+            case "TipOfTheDayActivity":
+            case "StarProcessMainActivity":
+            case "AboutThisAppActivity":
+            case "StarResourcesActivity":
+            case "ProblemSolvingGuideActivity":
+                color = "#6fa8dc";
+                break;
+            case "StarPointsActivity":
+                color = "#93c47d";
+                break;
+
+            default:
+                Log.d(TAG, "Activity not found");
+                break;
+        }
+        toolbar.setBackground(new ColorDrawable(Color.parseColor(color)));
+
         frameLayout = (FrameLayout) findViewById(R.id.content_frame);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

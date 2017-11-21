@@ -51,10 +51,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/greenBarBG"
+            android:textColor="@color/white"
             android:textAlignment="center"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/toolbar_app_name" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 

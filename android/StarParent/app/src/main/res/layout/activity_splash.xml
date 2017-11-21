@@ -25,15 +25,19 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+
             app:srcCompat="@drawable/star_process" />
 
         <Button
             android:id="@+id/btn_continue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/colorButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/img_star"
             android:layout_centerHorizontal="true"
             android:onClick="continueButton"
-            android:text="Continue" />
+            android:text="Continue"
+            android:visibility="visible" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

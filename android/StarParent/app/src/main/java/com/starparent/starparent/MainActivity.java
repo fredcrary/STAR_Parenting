@@ -14,7 +14,7 @@ public class MainActivity extends BaseNavigationDrawerActivity {
         Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
         getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
-        setTitle("Main");
+        setTitle("STAR Parenting");
 
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);
@@ -51,16 +51,6 @@ public class MainActivity extends BaseNavigationDrawerActivity {
                 startActivity(new Intent(MainActivity.this, SplashActivity.class));
             }
         });
-
-        //problem solving guide
-        Button btn_problem_solving_guide = (Button)findViewById(R.id.btn_problem_solving_guide);
-        btn_problem_solving_guide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProblemSolvingGuideActivity.class));
-            }
-        });
-
 
     }
 }
