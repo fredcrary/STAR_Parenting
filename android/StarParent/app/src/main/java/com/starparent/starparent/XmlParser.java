@@ -76,10 +76,10 @@ public class XmlParser {
     private ProcessTutorialStep readProcessTutorial(XmlPullParser parser) throws XmlPullParserException, IOException {
         Log.d(TAG, "Reading process_tutorial.xml");
         String name = null;
-        StepElement element = null;
-        List<ProcessTutorialStep> steps = null;
+        String detail = null;
+        List<StepElement> elements = new ArrayList<>();
 
-        parser.require(XmlPullParser.START_TAG, ns, "point");
+        parser.require(XmlPullParser.START_TAG, ns, "step");
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
@@ -89,14 +89,17 @@ public class XmlParser {
                 case "name":
                     name = readText(parser);
                     break;
+                case "detail":
+                    detail = readText(parser);
+                    break;
                 case "element":
-                    element = readStepElement(parser);
+                    elements.add(readStepElement(parser));
                     break;
                 default:
                     break;
             }
         }
-        return new ProcessTutorialStep(name, element);
+        return new ProcessTutorialStep(name, detail, elements);
     }
 
     private StepElement readStepElement(XmlPullParser parser) throws XmlPullParserException, IOException {
@@ -126,7 +129,7 @@ public class XmlParser {
         String name = null;
         String goal = null;
         String explanation = null;
-        List<PointsTutorialTool> tools = null;
+        List<PointsTutorialTool> tools = new ArrayList<>();
 
         parser.require(XmlPullParser.START_TAG, ns, "point");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -159,7 +162,7 @@ public class XmlParser {
         String goal = null;
         String howToTitle = null;
         String howToText = null;
-        String examples = null;
+        String example = null;
 
         parser.require(XmlPullParser.START_TAG, ns, "tool");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -180,14 +183,14 @@ public class XmlParser {
                 case "how_to_text":
                     howToText = readText(parser);
                     break;
-                case "examples":
-                    examples = readText(parser);
+                case "example":
+                    example = readText(parser);
                     break;
                 default:
                     break;
             }
         }
-        return new PointsTutorialTool(name, goal, howToTitle, howToText, examples);
+        return new PointsTutorialTool(name, goal, howToTitle, howToText, example);
     }
 
     private QuickIdeaTools readQuickIdeas(XmlPullParser parser) throws XmlPullParserException, IOException {
