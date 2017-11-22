@@ -61,6 +61,9 @@ public class XmlParser {
                 case "points_tutorial":
                     entries.add(readPointsTutorial(parser));
                     break;
+                case "process_tutorial":
+                    entries.add(readProcessTutorial(parser));
+                    break;
                 //TODO: Various other case statements
                 default:
                     Log.d(TAG, "Unexpected XML tag, nothing to render.");
@@ -68,6 +71,54 @@ public class XmlParser {
             }
         }
         return entries;
+    }
+
+    private ProcessTutorialStep readProcessTutorial(XmlPullParser parser) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading process_tutorial.xml");
+        String name = null;
+        StepElement element = null;
+        List<ProcessTutorialStep> steps = null;
+
+        parser.require(XmlPullParser.START_TAG, ns, "point");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "name":
+                    name = readText(parser);
+                    break;
+                case "element":
+                    element = readStepElement(parser);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return new ProcessTutorialStep(name, element);
+    }
+
+    private StepElement readStepElement(XmlPullParser parser) throws XmlPullParserException, IOException {
+        String name = null;
+        String detail = null;
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "name":
+                    name = readText(parser);
+                    break;
+                case "detail":
+                    detail = readText(parser);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return new StepElement(name, detail);
     }
 
     private PointsTutorialPoint readPointsTutorial(XmlPullParser parser) throws XmlPullParserException, IOException {
