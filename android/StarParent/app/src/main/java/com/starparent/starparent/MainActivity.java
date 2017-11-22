@@ -51,15 +51,6 @@ public class MainActivity extends BaseNavigationDrawerActivity {
                 startActivity(new Intent(MainActivity.this, SplashActivity.class));
             }
         });
-
-        //problem solving guide - temporary - remove once nav drawer integrated
-        Button btn_problem_solving_guide = (Button)findViewById(R.id.btn_problem_solving_guide);
-        btn_problem_solving_guide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProblemSolvingGuideActivity.class));
-            }
-        });
-
+        
     }
 }
