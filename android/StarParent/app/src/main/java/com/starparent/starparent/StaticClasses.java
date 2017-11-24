@@ -41,10 +41,12 @@ public class StaticClasses {
     }
     public static class ProcessTutorialStep {
         public final String name;
-        public final StepElement element;
-        protected ProcessTutorialStep(String name, StepElement element) {
+        public final String detail;
+        public final List<StepElement> elements;
+        protected ProcessTutorialStep(String name, String detail, List<StepElement> elements) {
             this.name = name;
-            this.element = element;
+            this.detail = detail;
+            this.elements = elements;
         }
     }
 
