@@ -65,4 +65,7 @@
     <string name="ps_guide_save_btn">Save</string>
     <string name="ps_guide_previous_btn">Previous</string>
     <string name="ps_guide_stop_title"><![CDATA[Stop & Focus]]></string>
+
+    <string name="quick_idea_goal_header">What is the goal?</string>
+    <string name="btn_star_points2">Tap here to see the all the Star Tools with how-tos and examples</string>
 </resources>

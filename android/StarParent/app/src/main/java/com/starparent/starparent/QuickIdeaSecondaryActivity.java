@@ -2,6 +2,8 @@ package com.starparent.starparent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -49,8 +51,17 @@ public class QuickIdeaSecondaryActivity extends BaseNavigationDrawerActivity {
             String idea_title = quickIdeas.get(index).name;
             String idea_goal = quickIdeas.get(index).display;
             quick_idea_title.setText(idea_title);
-            quick_idea_goal.setText("Goal: " + idea_goal);
+            quick_idea_goal.setText(idea_goal);
         }
+
+        Button btn_star_points2 =(Button)findViewById(R.id.btn_star_points2);
+        btn_star_points2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent ii = new Intent(QuickIdeaSecondaryActivity.this, StarPointsActivity.class);
+                startActivity(ii);
+            }
+        });
+
     }
 
     //This should be usable in every ActivityClass

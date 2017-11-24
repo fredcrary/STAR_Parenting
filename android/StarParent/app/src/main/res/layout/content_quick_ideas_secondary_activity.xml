@@ -10,58 +10,52 @@
     tools:showIn="@layout/activity_quick_idea_secondary">
 
 
-
     <TextView
         android:id="@+id/quick_idea_title"
-        android:layout_width="285dp"
-        android:layout_height="37dp"
+        android:layout_width="337dp"
+        android:layout_height="74dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="132dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/quick_idea_goal"
-        android:layout_width="340dp"
-        android:layout_height="108dp"
+        android:layout_width="347dp"
+        android:layout_height="179dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/quick_idea_goal"
-        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quick_idea_title" />
 
-    <TextView
-        android:id="@+id/quick_idea_howtouse"
-        android:layout_width="336dp"
-        android:layout_height="131dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/quick_idea_how"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quick_idea_goal" />
 
-    <TextView
-        android:id="@+id/quick_idea_examples"
-        android:layout_width="333dp"
-        android:layout_height="152dp"
+    <Button
+        android:id="@+id/btn_star_points2"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="249dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/quick_idea_examples"
+        android:text="@string/btn_star_points2"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quick_idea_howtouse" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

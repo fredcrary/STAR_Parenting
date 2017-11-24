@@ -21,7 +21,6 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
     //Standard constants
     private static final String TAG = "QuickIdeasMain";
     private final String tag = "quick_ideas";
-    //private final String tag = "points_tutorial";
     private final String xmlFileName = tag + ".xml";
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
@@ -65,7 +64,6 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
                 startActivity(ii);
             }
         });
-
         btn_1_quick_ideas =(Button)findViewById(R.id.btn_1_quick_ideas);
         btn_1_quick_ideas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -100,29 +98,6 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
         //fades in buttons
         btnFadeIn();
 
-
-//        //Animation
-//        final Animation fade_in;
-//        fade_in = AnimationUtils.loadAnimation(getApplicationContext(),
-//                R.anim.fade_in);
-//
-//        final TextView animatedText = (TextView)findViewById(R.id.quick_ideas_text);
-//
-//        // fade in
-//        animatedText.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                animatedText.setVisibility(View.VISIBLE);
-//                animatedText.startAnimation(fade_in);
-//                int index = getRandomNumber(quickIdeas.size());
-//                Log.d(TAG, "index: " + index);
-//                Log.d(TAG, "size : " + quickIdeas.size());
-//                String idea = quickIdeas.get(index).name + "\n" + quickIdeas.get(index).display;
-//                animatedText.setText(idea);
-//            }
-//        });
-
         // ShakeDetector initialization
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager
@@ -132,14 +107,6 @@ public class QuickIdeasMainActivity extends BaseNavigationDrawerActivity{
 
             @Override
             public void onShake(int count) {
-                //handleShakeEvent(count);
-                //animatedText.setVisibility(View.VISIBLE);
-                //animatedText.startAnimation(fade_in);
-                //int index = getRandomNumber(quickIdeas.size());
-                //Log.d(TAG, "index: " + index);
-                //Log.d(TAG, "size : " + quickIdeas.size());
-                //String idea = quickIdeas.get(index).name + "\n" + quickIdeas.get(index).display;
-                //animatedText.setText(idea);
                 quick_ideas_index = setQuickIdeasBtnText();
                 btnFadeIn();
             }
