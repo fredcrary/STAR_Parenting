@@ -79,4 +79,7 @@
     <string name="what_will_you_try_first">What will you try first?</string>
     <string name="review_and_revise">Review and Revise&#160;&#160;</string>
     <string name="what_went_well">What went well?</string>
+
+    <string name="quick_idea_goal_header">What is the goal?</string>
+    <string name="btn_star_points2">Tap here to see the all the Star Tools with how-tos and examples</string>
 </resources>
