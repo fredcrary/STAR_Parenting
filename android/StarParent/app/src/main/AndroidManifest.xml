@@ -38,6 +38,7 @@
         <activity
             android:name=".ProblemSolverMainActivity"
             android:label="@string/title_activity_problem_solver"
+            android:windowSoftInputMode="stateHidden"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
