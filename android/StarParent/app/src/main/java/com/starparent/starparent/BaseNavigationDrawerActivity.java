@@ -1,8 +1,6 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -45,6 +43,10 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //after removing menu drop shadow by setting app elevation
+        // to 0 the line below makes sure the app bar stays on top
+        findViewById(R.id.appBar).bringToFront();
     }
 
     @Override
@@ -80,37 +82,47 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         switch (id) {
+            case R.id.nav_main_screen:
+                startActivity(new Intent(this, MainActivity.class));
+                break;
+
             //TOP NavMenu Block
             case R.id.nav_tip:
                 startActivity(new Intent(this, TipOfTheDayActivity.class));
                 break;
-            case R.id.nav_about_star:
-                startActivity(new Intent(this, LearnAboutStarMainActivity.class));
-                break;
-            case R.id.nav_about:
-                startActivity(new Intent(this, AboutThisAppActivity.class));
-                break;
 
-            //Problem Solver
-            case R.id.nav_quick_ideas:
-                startActivity(new Intent(this, QuickIdeasMainActivity.class));
+            //Learn about STAR Parenting Process
+            case R.id.nav_learn_about_star:
+                startActivity(new Intent(this,LearnAboutStarMainActivity.class));
                 break;
-            case R.id.nav_guide:
-                startActivity(new Intent(this, ProblemSolvingGuideActivity.class));
-                break;
-            case R.id.nav_bank:
-                startActivity(new Intent(this, IdeaBankMainActivity.class));
-                break;
-
-            //Process
             case R.id.nav_parenting_proc:
                 startActivity(new Intent(this,StarProcessMainActivity.class));
                 break;
             case R.id.nav_points:
                 startActivity(new Intent(this, StarPointsActivity.class));
                 break;
+
+            //Problem Solving
+
+            case R.id.nav_problem_solving:
+                startActivity(new Intent(this, ProblemSolverMainActivity.class));
+                break;
+            case R.id.nav_quick_ideas:
+                startActivity(new Intent(this, QuickIdeasMainActivity.class));
+                break;
+            case R.id.nav_problem_solving_buddy:
+                startActivity(new Intent(this, ProblemSolvingGuideActivity.class));
+                break;
+            case R.id.nav_ideas_bank:
+                startActivity(new Intent(this, IdeaBankMainActivity.class));
+                break;
+
+            //other
             case R.id.nav_resources:
                 startActivity(new Intent(this, StarResourcesActivity.class));
+                break;
+            case R.id.about_this_app:
+                startActivity(new Intent(this, AboutThisAppActivity.class));
                 break;
 
             default:

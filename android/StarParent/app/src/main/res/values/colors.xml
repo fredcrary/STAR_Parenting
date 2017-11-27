@@ -2,13 +2,19 @@
 <resources>
     <color name="colorPrimary">#1e2d7a</color>
     <color name="colorPrimaryDark">#1e2d7a</color>
-    <color name="colorAccent">#e06666</color>
+    <color name="colorAccent">#de4232</color>
     <color name="background_material_light">#f6f8fe</color>
-    <color name="orangeBarBG">#FFF9A045</color>
-    <color name="greenBarBG">#93c47d</color>
-    <color name="blueBarBG">#6fa8dc</color>
-    <color name="yellowBarBG">#ffd966</color>
-    <color name="redBarBG">#e06666</color>
-    <color name="white">#fff</color>
-    <color name="black">#000</color>
+    <color name="orange">#FFF9A045</color>
+    <color name="green">#72ca7a</color>
+    <color name="blue">#6e86e6</color>
+    <color name="yellow">#ffd966</color>
+    <color name="red">#de4232</color>
+    <color name="turqoise">#1ad8cc</color>
+    <color name="turqoisedark">#16bcb2</color>
+    <color name="turqoisedarker">#12948b</color>
+    <color name="violet">#8047a5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#dddddd</color>
+
 </resources>

@@ -1,19 +1,22 @@
 package com.starparent.starparent;
 
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.starparent.starparent.StaticClasses.IdeasBankProblem;
+
 import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import com.starparent.starparent.StaticClasses.*;
 
 public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     //Standard constants
@@ -50,7 +53,6 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
         //Descriptive Text Container
         TextView textView = (TextView) findViewById(R.id.textView);
         StringBuilder htmlString = new StringBuilder();
-        htmlString.append("<h1>Ideas Bank</h1>");
         htmlString.append("<p>A brief description of this pane and how it works.</p>");
         htmlString.append("<p>Maybe even a second line of somewhat descriptive text.</p>");
         htmlString.append("<h3>Choose age group: </h3>");
