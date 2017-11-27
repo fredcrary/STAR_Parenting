@@ -79,4 +79,13 @@
     <string name="what_will_you_try_first">What will you try first?</string>
     <string name="review_and_revise">Review and Revise&#160;&#160;</string>
     <string name="what_went_well">What went well?</string>
+    <string name="psgFrequencyTV">Frequency of behavior</string>
+    <string name="psgValuesTV">Values</string>
+    <string name="psgValuesListTV">List three that may be related to the behaviors</string>
+    <string name="psgDevelopmentTV">Development</string>
+    <string name="psgDevelopmentTV2">What is the child\'s developmental task?</string>
+    <string name="psgTemperamentTV">Temperament</string>
+    <string name="psgTempListTV">List three traits that might affect this behavior and how intense the traits are</string>
+    <string name="psgDesiredTV">Desired behavior</string>
+    <string name="psgDesiredTV2">What you want the child to do instread of what they are doing</string>
 </resources>
