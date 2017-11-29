@@ -51,12 +51,12 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
         }
 
         //Descriptive Text Container
-        TextView textView = (TextView) findViewById(R.id.textView);
-        StringBuilder htmlString = new StringBuilder();
-        htmlString.append("<p>A brief description of this pane and how it works.</p>");
-        htmlString.append("<p>Maybe even a second line of somewhat descriptive text.</p>");
-        htmlString.append("<h3>Choose age group: </h3>");
-        textView.setText(Html.fromHtml(htmlString.toString()));
+//        TextView textView = (TextView) findViewById(R.id.textView);
+//        StringBuilder htmlString = new StringBuilder();
+//        htmlString.append("<p>A brief description of this pane and how it works.</p>");
+//        htmlString.append("<p>Maybe even a second line of somewhat descriptive text.</p>");
+//        htmlString.append("<h3>Choose age group: </h3>");
+//        textView.setText(Html.fromHtml(htmlString.toString()));
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
