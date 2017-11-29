@@ -1,36 +1,47 @@
 package com.starparent.starparent;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class DisplayPreviousPSGuide extends BaseNavigationDrawerActivity {
+    String filename;
+    String fileContents;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         onCreateDrawer();
         getLayoutInflater().inflate(R.layout.activity_display_previous_psguide, frameLayout);
-        setTitle("Previous Problem Solving Guide");
+        setTitle("Problem Solving Guide");
 
-        TextView psg_display = (TextView)findViewById(R.id.psg_display);
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+
+        if(b!=null){
+            filename = (String)b.get("FileName");
+        }
+
         try {
-            psg_display.setText(readFile());
+            fileContents = readFile(filename);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        TextView displayPSGuideHeading = (TextView)findViewById(R.id.displayPSGuideHeading);
+        displayPSGuideHeading.setText("Created on:  " + filename);
+        TextView displayPSGuide = (TextView)findViewById(R.id.displayPSGuide);
+        displayPSGuide.setText(fileContents);
+
     }
 
-    public String readFile() throws FileNotFoundException {
+    public String readFile(String filename) throws FileNotFoundException {
         // Read File and Content
-        FileInputStream fin = openFileInput("ProblemSolvingGuide");
+        FileInputStream fin = openFileInput(filename);
         int size;
         String neuText = "";
 
@@ -46,5 +57,4 @@ public class DisplayPreviousPSGuide extends BaseNavigationDrawerActivity {
 
         return neuText;
     }
-
 }

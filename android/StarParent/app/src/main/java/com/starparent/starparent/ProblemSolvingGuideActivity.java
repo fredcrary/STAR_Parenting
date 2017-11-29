@@ -3,6 +3,8 @@ package com.starparent.starparent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,15 +14,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
+    private static final String TAG = "ProblemSolvingGuide";
 
     private ExpandableLayout expandableLayout1, expandableLayout2, expandableLayout3, expandableLayout4;
     private Button psg_save_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "Rendering the pane");
         super.onCreate(savedInstanceState);
         onCreateDrawer();
         getLayoutInflater().inflate(R.layout.activity_problem_solving_guide, frameLayout);
@@ -37,8 +43,8 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         psg_save_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    saveData();
-                    Toast toast = Toast.makeText(getBaseContext(), readFile(), Toast.LENGTH_SHORT);
+                    String filename = saveData();
+                    Toast toast = Toast.makeText(getBaseContext(), readFile(filename), Toast.LENGTH_SHORT);
                     toast.show();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -49,20 +55,66 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         Button psg_previous =(Button)findViewById(R.id.psg_previous);
         psg_previous.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent ii = new Intent(ProblemSolvingGuideActivity.this, DisplayPreviousPSGuide.class);
+                Intent ii = new Intent(ProblemSolvingGuideActivity.this, ListOfPreviousPSGuide.class);
                 startActivity(ii);
             }
         });
 
     }
 
-    public void saveData() throws FileNotFoundException {
-        FileOutputStream fos = openFileOutput("ProblemSolvingGuide", Context.MODE_PRIVATE);
+    public String saveData() throws FileNotFoundException {
+        String filename = new SimpleDateFormat("yyyy.MM.dd.HH:mm:ss").format(new Date());
+        FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
+
+        String background;
         EditText psg_background_input = (EditText)findViewById(R.id.psg_background_input);
-        String background =
-                "Background:\n\n" + psg_background_input.getText().toString() + "\n\n\n";
+        if (TextUtils.isEmpty(psg_background_input.getText())) {
+            background =
+                    "Background:\n\n" + "No answer " + "\n\n\n";
+        }else{
+            background =
+                    "Background:\n\n" + psg_background_input.getText().toString() + "\n\n\n";
+        }
+
+        String childAge;
+        EditText childAgeInput = (EditText)findViewById(R.id.childAgeInput);
+        if (TextUtils.isEmpty(childAgeInput.getText())) {
+            childAge =
+                    "Child Age:\n\n" + "No answer " + "\n\n\n";
+        }else{
+            childAge =
+                    "Child Age:\n\n" + childAgeInput.getText().toString() + "\n\n\n";
+        }
+
+        String length;
+        EditText lengthInput = (EditText)findViewById(R.id.lengthInput);
+        if (TextUtils.isEmpty(lengthInput.getText())) {
+            length =
+                    "Length of the problem:\n\n" + "No answer " + "\n\n\n";
+        }else{
+            length =
+                    "Length of the problem:\n\n" + lengthInput.getText().toString() + "\n\n\n";
+        }
+
+        String frequency;
+        EditText frequencyInput = (EditText)findViewById(R.id.frequencyInput);
+        if (TextUtils.isEmpty(frequencyInput.getText())) {
+            frequency =
+                    "Frequency of the Behavior:\n\n" + "No answer " + "\n\n\n";
+        }else{
+            frequency =
+                    "Frequency of the Behavior:\n\n" + frequencyInput.getText().toString() + "\n\n\n";
+        }
+
+
+
+
         try {
             fos.write(background.getBytes());
+            fos.write("\n\n\nCollect Data\n\n\n".getBytes());
+            fos.write(childAge.getBytes());
+            fos.write(length.getBytes());
+            fos.write(frequency.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,11 +123,13 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return filename;
     }
 
-    public String readFile() throws FileNotFoundException {
+    public String readFile(String filename) throws FileNotFoundException {
         // Read File and Content
-        FileInputStream fin = openFileInput("ProblemSolvingGuide");
+        FileInputStream fin = openFileInput(filename);
+        Log.d(TAG, "Filename: " + filename);
         int size;
         String neuText = "";
 
