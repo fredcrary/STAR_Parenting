@@ -4,36 +4,36 @@
     <string name="title_activity_idea_bank_main">Idea Bank</string>
     <string name="title_activity_quick_ideas_main">Quick Ideas</string>
     <string name="btn_star_process">STAR Process</string>
-    <string name="btn_quick_ideas">Quick Ideas (Magic 8-Ball)</string>
-    <string name="btn_problem_solver">Problem Solver</string>
+    <string name="btn_quick_ideas">Quick Ideas</string>
+    <string name="btn_problem_solver">Problem Solving</string>
     <string name="btn_idea_bank">Ideas Bank</string>
-    <string name="btn_learn_about">Learn about STAR Parenting</string>
+    <string name="btn_learn_about">Learning about STAR Parenting</string>
     <string name="title_activity_problem">Ideas Bank</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_learn_about_star">Learn About Star Parenting</string>
+    <string name="title_activity_learn_about_star">Learning About Star Parenting</string>
     <string name="title_activity_tip_of_the_day">Tip of the Day</string>
-    <string name="title_activity_problem_solving_guide">Problem Solving Guide</string>
+    <string name="title_activity_problem_solving_guide">Problem Solving Buddy</string>
     <string name="title_activity_about_this_app">About This App</string>
     <string name="about_team_acknowledgement">This app was designed and developed by Jeremy Duke, Mark Pfaff, Mitch Thompson, Rasa Rasiulyte, Travis Kapirsky, and Justin Simmons in the Application Development Program at North Seattle College. </string>
     <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model</string>
     <string name="about_book_acknowledgement">This app is based on and a companion to the book STAR Parenting Tales and Tools by Elizabeth Crary.</string>
     <string name="about_app_version">App Version: 1.0</string>
     <string name="title_activity_star_resources">Star Resources</string>
-    <string name="title_activity_star_points">Star Points</string>
+    <string name="title_activity_star_points">Star Points &amp; Tools</string>
     <string name="problem_solver_description">Tools to help you work through issues as they happen</string>
-    <string name="btn_problem_solving_guide">Problem Solving Guide</string>
+    <string name="btn_problem_solving_guide">Problem Solving Buddy</string>
 
-    <string name="title_activity_problem_solver">Problem Solver</string>
+    <string name="title_activity_problem_solver">Problem Solving</string>
 
     <string name="learn_about_heading">What is Star Parenting?</string>
     <string name="learn_about_description">STAR Parenting is a method and a set of points and tools. STAR Parenting is a powerful, focused approach to child guidance. STAR Parenting gives you a problem-solving process,
         5 general strategies, and 15 practical tools. STAR Parenting can be used by parents, teachers, caregivers, counselors – anyone who works with children.</string>
-    <string name="resources_description">STAR Parenting Resources.</string>
+    <string name="resources_description">STAR Resources.</string>
     <string name="learn_about_subheading2">Get Started with Star Parenting</string>
-    <string name="learn_about_process_btn">STAR Parenting Process</string>
-    <string name="problem_solving_btn">Problem Solving Guide</string>
+    <string name="learn_about_process_btn">STAR Process</string>
+    <string name="problem_solving_btn">Problem Solving Buddy</string>
     <string name="learn_about_points_btn">Star Points</string>
-    <string name="learn_about_resources_btn">STAR Parenting Resources</string>
+    <string name="learn_about_resources_btn">STAR Resources</string>
     <string name="learn_about_btn_description">We created some activites to help you get ideas about your child and common behaviors you are trying to understand and direct. Tap below to explore the STAR Parenting methods.</string>
     <string name="learn_about_process_title">The STAR Parenting Process</string>
     <string name="learn_about_process_desc">The process is based on the word S-T-A-R and helps you create a plan to resolve your problem. The process encourages you to consider: the child\'s developmental stage and experience, the child\'s temperament, your long-term goals for the child, and your values.</string>
@@ -52,7 +52,7 @@
     <string name="quick_idea_goal">Goal:</string>
     <string name="quick_idea_how">How to use:</string>
     <string name="quick_idea_examples">Examples:</string>
-    <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Tools >]]></string>
+    <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Points & Tools >]]></string>
     <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
     <string name="learn_about_points_desc">Parenting is easier when have many options. STAR Parenting offers you five strategies (points) and 15 parent-tested tools.</string>
 

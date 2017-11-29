@@ -7,11 +7,14 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="com.starparent.starparent.AboutThisAppActivity">
 
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
-        android:layout_width="411dp"
-        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/rainbow_repeat"
+        android:textColor="@color/black"
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,18 +54,18 @@ tools:context="com.starparent.starparent.AboutThisAppActivity">
         app:layout_constraintTop_toBottomOf="@+id/learn_about_title" />
 
 
-<Button
-    android:id="@+id/learn_about_process_btn"
-    android:layout_width="300dp"
-    android:layout_height="50dp"
-    android:text="@string/learn_about_process_btn"
-    android:layout_marginRight="8dp"
-    app:layout_constraintRight_toRightOf="parent"
-    android:layout_marginLeft="8dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginTop="16dp"
-    style="@style/colorButton.yellowButton"
-    app:layout_constraintTop_toBottomOf="@+id/learn_about_btn_description" />
+    <Button
+        android:id="@+id/learn_about_process_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/learn_about_process_btn"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        style="@style/colorButton.blueButton"
+        app:layout_constraintTop_toBottomOf="@+id/learn_about_btn_description" />
 
     <Button
         android:id="@+id/learn_about_points_btn"
@@ -74,7 +77,7 @@ tools:context="com.starparent.starparent.AboutThisAppActivity">
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="16dp"
-        style="@style/colorButton.greenButton"
+        style="@style/colorButton.rainbowButton"
 
         app:layout_constraintTop_toBottomOf="@+id/learn_about_process_btn" />
 

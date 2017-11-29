@@ -8,4 +8,13 @@
     tools:context="com.starparent.starparent.IdeaBankMainActivity"
     tools:showIn="@layout/activity_idea_bank_main">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
 </android.support.constraint.ConstraintLayout>

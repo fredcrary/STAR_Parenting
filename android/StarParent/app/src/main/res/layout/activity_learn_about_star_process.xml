@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     tools:context="com.starparent.starparent.AboutThisAppActivity">
 
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
-        android:layout_width="411dp"
-        android:layout_height="64dp"
-        android:background="@color/greenBarBG"
-        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/rainbow_repeat"
+        android:textColor="@color/black"
         android:minHeight="?attr/actionBarSize"
         app:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
