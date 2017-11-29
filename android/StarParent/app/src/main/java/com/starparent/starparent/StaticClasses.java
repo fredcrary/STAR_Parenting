@@ -114,12 +114,12 @@ public class StaticClasses {
         public final List<String> ageGroups;       //TODO: Verify a) that this is actually a String and b) that it's necessary at all
         public final String goal;
         public final String reality_check;
-        public static transient List<IdeasBankDescription> descriptions;
+        public final String description;
         public static transient List<IdeasBankIdea> ideas;
-        protected IdeasBankProblem(String title, List<String> ageGroups, List<IdeasBankDescription> descriptions, String goal, String reality_check, List<IdeasBankIdea> ideas) {
+        protected IdeasBankProblem(String title, List<String> ageGroups, String description, String goal, String reality_check, List<IdeasBankIdea> ideas) {
             this.title = title;
             this.ageGroups = ageGroups;
-            this.descriptions = descriptions;
+            this.description = description;
             this.goal = goal;
             this.reality_check = reality_check;
             this.ideas = ideas;

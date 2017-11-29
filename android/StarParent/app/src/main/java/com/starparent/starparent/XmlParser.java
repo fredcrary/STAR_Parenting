@@ -82,7 +82,6 @@ public class XmlParser {
         String expl = null;
         String link = null;
 
-//        parser.require(XmlPullParser.START_TAG, ns, "tip");
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
@@ -268,8 +267,8 @@ public class XmlParser {
         String title      = null;
         String goal       = null;
         String reality    = null;
+        String desc       = null;
         List<IdeasBankIdea> ideas           = new ArrayList<>();
-        List<IdeasBankDescription> examples = new ArrayList<>();
         List<String> ageGroups              = new ArrayList<>();
 
         parser.require(XmlPullParser.START_TAG, ns, "problem");
@@ -286,7 +285,7 @@ public class XmlParser {
                     ageGroups.add(readText(parser));
                     break;
                 case "description":
-                    examples.add(readIdeasBankDescription(parser));
+                    desc = (readText(parser));
                     break;
                 case "goal":
                     goal = readText(parser);
@@ -301,7 +300,7 @@ public class XmlParser {
                     skip(parser);
             }
         }
-        return new IdeasBankProblem(title, ageGroups, examples, goal, reality, ideas);
+        return new IdeasBankProblem(title, ageGroups, desc, goal, reality, ideas);
     }
 
     private IdeasBankIdea readIdeaBankIdea(XmlPullParser parser)  throws XmlPullParserException, IOException {

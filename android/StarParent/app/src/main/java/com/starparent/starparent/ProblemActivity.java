@@ -74,10 +74,8 @@ public class ProblemActivity extends AppCompatActivity {
         //Build the detailed TextView
         StringBuilder htmlString = new StringBuilder();
         htmlString.append("<h2>" + problem.title + "</h2>");
-        for (IdeasBankDescription description : problem.descriptions) {
-            htmlString.append("<h4>Description:</h4>");
-            htmlString.append("<p>" + description.text + "</p>");
-        }
+        htmlString.append("<h4>Description:</h4>");
+        htmlString.append("<p>" + problem.description + "</p>");
         htmlString.append("<h4>Goal: </h4>");
         htmlString.append("<p>" + problem.goal + "</p>");
         htmlString.append("<h4>Reality Check: </h4>");
