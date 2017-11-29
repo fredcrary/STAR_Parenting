@@ -64,6 +64,9 @@ public class XmlParser {
                 case "process_tutorial":
                     entries.add(readProcessTutorial(parser));
                     break;
+                case "daily_tip":
+                    entries.add(readDailyTips(parser));
+                    break;
                 //TODO: Various other case statements
                 default:
                     Log.d(TAG, "Unexpected XML tag, nothing to render.");
@@ -71,6 +74,35 @@ public class XmlParser {
             }
         }
         return entries;
+    }
+
+    private DailyTip readDailyTips(XmlPullParser parser) throws XmlPullParserException, IOException {
+        Log.d(TAG, "Reading daily_tip.xml");
+        String text = null;
+        String expl = null;
+        String link = null;
+
+//        parser.require(XmlPullParser.START_TAG, ns, "tip");
+        while (parser.next() != XmlPullParser.END_TAG) {
+            if (parser.getEventType() != XmlPullParser.START_TAG) {
+                continue;
+            }
+            String tagName = parser.getName();
+            switch (tagName) {
+                case "text":
+                    text = readText(parser);
+                    break;
+                case "explanation":
+                    expl = readText(parser);
+                    break;
+                case "link":
+                    link = readText(parser);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return new DailyTip(text, expl, link);
     }
 
     private ProcessTutorialStep readProcessTutorial(XmlPullParser parser) throws XmlPullParserException, IOException {

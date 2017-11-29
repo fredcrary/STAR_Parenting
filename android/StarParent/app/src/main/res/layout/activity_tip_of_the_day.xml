@@ -10,7 +10,20 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
 
     <include layout="@layout/content_tip_of_the_day" />
 
