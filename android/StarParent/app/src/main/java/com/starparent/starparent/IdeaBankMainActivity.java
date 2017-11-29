@@ -58,6 +58,7 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
 //        htmlString.append("<h3>Choose age group: </h3>");
 //        textView.setText(Html.fromHtml(htmlString.toString()));
 
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
