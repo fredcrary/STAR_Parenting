@@ -18,12 +18,14 @@
 
     <Button
         android:id="@+id/text_view_button"
-        style="@style/colorButton"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="65dp"
-        android:textAlignment="center"
-        android:visibility="visible" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:visibility="visible"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
 
 </RelativeLayout>
