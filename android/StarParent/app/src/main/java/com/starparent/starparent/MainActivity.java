@@ -16,6 +16,43 @@ public class MainActivity extends BaseNavigationDrawerActivity {
         getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
         setTitle("STAR Parenting");
 
+        Button btnStopFocus = (Button)findViewById(R.id.btnStopFocus);
+        btnStopFocus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StarProcessMainActivity.class);
+                intent.putExtra("step", 0);
+                startActivity(intent);
+            }
+        });
+        Button btnThinkIdeas = (Button)findViewById(R.id.btnThinkIdeas);
+        btnThinkIdeas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StarProcessMainActivity.class);
+                intent.putExtra("step", 1);
+                startActivity(intent);
+            }
+        });
+        Button btnActEffectively = (Button)findViewById(R.id.btnActEffectively);
+        btnActEffectively.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StarProcessMainActivity.class);
+                intent.putExtra("step", 2);
+                startActivity(intent);
+            }
+        });
+        Button btnReviewRevise = (Button)findViewById(R.id.btnReviewRevise);
+        btnReviewRevise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StarProcessMainActivity.class);
+                intent.putExtra("step", 3);
+                startActivity(intent);
+            }
+        });
+
         //Quick Ideas (Magic 8-ball) Button
         Button btn_quick_ideas_main = (Button)findViewById(R.id.btn_quick_ideas_main);
         btn_quick_ideas_main.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +88,6 @@ public class MainActivity extends BaseNavigationDrawerActivity {
                 startActivity(new Intent(MainActivity.this, SplashActivity.class));
             }
         });
-        
+
     }
 }

@@ -1,5 +1,6 @@
 package com.starparent.starparent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -41,9 +43,21 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
             e.printStackTrace();
         }
 
+        TextView lblPointTitle = (TextView)findViewById(R.id.lblPointHeader);
+        TextView lblGoal = (TextView)findViewById(R.id.lblGoal);
+        TextView lblExplaination = (TextView)findViewById(R.id.lblExplaination);
+
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+
         //Points looks good -- Do what you will with them!  :)
         if (points != null) {
+            int index = (int)b.get("point");
             Log.d(TAG, points.toString());
+
+            lblPointTitle.setText(points.get(index).name);
+            lblGoal.setText(points.get(index).goal);
+            lblExplaination.setText(points.get(index).explanation);
         }
     }
 

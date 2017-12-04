@@ -99,7 +99,7 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
                 startActivity(new Intent(this,StarProcessMainActivity.class));
                 break;
             case R.id.nav_points:
-                startActivity(new Intent(this, StarPointsActivity.class));
+                startActivity(new Intent(this, StarPointsMainActivity.class));
                 break;
 
             //Problem Solving
