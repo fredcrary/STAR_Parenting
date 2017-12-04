@@ -48,7 +48,7 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
         Bundle b = i.getExtras();
 
         //Steps looks good -- Do what you will with them!  :)
-        if (steps != null) {
+        if (steps != null && b != null) {
             Log.d(TAG, steps.toString());
             int index = (int)b.get("step");
 

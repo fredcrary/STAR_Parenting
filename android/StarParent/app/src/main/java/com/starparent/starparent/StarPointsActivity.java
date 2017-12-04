@@ -51,7 +51,7 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
         Bundle b = i.getExtras();
 
         //Points looks good -- Do what you will with them!  :)
-        if (points != null) {
+        if (points != null && b != null) {
             int index = (int)b.get("point");
             Log.d(TAG, points.toString());
 
