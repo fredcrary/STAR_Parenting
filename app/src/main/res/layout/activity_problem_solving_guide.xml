@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.starparent.starparent.ProblemSolvingGuideActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            />
+
+    <TextView
+        android:id="@+id/ps_guide_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/problem_solving_guide_intro" />
+
+    <TextView
+        android:id="@+id/ps_guide_background_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ps_guide_background"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ps_guide_background_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine"
+        android:lines="4" />
+
+        <Button
+            android:id="@+id/expandableButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton1"
+            android:text="@string/stop_focus"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:el_duration="1000"
+            app:el_expanded="true"
+            app:el_parallax="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/psGuideCollectDataTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/collect_data"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/psGuideChildAgeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/age_of_child" />
+
+                <EditText
+                    android:id="@+id/childAgeInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/psGuideLengthTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/LengthInput"
+                    android:text="@string/problem_length" />
+
+                <EditText
+                    android:id="@+id/LengthInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <Button
+            android:id="@+id/expandableButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton2"
+            android:text="@string/think_of_ideas"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:el_duration="1000"
+            app:el_expanded="false"
+            app:el_parallax="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/psGuideAvoidTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avoid_the_problem"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/psGuideChangeThingsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/change_things"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/changeThingsInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="15"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/psGuideReduceStressTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/reduce_stress"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/reduceStressInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="15"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/psGuideTwoYesTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/two_yeses"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/twoYesInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="15"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        <Button
+            android:id="@+id/expandableButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton3"
+            android:text="@string/act_effectively"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:el_duration="1000"
+            app:el_expanded="false"
+            app:el_parallax="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/psGuideIdeasTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ideas"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/psGuideWhatChangeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/what_will_you_try_first"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/whatChangeInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="15"
+                    android:inputType="text" />
+
+
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <Button
+            android:id="@+id/expandableButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableEnd="@android:drawable/arrow_down_float"
+            android:onClick="expandableButton4"
+            android:text="@string/review_and_revise"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:el_duration="1000"
+            app:el_expanded="false"
+            app:el_parallax="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/psGuideWentWellTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/childAgeInput"
+                    android:text="@string/what_went_well"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/wentWellInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:ems="15"
+                    android:inputType="text" />
+
+
+            </LinearLayout>
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="bottom|end"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/psGuideSaveBtn"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/ps_guide_save_btn" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
