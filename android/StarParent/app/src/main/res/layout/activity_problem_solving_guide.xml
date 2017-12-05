@@ -65,6 +65,7 @@
             android:onClick="expandableButton1"
             android:text="@string/stop_focus"
             android:textAlignment="viewStart"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -276,6 +277,7 @@
             android:onClick="expandableButton2"
             android:text="@string/think_of_ideas"
             android:textAlignment="viewStart"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -614,6 +616,7 @@
             android:onClick="expandableButton3"
             android:text="@string/act_effectively"
             android:textAlignment="viewStart"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -782,6 +785,7 @@
             android:onClick="expandableButton4"
             android:text="@string/review_and_revise"
             android:textAlignment="viewStart"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
