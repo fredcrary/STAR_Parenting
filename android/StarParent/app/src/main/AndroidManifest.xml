@@ -118,7 +118,8 @@
         <activity android:name=".LearnAboutStarProcessActivity" />
         <activity android:name=".LearnAboutStarPointsActivity" />
         <activity android:name=".SplashActivity" />
-        <activity android:name=".StarPointsMainActivity"></activity>
+        <activity android:name=".StarPointsMainActivity" />
+        <activity android:name=".StarPointTools"></activity>
     </application>
 
 </manifest>

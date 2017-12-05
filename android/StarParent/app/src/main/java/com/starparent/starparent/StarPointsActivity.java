@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -47,17 +48,59 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
         TextView lblGoal = (TextView)findViewById(R.id.lblGoal);
         TextView lblExplaination = (TextView)findViewById(R.id.lblExplaination);
 
+        Button btnToolOne = (Button)findViewById(R.id.btnToolOne);
+        Button btnToolTwo = (Button)findViewById(R.id.btnToolTwo);
+        Button btnToolThree = (Button)findViewById(R.id.btnToolThree);
+
         Intent i = getIntent();
         Bundle b = i.getExtras();
 
         //Points looks good -- Do what you will with them!  :)
         if (points != null && b != null) {
-            int index = (int)b.get("point");
+            final int index = (int)b.get("point");
             Log.d(TAG, points.toString());
 
             lblPointTitle.setText(points.get(index).name);
             lblGoal.setText(points.get(index).goal);
             lblExplaination.setText(points.get(index).explanation);
+
+            String tool1 = points.get(index).tools.get(0).name;
+            String tool2 = points.get(index).tools.get(1).name;
+            String tool3 = points.get(index).tools.get(2).name;
+
+            btnToolOne.setText(tool1);
+            btnToolTwo.setText(tool2);
+            btnToolThree.setText(tool3);
+
+            btnToolOne.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(StarPointsActivity.this, StarPointTools.class);
+                    intent.putExtra("point", index);
+                    intent.putExtra("tool", 0);
+                    startActivity(intent);
+                }
+            });
+
+            btnToolTwo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(StarPointsActivity.this, StarPointTools.class);
+                    intent.putExtra("point", index);
+                    intent.putExtra("tool", 1);
+                    startActivity(intent);
+                }
+            });
+
+            btnToolThree.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(StarPointsActivity.this, StarPointTools.class);
+                    intent.putExtra("point", index);
+                    intent.putExtra("tool", 2);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
