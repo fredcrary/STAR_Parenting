@@ -192,6 +192,258 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
                     "What you want the child to do instead of what they are doing\n\n" + desiredInput.getText().toString() + "\n\n\n";
         }
 
+        //Think of Ideas
+        //Change things
+        String changeThings;
+        EditText changeThingsInput = (EditText)findViewById(R.id.changeThingsInput);
+        if (TextUtils.isEmpty(changeThingsInput.getText())) {
+            changeThings =
+                    "Change Things\n\n" + "No answer " + "\n\n\n";
+        }else{
+            changeThings =
+                    "Change Things\n\n" + changeThingsInput.getText().toString() + "\n\n\n";
+        }
+
+        //Reduce Stress
+        String reduceStress;
+        EditText reduceStressInput = (EditText)findViewById(R.id.reduceStressInput);
+        if (TextUtils.isEmpty(reduceStressInput.getText())) {
+            reduceStress =
+                    "Reduce Stress\n\n" + "No answer " + "\n\n\n";
+        }else{
+            reduceStress =
+                    "Reduce Stress\n\n" + reduceStressInput.getText().toString() + "\n\n\n";
+        }
+
+        //Two yeses
+        String twoYeses;
+        EditText twoYesInput = (EditText)findViewById(R.id.twoYesInput);
+        if (TextUtils.isEmpty(twoYesInput.getText())) {
+            twoYeses =
+                    "Two yeses\n\n" + "No answer " + "\n\n\n";
+        }else{
+            twoYeses =
+                    "Two yeses\n\n" + twoYesInput.getText().toString() + "\n\n\n";
+        }
+
+        //Attention
+        String attention;
+        EditText attentionInput = (EditText)findViewById(R.id.attentionInput);
+        if (TextUtils.isEmpty(attentionInput.getText())) {
+            attention =
+                    "Attention\n\n" + "No answer " + "\n\n\n";
+        }else{
+            attention =
+                    "Attention\n\n" + attentionInput.getText().toString() + "\n\n\n";
+        }
+
+        //Praise
+        String praise;
+        EditText praiseInput = (EditText)findViewById(R.id.praiseInput);
+        if (TextUtils.isEmpty(praiseInput.getText())) {
+            praise =
+                    "Praise\n\n" + "No answer " + "\n\n\n";
+        }else{
+            praise =
+                    "Praise\n\n" + praiseInput.getText().toString() + "\n\n\n";
+        }
+
+        //Rewards
+        String rewards;
+        EditText rewardsInput = (EditText)findViewById(R.id.rewardsInput);
+        if (TextUtils.isEmpty(rewardsInput.getText())) {
+            rewards =
+                    "Rewards\n\n" + "No answer " + "\n\n\n";
+        }else{
+            rewards =
+                    "Rewards\n\n" + rewardsInput.getText().toString() + "\n\n\n";
+        }
+
+        //Simple Listening
+        String simple;
+        EditText simpleListenInput = (EditText)findViewById(R.id.simpleListenInput);
+        if (TextUtils.isEmpty(simpleListenInput.getText())) {
+            simple =
+                    "Simple Listening\n\n" + "No answer " + "\n\n\n";
+        }else{
+            simple =
+                    "Simple Listening\n\n" + simpleListenInput.getText().toString() + "\n\n\n";
+        }
+        //Active listening
+        String active;
+        EditText ActListenInput = (EditText)findViewById(R.id.ActListenInput);
+        if (TextUtils.isEmpty(ActListenInput.getText())) {
+            active =
+                    "Active Listening\n\n" + "No answer " + "\n\n\n";
+        }else{
+            active =
+                    "Active Listenin\n\n" + ActListenInput.getText().toString() + "\n\n\n";
+        }
+        //Grant in fantasy
+        String grant;
+        EditText grantFanInput = (EditText)findViewById(R.id.grantFanInput);
+        if (TextUtils.isEmpty(grantFanInput.getText())) {
+            grant =
+                    "Grant in fantasy\n\n" + "No answer " + "\n\n\n";
+        }else{
+            grant =
+                    "Grant in fantasy\n\n" + grantFanInput.getText().toString() + "\n\n\n";
+        }
+
+        //clear rules
+        String rules;
+        EditText clearRulesInput = (EditText)findViewById(R.id.grantFanInput);
+        if (TextUtils.isEmpty(clearRulesInput.getText())) {
+            rules =
+                    "Clear Rules\n\n" + "No answer " + "\n\n\n";
+        }else{
+            rules =
+                    "Clear Rules\n\n" + clearRulesInput.getText().toString() + "\n\n\n";
+        }
+        //Grant in fantasy
+        String consequences;
+        EditText consequencesInput = (EditText)findViewById(R.id.consequencesInput);
+        if (TextUtils.isEmpty(consequencesInput.getText())) {
+            consequences =
+                    "Consequences\n\n" + "No answer " + "\n\n\n";
+        }else{
+            consequences =
+                    "Consequences\n\n" + consequencesInput.getText().toString() + "\n\n\n";
+        }
+        //betterWay
+        String betterWay;
+        EditText betterWayInput = (EditText)findViewById(R.id.betterWayInput);
+        if (TextUtils.isEmpty(betterWayInput.getText())) {
+            betterWay =
+                    "A Better Way\n\n" + "No answer " + "\n\n\n";
+        }else{
+            betterWay =
+                    "A Better Way\n\n" + betterWayInput.getText().toString() + "\n\n\n";
+        }
+
+        //model
+        String model;
+        EditText modelInput = (EditText)findViewById(R.id.modelInput);
+        if (TextUtils.isEmpty(modelInput.getText())) {
+            model =
+                    "Model\n\n" + "No answer " + "\n\n\n";
+        }else{
+            model =
+                    "Model\n\n" + modelInput.getText().toString() + "\n\n\n";
+        }
+        //Redo it right
+        String redo;
+        EditText redoInput = (EditText)findViewById(R.id.redoInput);
+        if (TextUtils.isEmpty(redoInput.getText())) {
+            redo =
+                    "Redo it right\n\n" + "No answer " + "\n\n\n";
+        }else{
+            redo =
+                    "Redo it right\n\n" + redoInput.getText().toString() + "\n\n\n";
+        }
+        //Shaping
+        String shaping;
+        EditText shapingInput = (EditText)findViewById(R.id.shapingInput);
+        if (TextUtils.isEmpty(shapingInput.getText())) {
+            shaping =
+                    "Shaping\n\n" + "No answer " + "\n\n\n";
+        }else{
+            shaping =
+                    "Shaping\n\n" + shapingInput.getText().toString() + "\n\n\n";
+        }
+
+        //Act Effectively
+        //tryFirst
+        String tryFirst;
+        EditText whatChangeInput = (EditText)findViewById(R.id.whatChangeInput);
+        if (TextUtils.isEmpty(whatChangeInput.getText())) {
+            tryFirst =
+                    "What will you try first?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            tryFirst =
+                    "What will you try first?\n\n" + whatChangeInput.getText().toString() + "\n\n\n";
+        }
+
+        //roadblocks
+        String roadblocks;
+        EditText roadblocksInput = (EditText)findViewById(R.id.roadblocksInput);
+        if (TextUtils.isEmpty(roadblocksInput.getText())) {
+            roadblocks =
+                    "What might interfere with your success?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            roadblocks =
+                    "What might interfere with your success?\n\n" + whatChangeInput.getText().toString() + "\n\n\n";
+        }
+
+        //support
+        String support;
+        EditText supportInput = (EditText)findViewById(R.id.supportInput);
+        if (TextUtils.isEmpty(supportInput.getText())) {
+            support =
+                    "How can you protect yourself from the problem?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            support =
+                    "How can you protect yourself from the problem?\n\n" + supportInput.getText().toString() + "\n\n\n";
+        }
+
+        //make a plan
+        String makePlan;
+        EditText makePlanInput = (EditText)findViewById(R.id.makePlanInput);
+        if (TextUtils.isEmpty(makePlanInput.getText())) {
+            makePlan =
+                    "What will you need?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            makePlan =
+                    "What will you need?\n\n" + makePlanInput.getText().toString() + "\n\n\n";
+        }
+        //how long
+        String howLong;
+        EditText howLongInput = (EditText)findViewById(R.id.howLongInput);
+        if (TextUtils.isEmpty(howLongInput.getText())) {
+            howLong =
+                    "How long will you contine this plan?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            howLong =
+                    "How long will you contine this plan?\n\n" + howLongInput.getText().toString() + "\n\n\n";
+        }
+
+        //Review and Revise
+        //wentWell
+        String wentWell;
+        EditText wentWellInput = (EditText)findViewById(R.id.wentWellInput);
+        if (TextUtils.isEmpty(wentWellInput.getText())) {
+            wentWell = "What went well?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            wentWell = "What went well?\n\n" + wentWellInput.getText().toString() + "\n\n\n";
+        }
+        //whoNeeds
+        String whoNeeds;
+        EditText whoNeedsInput = (EditText)findViewById(R.id.whoNeedsInput);
+        if (TextUtils.isEmpty(whoNeedsInput.getText())) {
+            whoNeeds = "Who needs to change?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            whoNeeds = "Who needs to change?\n\n" + whoNeedsInput.getText().toString() + "\n\n\n";
+        }
+        //tryNext
+        String tryNext;
+        EditText tryNextInput = (EditText)findViewById(R.id.tryNextInput);
+        if (TextUtils.isEmpty(tryNextInput.getText())) {
+            tryNext = "What will you try next? For how long?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            tryNext = "What will you try next? For how long?\n\n" + tryNextInput.getText().toString() + "\n\n\n";
+        }
+        //wentWell
+        String future;
+        EditText futureInput = (EditText)findViewById(R.id.futureInput);
+        if (TextUtils.isEmpty(futureInput.getText())) {
+            future = "What have you learned for the future?\n\n" + "No answer " + "\n\n\n";
+        }else{
+            future = "What have you learned for the future?\n\n" + futureInput.getText().toString() + "\n\n\n";
+        }
+
+
+
+
         //Attempts to write data to text file
         try {
             fos.write(background.getBytes());
@@ -221,6 +473,51 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
             fos.write("\n\nDesired Behavior\n\n".getBytes());
             fos.write(desiredbeh.getBytes());
 
+            fos.write("\nThink of Ideas\n\n".getBytes());
+            fos.write("\n\nAvoid the Problem\n".getBytes());
+            fos.write(changeThings.getBytes());
+            fos.write(reduceStress.getBytes());
+            fos.write(twoYeses.getBytes());
+
+            fos.write("\n\nRespond to cooperation\n".getBytes());
+            fos.write(attention.getBytes());
+            fos.write(praise.getBytes());
+            fos.write(rewards.getBytes());
+
+            fos.write("\n\nAcknowledge Feelings\n".getBytes());
+            fos.write(simple.getBytes());
+            fos.write(active.getBytes());
+            fos.write(grant.getBytes());
+
+            fos.write("\n\nSet Limits\n".getBytes());
+            fos.write(rules.getBytes());
+            fos.write(consequences.getBytes());
+            fos.write(betterWay.getBytes());
+
+            fos.write("\n\nTeach New Skills\n".getBytes());
+            fos.write(model.getBytes());
+            fos.write(redo.getBytes());
+            fos.write(shaping.getBytes());
+
+            fos.write("\nAct Effectively\n\n".getBytes());
+            fos.write("\n\nIdeas\n".getBytes());
+            fos.write(tryFirst.getBytes());
+
+            fos.write("\n\nRoadblocks\n".getBytes());
+            fos.write(roadblocks.getBytes());
+
+            fos.write("\n\nSupport\n".getBytes());
+            fos.write(support.getBytes());
+
+            fos.write("\n\nMake a plan\n".getBytes());
+            fos.write(makePlan.getBytes());
+            fos.write(howLong.getBytes());
+
+            fos.write("\nReview and Revise\n\n".getBytes());;
+            fos.write(wentWell.getBytes());
+            fos.write(whoNeeds.getBytes());
+            fos.write(tryNext.getBytes());
+            fos.write(future.getBytes());
 
 
         } catch (IOException e) {
