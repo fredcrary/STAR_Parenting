@@ -136,5 +136,3 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_problem_solver_main" />
     </android.support.constraint.ConstraintLayout>
-
-</LinearLayout>
