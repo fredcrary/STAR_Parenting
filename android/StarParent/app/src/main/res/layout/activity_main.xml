@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,88 +15,35 @@
         android:background="@drawable/rainbow_repeat"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/img_star"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_quick_ideas_main"
             android:layout_centerHorizontal="true"
-            android:paddingTop="10dp"
-            app:srcCompat="@drawable/star_points_no_text_large" />
-
-        <Button
-            android:id="@+id/btnStopFocus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/transparent"
-            android:padding="1dp"
-            android:text="S - Stop and Focus"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/btnThinkIdeas" />
-
-        <Button
-            android:id="@+id/btnThinkIdeas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/transparent"
-            android:padding="1dp"
-            android:text="T - Think of Ideas"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnActEffectively"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/btnThinkIdeas"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/transparent"
-            android:padding="1dp"
-            android:text="A - Act Effectively"
-            android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@+id/btnThinkIdeas" />
-
-        <Button
-            android:id="@+id/btnReviewRevise"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnActEffectively"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/transparent"
-            android:padding="1dp"
-            android:text="R - Review and Revise"
-            app:layout_constraintTop_toBottomOf="@+id/btnActEffectively" />
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            app:srcCompat="@drawable/star_process" />
 
         <Button
             android:id="@+id/btn_quick_ideas_main"
             style="@style/colorButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:minWidth="300dp"
+            android:layout_above="@+id/btn_learn_about_main"
+            android:layout_centerHorizontal="true"
             android:text="@string/btn_quick_ideas"
-            android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="spread"
-            app:layout_constraintWidth_min="300dp" />
+            android:visibility="visible" />
 
 
         <Button
@@ -106,10 +54,7 @@
             android:layout_above="@+id/btn_problem_solver_main"
             android:layout_centerHorizontal="true"
             android:text="@string/btn_learn_about"
-            android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_quick_ideas_main" />
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/btn_problem_solver_main"
@@ -119,10 +64,7 @@
             android:layout_above="@+id/btn_splash_screen"
             android:layout_centerHorizontal="true"
             android:text="@string/btn_problem_solver"
-            android:visibility="visible"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_learn_about_main" />
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/btn_splash_screen"
@@ -130,9 +72,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:padding="0dp"
-            android:text="Splash"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_problem_solver_main" />
-    </android.support.constraint.ConstraintLayout>
+            android:text="Splash" />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btn_splash_screen"
+            android:layout_alignTop="@+id/img_star"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="81dp"
+            android:visibility="invisible"
+            app:srcCompat="@android:drawable/ic_menu_help" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
