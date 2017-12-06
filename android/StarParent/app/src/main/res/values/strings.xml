@@ -93,4 +93,5 @@
 
     <string name="quick_idea_goal_header">What is the goal?</string>
     <string name="btn_star_points2">Tap here to see the all the Star Tools with how-tos and examples</string>
+    <string name="tooltip_process">Tap a step to explore \n the STAR Parenting \n Process</string>
 </resources>

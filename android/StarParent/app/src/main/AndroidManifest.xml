@@ -124,6 +124,8 @@
             android:parentActivityName=".ProblemSolvingGuideActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DisplayPreviousPSGuide"></activity>
+        <activity android:name=".StarPointsMainActivity" />
+        <activity android:name=".StarPointTools"></activity>
     </application>
 
 </manifest>
