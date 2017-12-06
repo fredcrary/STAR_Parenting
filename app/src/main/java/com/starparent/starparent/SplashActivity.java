@@ -31,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
     private final String tag = "daily_tip";
     private final String xmlFileName = tag + ".xml";
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
-    private boolean continueFlag = false;
+    private boolean continueFlag = true;
 
     //Classes we need
     Utils utils = new Utils();
