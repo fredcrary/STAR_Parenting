@@ -11,17 +11,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import com.tooltip.Tooltip;
 
-public class LearnAboutStarPointsActivity extends AppCompatActivity {
+public class LearnAboutStarPointsActivity extends BaseNavigationDrawerActivity {
 
     ImageButton learn_about_points_imageBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn_about_star_points);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_learn_about_star_points, frameLayout);
+        setTitle("STAR Points & Tools");
 
         //Star Process ImageButton
         learn_about_points_imageBtn = (ImageButton) findViewById(R.id.learn_about_points_imageButton);

@@ -9,17 +9,16 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class LearnAboutStarProcessActivity extends AppCompatActivity {
+public class LearnAboutStarProcessActivity extends BaseNavigationDrawerActivity {
 
     ImageButton learn_about_process_imageBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn_about_star_process);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_learn_about_star_process, frameLayout);
+        setTitle("STAR Process");
 
         //Star Process ImageButton
         learn_about_process_imageBtn = (ImageButton) findViewById(R.id.learn_about_process_imageButton);
@@ -29,7 +28,5 @@ public class LearnAboutStarProcessActivity extends AppCompatActivity {
                 startActivity(new Intent(LearnAboutStarProcessActivity.this, StarProcessMainActivity.class));
             }
         });
-
     }
-
 }
