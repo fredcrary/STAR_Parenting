@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_splash, frameLayout);
+        setTitle("STAR Parenting");
+
         final Button continueButton = (Button) findViewById(R.id.btn_continue);
         continueButton.setVisibility(View.INVISIBLE);
         continueButton.postDelayed(new Runnable() {
