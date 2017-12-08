@@ -1,9 +1,11 @@
 package com.starparent.starparent;
 
+import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -39,9 +41,19 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
             e.printStackTrace();
         }
 
+        TextView lblName = (TextView)findViewById(R.id.lblStepName);
+        TextView lblDetail = (TextView)findViewById(R.id.lblStepDetail);
+
+        Intent i = getIntent();
+        Bundle b = i.getExtras();
+
         //Steps looks good -- Do what you will with them!  :)
-        if (steps != null) {
+        if (steps != null && b != null) {
             Log.d(TAG, steps.toString());
+            int index = (int)b.get("step");
+
+            lblName.setText(steps.get(index).name);
+            lblDetail.setText(steps.get(index).detail);
         }
     }
 

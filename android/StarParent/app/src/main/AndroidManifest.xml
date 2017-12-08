@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,7 +39,8 @@
         <activity
             android:name=".ProblemSolverMainActivity"
             android:label="@string/title_activity_problem_solver"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
@@ -117,6 +119,13 @@
         <activity android:name=".LearnAboutStarProcessActivity" />
         <activity android:name=".LearnAboutStarPointsActivity" />
         <activity android:name=".SplashActivity" />
+        <activity
+            android:name=".ListOfPreviousPSGuide"
+            android:parentActivityName=".ProblemSolvingGuideActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DisplayPreviousPSGuide"></activity>
+        <activity android:name=".StarPointsMainActivity" />
+        <activity android:name=".StarPointTools"></activity>
     </application>
 
 </manifest>
