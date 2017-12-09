@@ -53,7 +53,11 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
             case "LearnAboutStarPointsActivity":
             case "LearnAboutStarProcessActivity":
             case "StarPointsActivity":
+            case "StarPointsMainActivity":
             case "MainActivity":
+            case "SplashActivity":
+            case "StarPointTools":
+
 
                 color = "#000000";
                 break;
@@ -124,7 +128,7 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
                 startActivity(new Intent(this,LearnAboutStarProcessActivity.class));
                 break;
             case R.id.nav_points:
-                startActivity(new Intent(this, StarPointsMainActivity.class));
+                startActivity(new Intent(this, LearnAboutStarPointsActivity.class));
                 break;
 
             //Problem Solving

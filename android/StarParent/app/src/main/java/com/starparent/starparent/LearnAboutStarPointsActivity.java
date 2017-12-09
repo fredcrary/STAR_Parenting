@@ -2,13 +2,12 @@ package com.starparent.starparent;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
 import com.tooltip.Tooltip;
 
 public class LearnAboutStarPointsActivity extends BaseNavigationDrawerActivity {
@@ -43,7 +42,7 @@ public class LearnAboutStarPointsActivity extends BaseNavigationDrawerActivity {
         learn_about_points_imageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LearnAboutStarPointsActivity.this, StarPointsActivity.class));
+                startActivity(new Intent(LearnAboutStarPointsActivity.this, StarPointsMainActivity.class));
             }
         });
 

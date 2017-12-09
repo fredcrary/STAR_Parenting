@@ -1,17 +1,19 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class StarPointsMainActivity extends AppCompatActivity {
+public class StarPointsMainActivity extends BaseNavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_star_points_main);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_star_points_main, frameLayout);
+        setTitle("Star Points & Tools");
+
 
         Button btnRespond = (Button)findViewById(R.id.btnRespondCooperation);
         btnRespond.setOnClickListener(new View.OnClickListener() {
