@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">StarParent</string>
     <string name="title_activity_star_process_main">STAR Process</string>
-    <string name="title_activity_idea_bank_main">Idea Bank</string>
+    <string name="title_activity_idea_bank_main">Ideas Bank</string>
     <string name="title_activity_quick_ideas_main">Quick Ideas</string>
     <string name="btn_star_process">STAR Process</string>
     <string name="btn_quick_ideas">Quick Ideas</string>
