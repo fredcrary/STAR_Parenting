@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/rainbow_repeat"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        android:textAppearance="@style/ActivityTitleText.Inverse"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="0dp"
@@ -61,24 +62,17 @@
             style="@style/colorButton.blueButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btn_splash_screen"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:text="@string/btn_problem_solver"
             android:visibility="visible" />
 
-        <Button
-            android:id="@+id/btn_splash_screen"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:text="Splash" />
 
         <ImageView
             android:id="@+id/help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/btn_splash_screen"
+            android:layout_alignEnd="@+id/btn_problem_solver_main"
             android:layout_alignTop="@+id/img_star"
             android:layout_marginEnd="17dp"
             android:layout_marginTop="81dp"

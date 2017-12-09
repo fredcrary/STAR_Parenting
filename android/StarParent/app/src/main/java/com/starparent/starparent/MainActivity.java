@@ -1,16 +1,13 @@
 package com.starparent.starparent;
 
-import android.graphics.Color;
-import android.util.Log;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.ImageSpan;
 
 import com.tooltip.Tooltip;
 
@@ -63,15 +60,6 @@ public class MainActivity extends BaseNavigationDrawerActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LearnAboutStarMainActivity.class));
-            }
-        });
-
-        //Splash Button
-        Button btn_splash_screen = (Button)findViewById(R.id.btn_splash_screen);
-        btn_splash_screen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SplashActivity.class));
             }
         });
 

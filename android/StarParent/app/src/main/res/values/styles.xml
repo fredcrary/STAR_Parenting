@@ -26,6 +26,9 @@
         <item name="android:typeface">sans</item>
     </style>
 
+    <style name="ActivityTitleText.Inverse">
+        <item name="android:textColor">@color/black</item>
+    </style>
     <!-- Custom button styles -->
 
     <!-- core button style -->
