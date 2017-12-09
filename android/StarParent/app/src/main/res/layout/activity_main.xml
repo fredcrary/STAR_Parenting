@@ -6,15 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity">
+    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:textColor="@color/black">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/rainbow_repeat"
-        android:textAppearance="@style/ActivityTitleText.Inverse"
-        android:textStyle="bold" />
+        android:textColorPrimary ="@color/black"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        />
 
     <RelativeLayout
         android:layout_width="0dp"

@@ -1,6 +1,7 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -43,6 +44,29 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //switch color of toolbar title text based on activity
+        String color = "#FFFFFF";
+        String activity = this.getClass().getSimpleName();
+        switch (activity) {
+            case "LearnAboutStarMainActivity":
+            case "LearnAboutStarPointsActivity":
+            case "LearnAboutStarProcessActivity":
+            case "StarPointsActivity":
+            case "MainActivity":
+
+                color = "#000000";
+                break;
+
+            default:
+                Log.d(TAG, "Activity not found");
+                break;
+        }
+        toolbar.setTitleTextColor(Color.parseColor(color));
+
+        //cannot set drawer toggle color with current compatibility less than API 24
+        //toggle.setColor(Color.parseColor(color));
+
 
         //after removing menu drop shadow by setting app elevation
         // to 0 the line below makes sure the app bar stays on top
