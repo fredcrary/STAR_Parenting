@@ -15,15 +15,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ProblemActivity extends AppCompatActivity {
+public class ProblemActivity extends BaseNavigationDrawerActivity {
     private IdeasBankProblem problem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_problem, frameLayout);
+        setTitle("Quick Ideas");
+
         TextView textView = (TextView) findViewById(R.id.textView);
 
         Bundle b = getIntent().getExtras();

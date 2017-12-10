@@ -96,7 +96,8 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
                 startActivity(new Intent(this,LearnAboutStarMainActivity.class));
                 break;
             case R.id.nav_parenting_proc:
-                startActivity(new Intent(this,StarProcessMainActivity.class));
+                //this will cause a blank page, since StarProcessMainActivity needs to know which process is being requested
+                //startActivity(new Intent(this,StarProcessMainActivity.class));
                 break;
             case R.id.nav_points:
                 startActivity(new Intent(this, StarPointsMainActivity.class));
