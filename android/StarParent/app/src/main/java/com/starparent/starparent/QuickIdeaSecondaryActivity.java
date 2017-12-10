@@ -57,7 +57,7 @@ public class QuickIdeaSecondaryActivity extends BaseNavigationDrawerActivity {
         Button btn_star_points2 =(Button)findViewById(R.id.btn_star_points2);
         btn_star_points2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent ii = new Intent(QuickIdeaSecondaryActivity.this, StarPointsActivity.class);
+                Intent ii = new Intent(QuickIdeaSecondaryActivity.this, LearnAboutStarPointsActivity.class);
                 startActivity(ii);
             }
         });
