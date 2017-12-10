@@ -76,10 +76,9 @@
             android:id="@+id/help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/btn_problem_solver_main"
             android:layout_alignTop="@+id/img_star"
-            android:layout_marginEnd="17dp"
-            android:layout_marginTop="81dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="73dp"
             android:visibility="invisible"
             app:srcCompat="@android:drawable/ic_menu_help" />
 
