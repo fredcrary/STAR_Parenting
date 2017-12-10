@@ -35,7 +35,7 @@ public class LearnAboutStarPointsActivity extends BaseNavigationDrawerActivity {
                 .setBackgroundColor(Color.argb(210, 255, 255, 255))
                 .setTextColor(Color.BLACK)
                 .setTextSize(12f)
-                .setText(R.string.tooltip_process);
+                .setText(R.string.tooltip_points);
 
         builder.show();
 

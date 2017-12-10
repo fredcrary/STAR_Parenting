@@ -1,7 +1,6 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -30,7 +29,7 @@ public class StarPointTools extends BaseNavigationDrawerActivity {
         super.onCreate(savedInstanceState);
         onCreateDrawer();
         getLayoutInflater().inflate(R.layout.activity_star_point_tools, frameLayout);
-        setTitle("Star Points");
+        setTitle("Star Points & Tools");
 
         try {
             parseXml();
