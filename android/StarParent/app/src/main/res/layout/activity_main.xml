@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity">
+    tools:context="com.starparent.starparent.BaseNavigationDrawerActivity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:textColor="@color/black">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/rainbow_repeat"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        android:textColorPrimary ="@color/black"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,6 +30,18 @@
             android:layout_centerHorizontal="true"
             android:paddingTop="10dp"
             app:srcCompat="@drawable/star_process_no_text_large" />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_star"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="192dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnStopFocus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_help" />
 
         <Button
             android:id="@+id/btnStopFocus"
@@ -120,7 +137,7 @@
             style="@style/colorButton.blueButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btn_splash_screen"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:text="@string/btn_problem_solver"
             android:visibility="visible"
@@ -140,16 +157,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_problem_solver_main" />
 
-        <ImageView
-            android:id="@+id/help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/btn_splash_screen"
-            android:layout_alignTop="@+id/img_star"
-            android:layout_marginEnd="17dp"
-            android:layout_marginTop="81dp"
-            android:visibility="invisible"
-            app:srcCompat="@android:drawable/ic_menu_help" />
+
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>

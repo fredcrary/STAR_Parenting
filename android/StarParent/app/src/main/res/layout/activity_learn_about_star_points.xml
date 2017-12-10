@@ -1,83 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.starparent.starparent.AboutThisAppActivity">
+    tools:context="com.starparent.starparent.AboutThisAppActivity"
+    android:orientation="vertical">
 
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rainbow_repeat"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@color/black"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/rainbow_repeat"
-        android:minHeight="?attr/actionBarSize"
-        android:textColor="@color/black"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        android:layout_height="match_parent">
 
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/learn_about_points_title"
-        android:layout_width="330dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/learn_about_points_title"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            <TextView
+                android:id="@+id/learn_about_points_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/learn_about_points_title"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="44dp"
+                tools:layout_conversion_absoluteWidth="330dp" />
 
-    <TextView
-        android:id="@+id/learn_about_points_desc"
-        android:layout_width="332dp"
-        android:layout_height="104dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/learn_about_points_desc"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/learn_about_points_title" />
+            <TextView
+                android:id="@+id/learn_about_points_desc"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/learn_about_points_desc"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/learn_about_points_title"
+                tools:layout_conversion_absoluteHeight="104dp"
+                tools:layout_conversion_absoluteWidth="332dp" />
 
-    <ImageButton
-        android:id="@+id/learn_about_points_imageButton"
-        style="@style/Widget.AppCompat.ImageButton"
-        android:layout_width="363dp"
-        android:layout_height="279dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/learn_about_points_desc"
-        app:srcCompat="@drawable/star_points" />
+            <ImageButton
+                android:id="@+id/learn_about_points_imageButton"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="222dp"
+                android:layout_marginTop="72dp"
+                android:background="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.58"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/learn_about_points_desc"
+                app:srcCompat="@drawable/star_points"
+                tools:layout_conversion_absoluteHeight="279dp"
+                tools:layout_conversion_absoluteWidth="363dp" />
 
-    <ImageView
-        android:id="@+id/helpView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+            <ImageView
+                android:id="@+id/helpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="true"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/learn_about_points_imageButton"
+                app:layout_constraintEnd_toEndOf="@+id/learn_about_points_imageButton"
+                app:layout_constraintTop_toTopOf="@+id/learn_about_points_imageButton"
+                app:layout_constraintVertical_bias="0.16"
+                app:srcCompat="@android:drawable/ic_menu_help"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="32dp" />
 
-</android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

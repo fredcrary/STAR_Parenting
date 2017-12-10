@@ -18,7 +18,7 @@
         />
     <item
         android:id="@+id/nav_points"
-        android:title="&#160;&#160;&#160;&#160;&#160;STAR Points Tools"
+        android:title="&#160;&#160;&#160;&#160;&#160;STAR Points &amp; Tools"
         />
     <item
         android:title="&#160;&#160;&#160;&#160;&#160;STAR Tools (Coming Soon)"
@@ -45,6 +45,6 @@
         android:title="STAR Resources" />
     <item
         android:id="@+id/about_this_app"
-        android:title="About the app" />
+        android:title="About this App" />
 
 </menu>

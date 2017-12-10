@@ -1,13 +1,11 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -21,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseNavigationDrawerActivity {
     private final int continueTime = 5000;
     private ProgressBar progressBar;
     private int progressStatus = 0;
@@ -42,7 +40,9 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        onCreateDrawer();
+        getLayoutInflater().inflate(R.layout.activity_splash, frameLayout);
+        setTitle("Star Process");
         progressBar = (ProgressBar) findViewById(R.id.bar_progress_splash);
 
         try {
