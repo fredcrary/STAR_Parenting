@@ -5,7 +5,10 @@ import android.util.Log;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -27,6 +30,8 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
 
     protected List<StaticClasses.ProcessTutorialStep> steps;
 
+    int index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "Rendering the pane");
@@ -41,8 +46,10 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
             e.printStackTrace();
         }
 
-        TextView lblName = (TextView)findViewById(R.id.lblStepName);
-        TextView lblDetail = (TextView)findViewById(R.id.lblStepDetail);
+        final TextView lblName = (TextView) findViewById(R.id.lblStepName);
+        final TextView lblDetail = (TextView) findViewById(R.id.lblStepDetail);
+        Button btnPrevious = (Button) findViewById(R.id.btnPrevious);
+        Button btnNext = (Button) findViewById(R.id.btnNext);
 
         Intent i = getIntent();
         Bundle b = i.getExtras();
@@ -50,11 +57,43 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
         //Steps looks good -- Do what you will with them!  :)
         if (steps != null && b != null) {
             Log.d(TAG, steps.toString());
-            int index = (int)b.get("step");
+            index = (int) b.get("step");
 
             lblName.setText(steps.get(index).name);
             lblDetail.setText(steps.get(index).detail);
         }
+
+        btnPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (index == 0){
+                    index = 3;
+                    lblName.setText(steps.get(index).name);
+                    lblDetail.setText(steps.get(index).detail);
+                }else {
+                    index--;
+                    lblName.setText(steps.get(index).name);
+                    lblDetail.setText(steps.get(index).detail);
+                }
+                Toast.makeText(getApplicationContext(),""+index, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (index == 3){
+                    index = 0;
+                    lblName.setText(steps.get(index).name);
+                    lblDetail.setText(steps.get(index).detail);
+                }else {
+                    index++;
+                    lblName.setText(steps.get(index).name);
+                    lblDetail.setText(steps.get(index).detail);
+                }
+                Toast.makeText(getApplicationContext(),""+index, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     //This should be usable in every ActivityClass
