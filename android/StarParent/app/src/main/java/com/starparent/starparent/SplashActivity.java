@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ExecutionException;
 
 public class SplashActivity extends BaseNavigationDrawerActivity {
     private final int continueTime = 5000;
@@ -32,7 +33,7 @@ public class SplashActivity extends BaseNavigationDrawerActivity {
     private boolean continueFlag = true;
 
     //Classes we need
-    Utils utils = new Utils();
+    //Utils utils = new Utils();
     InputStream stream = null;
     XmlParser parser = new XmlParser();
 
@@ -125,9 +126,21 @@ public class SplashActivity extends BaseNavigationDrawerActivity {
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
-            tips = parser.parse(stream, tag);
+            boolean networkSuccess = false;
+            try {
+                Utils network = new Utils(this);
+                tips = network.execute(URL, tag).get();
+                networkSuccess = true;
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                if (!networkSuccess) {
+                    tips = parser.parse(this.getAssets().open(xmlFileName), tag);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

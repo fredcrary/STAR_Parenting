@@ -10,6 +10,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class StarResourcesActivity extends BaseNavigationDrawerActivity {
     private final String tag = "resources";
@@ -17,7 +18,7 @@ public class StarResourcesActivity extends BaseNavigationDrawerActivity {
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
     InputStream stream = null;
-    Utils utils = new Utils();
+    //Utils utils = new Utils();
     XmlParser parser = new XmlParser();
     protected List<StaticClasses.ResourceEntry> entries;
 
@@ -51,9 +52,21 @@ public class StarResourcesActivity extends BaseNavigationDrawerActivity {
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
-            entries = parser.parse(stream, tag);
+            boolean networkSuccess = false;
+            try {
+                Utils network = new Utils(this);
+                entries = network.execute(URL, tag).get();
+                networkSuccess = true;
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                if (!networkSuccess) {
+                    entries = parser.parse(this.getAssets().open(xmlFileName), tag);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -2,10 +2,6 @@ package com.starparent.starparent;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +12,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class StarPointsActivity extends BaseNavigationDrawerActivity {
     //Standard constants
@@ -25,7 +22,7 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
     //Classes we need
-    Utils utils = new Utils();
+    //Utils utils = new Utils();
     InputStream stream = null;
     XmlParser parser = new XmlParser();
 
@@ -106,12 +103,25 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
 
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
-            points = parser.parse(stream, tag);
+            boolean networkSuccess = false;
+            try {
+                Utils network = new Utils(this);
+                points = network.execute(URL, tag).get();
+                networkSuccess = true;
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                if (!networkSuccess) {
+                    points = parser.parse(this.getAssets().open(xmlFileName), tag);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 }
