@@ -1,14 +1,11 @@
 package com.starparent.starparent;
 
 import android.content.Intent;
-import android.util.Log;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -75,7 +72,6 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
                     lblName.setText(steps.get(index).name);
                     lblDetail.setText(steps.get(index).detail);
                 }
-                Toast.makeText(getApplicationContext(),""+index, Toast.LENGTH_LONG).show();
             }
         });
 
@@ -91,7 +87,6 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
                     lblName.setText(steps.get(index).name);
                     lblDetail.setText(steps.get(index).detail);
                 }
-                Toast.makeText(getApplicationContext(),""+index, Toast.LENGTH_LONG).show();
             }
         });
     }
