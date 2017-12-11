@@ -15,7 +15,9 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="STAR Parenting"
+        app:subtitleTextAppearance="@style/ActivityTitleText" />
 
     <RelativeLayout
         android:layout_width="368dp"
