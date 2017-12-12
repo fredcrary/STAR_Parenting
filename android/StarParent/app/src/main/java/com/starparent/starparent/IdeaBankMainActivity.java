@@ -3,11 +3,9 @@ package com.starparent.starparent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.TextView;
 
 import com.starparent.starparent.StaticClasses.IdeasBankProblem;
 
@@ -17,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     //Standard constants
@@ -26,7 +25,7 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 
     //Classes we need
-    Utils utils = new Utils();
+    //Utils utils = new Utils();
     InputStream stream = null;
     XmlParser parser = new XmlParser();
 
@@ -109,13 +108,30 @@ public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
         return filteredProblems;
     }
 
+    public void setList(List list) {
+        this.problems = list;
+    }
+
     //This should be usable in every ActivityClass
     private void parseXml() throws XmlPullParserException, IOException {
-        stream = utils.isNetworkAvailable() ? parser.downloadUrl(URL) : this.getAssets().open(xmlFileName);
         try {
-            problems = parser.parse(stream, tag);
+            boolean networkSuccess = false;
+            try {
+                Utils network = new Utils(this);
+                problems = network.execute(URL, tag).get();
+                networkSuccess = true;
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                if (!networkSuccess) {
+                    problems = parser.parse(this.getAssets().open(xmlFileName), tag);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
