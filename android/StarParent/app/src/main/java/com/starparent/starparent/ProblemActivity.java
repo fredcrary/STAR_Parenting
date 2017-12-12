@@ -75,13 +75,10 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         //Build the detailed TextView
         StringBuilder htmlString = new StringBuilder();
         htmlString.append("<h2>" + problem.title + "</h2>");
-        htmlString.append("<h4>Description:</h4>");
-        htmlString.append("<p>" + problem.description + "</p>");
-        htmlString.append("<h4>Goal: </h4>");
-        htmlString.append("<p>" + problem.goal + "</p>");
-        htmlString.append("<h4>Reality Check: </h4>");
-        htmlString.append("<p>" + problem.reality_check + "</p>");
-        htmlString.append("<h3>Ideas: </h3>");
+        htmlString.append("<b>Description:</b>  " + problem.description + "<br /><br />");
+        htmlString.append("<b>Goal:</b>  " + problem.goal + "<br /><br />");
+        htmlString.append("<b>Reality Check:</b>  " + problem.reality_check + "<br /><br />");
+        htmlString.append("<b>Ideas:</b>");
 
         //Build the expandable TextViews
         final List<String> expandableListTitle;
