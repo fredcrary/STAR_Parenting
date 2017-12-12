@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/nav_main_screen"
-        android:title="Home Screen" />
+        android:title="Home" />
     <item
         android:id="@+id/nav_tip"
         android:title="Tip of the Day" />

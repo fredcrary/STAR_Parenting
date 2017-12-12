@@ -14,6 +14,7 @@
     <string name="title_activity_tip_of_the_day">Tip of the Day</string>
     <string name="title_activity_problem_solving_guide">Problem Solving Buddy</string>
     <string name="title_activity_about_this_app">About This App</string>
+    <string name="title_activity_learn_about_star_process">STAR Parenting Process</string>
     <string name="about_team_acknowledgement">This app was designed and developed by Jeremy Duke, Mark Pfaff, Mitch Thompson, Rasa Rasiulyte, Travis Kapirsky, and Justin Simmons in the Application Development Program at North Seattle College. </string>
     <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model</string>
     <string name="about_book_acknowledgement">This app is based on and a companion to the book STAR Parenting Tales and Tools by Elizabeth Crary.</string>
@@ -53,6 +54,7 @@
     <string name="quick_idea_how">How to use:</string>
     <string name="quick_idea_examples">Examples:</string>
     <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Points & Tools >]]></string>
+    <string name="learn_process_link"><![CDATA[Do the Star Process >]]></string>
     <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
     <string name="learn_about_points_desc">Parenting is easier when have many options. STAR Parenting offers you five strategies (points) and 15 parent-tested tools.</string>
 
@@ -94,6 +96,6 @@
     <string name="quick_idea_goal_header">What is the goal?</string>
     <string name="btn_star_points2">Tap here to see the all the Star Tools with how-tos and examples</string>
     <string name="tooltip_process">Tap a step to explore \n the STAR Parenting \n Process</string>
-    <string name="tooltip_points">Tap a step to explore \n the STAR Points \n  &amp; Tools</string>
+    <string name="tooltip_points">Tap the star explore the STAR Points</string>
 
 </resources>
