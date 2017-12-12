@@ -54,6 +54,7 @@
     <string name="quick_idea_how">How to use:</string>
     <string name="quick_idea_examples">Examples:</string>
     <string name="quick_ideas_tools_link"><![CDATA[Check out all the Star Points & Tools >]]></string>
+    <string name="learn_process_link"><![CDATA[Do the Star Process >]]></string>
     <string name="quick_ideas_intro">Shake your device to get three different parenting tools.</string>
     <string name="learn_about_points_desc">Parenting is easier when have many options. STAR Parenting offers you five strategies (points) and 15 parent-tested tools.</string>
 
@@ -95,6 +96,6 @@
     <string name="quick_idea_goal_header">What is the goal?</string>
     <string name="btn_star_points2">Tap here to see the all the Star Tools with how-tos and examples</string>
     <string name="tooltip_process">Tap a step to explore \n the STAR Parenting \n Process</string>
-    <string name="tooltip_points">Tap a step to explore \n the STAR Points \n  &amp; Tools</string>
+    <string name="tooltip_points">Tap the star explore the STAR Points</string>
 
 </resources>

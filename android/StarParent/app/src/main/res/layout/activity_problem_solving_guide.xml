@@ -1,921 +1,929 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.starparent.starparent.ProblemSolvingGuideActivity">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:background="@color/blue"
-            android:textColor="@color/white"
-            />
-
-    <TextView
-        android:id="@+id/ps_guide_intro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/problem_solving_guide_intro" />
-
-    <TextView
-        android:id="@+id/psg_background_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/ps_guide_background"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/psg_background_input"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:inputType="text"
-        android:lines="4"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@color/blue"
+        android:textColor="@color/white"
         />
 
-        <Button
-            android:id="@+id/expandableButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@android:drawable/arrow_down_float"
-            android:onClick="expandableButton1"
-            android:text="@string/stop_focus"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    <ScrollView
 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <net.cachapa.expandablelayout.ExpandableLayout
-            android:id="@+id/expandableLayout1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
-            app:el_duration="1000"
-            app:el_expanded="false"
-            app:el_parallax="0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/psGuideCollectDataTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/collect_data"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"/>
-
-                <TextView
-                    android:id="@+id/psGuideChildAgeTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/age_of_child" />
-
-                <EditText
-                    android:id="@+id/childAgeInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="10"
-                    android:inputType="number" />
-
-                <TextView
-                    android:id="@+id/psGuideLengthTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/LengthInput"
-                    android:text="@string/problem_length" />
-
-                <EditText
-                    android:id="@+id/lengthInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgFrequencyTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/frequencyInput"
-                    android:text="@string/psgFrequencyTV" />
-
-                <EditText
-                    android:id="@+id/frequencyInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgValuesTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/psgValuesTV"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgValuesListTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/valuesInput1"
-                    android:text="@string/psgValuesListTV" />
-
-                <EditText
-                    android:id="@+id/valuesInput1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/valuesInput2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/valuesInput3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgDevelopmentTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/psgDevelopmentTV"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgDevelopmentTV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/developmentInput"
-                    android:text="@string/psgDevelopmentTV2" />
-
-                <EditText
-                    android:id="@+id/developmentInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgTemperamentTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/psgTemperamentTV"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgTempListTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/temperamentInput1"
-                    android:text="@string/psgTempListTV" />
-
-                <EditText
-                    android:id="@+id/temperamentInput1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/temperamentInput2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/temperamentInput3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgDesiredTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/psgDesiredTV"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgDesiredTV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/desiredInput"
-                    android:text="@string/psgDesiredTV2" />
-
-                <EditText
-                    android:id="@+id/desiredInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:inputType="text" />
-
-            </LinearLayout>
-
-
-        </net.cachapa.expandablelayout.ExpandableLayout>
-
-        <Button
-            android:id="@+id/expandableButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@android:drawable/arrow_down_float"
-            android:onClick="expandableButton2"
-            android:text="@string/think_of_ideas"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <net.cachapa.expandablelayout.ExpandableLayout
-            android:id="@+id/expandableLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
-            app:el_duration="1000"
-            app:el_expanded="false"
-            app:el_parallax="0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/psGuideAvoidTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/avoid_the_problem"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"/>
-
-                <TextView
-                    android:id="@+id/psGuideChangeThingsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/change_things"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/changeThingsInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psGuideReduceStressTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/reduce_stress"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/reduceStressInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psGuideTwoYesTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/two_yeses"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/twoYesInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-                <TextView
-                    android:id="@+id/psRespondTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Respond to cooperation"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgAttentionTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/attentionInput"
-                    android:text="Attention"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/attentionInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgPraiseTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/praiseInput"
-                    android:text="Praise"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/praiseInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgRewardsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/rewardsInput"
-                    android:text="Rewards"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/rewardsInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-
-                <TextView
-                    android:id="@+id/psAckFeelingsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Acknowledge Feelings"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgSimpleListenTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/simpleListenInput"
-                    android:text="Simple Listening"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/simpleListenInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgActListenTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/ActListenInput"
-                    android:text="Active Listening"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/ActListenInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgGrantFanTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/grantFanInput"
-                    android:text="Grant in fantasy"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/grantFanInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-
-                <TextView
-                    android:id="@+id/psgSetLimitsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Set Limits"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgClearRulesTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/clearRulesInput"
-                    android:text="Clear Rules"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/clearRulesInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgConsequencesTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/consequencesInput"
-                    android:text="Consequences"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/consequencesInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgBetterWayTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/betterWayInput"
-                    android:text="A Better Way"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/betterWayInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-                <TextView
-                    android:id="@+id/psgTeachSkillsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Teach new skills"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgModelTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/modelInput"
-                    android:text="Model"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/modelInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgRedoTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/redoInput"
-                    android:text="Redo it right"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/redoInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/psgShapingTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/shapingInput"
-                    android:text="Shaping"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/shapingInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-            </LinearLayout>
-
-
-        </net.cachapa.expandablelayout.ExpandableLayout>
-
-
-        <Button
-            android:id="@+id/expandableButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@android:drawable/arrow_down_float"
-            android:onClick="expandableButton3"
-            android:text="@string/act_effectively"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <net.cachapa.expandablelayout.ExpandableLayout
-            android:id="@+id/expandableLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
-            app:el_duration="1000"
-            app:el_expanded="false"
-            app:el_parallax="0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/psGuideIdeasTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ideas"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"/>
-
-                <TextView
-                    android:id="@+id/psGuideWhatChangeTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/what_will_you_try_first"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/whatChangeInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-                <TextView
-                    android:id="@+id/psgRoadblocksTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Roadblocks"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgRoadblocksTV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/roadblocksInput"
-                    android:text="What might interfere with your success?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/roadblocksInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-                <TextView
-                    android:id="@+id/psgSupportTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Support"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgSupportTV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/supportInput"
-                    android:text="How can you protect yourself from the problem?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/supportInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-
-                <TextView
-                    android:id="@+id/psgMakePlanTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Make a plan"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"/>
-
-                <TextView
-                    android:id="@+id/psgMakePlanTV2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/makePlanInput"
-                    android:text="What will you need?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/makePlanInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-
-
-
-                <TextView
-                    android:id="@+id/psgHowLongTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/howLongInput"
-                    android:text="How long will you continue this plan?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/howLongInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-            </LinearLayout>
-
-
-        </net.cachapa.expandablelayout.ExpandableLayout>
-
-        <Button
-            android:id="@+id/expandableButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:drawableEnd="@android:drawable/arrow_down_float"
-            android:onClick="expandableButton4"
-            android:text="@string/review_and_revise"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <net.cachapa.expandablelayout.ExpandableLayout
-            android:id="@+id/expandableLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
-            app:el_duration="1000"
-            app:el_expanded="false"
-            app:el_parallax="0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/psGuideWentWellTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/childAgeInput"
-                    android:text="@string/what_went_well"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/wentWellInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-                <TextView
-                    android:id="@+id/psgWhoNeedsTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/whoNeedsInput"
-                    android:text="Who needs to change?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/whoNeedsInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-                <TextView
-                    android:id="@+id/psgTryNextTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/tryNextInput"
-                    android:text="What will you try next? For how long?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/tryNextInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-
-                <TextView
-                    android:id="@+id/psgFutureTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:labelFor="@+id/futureInput"
-                    android:text="What have you learned for the future?"
-                    android:textStyle="italic" />
-
-                <EditText
-                    android:id="@+id/futureInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:ems="15"
-                    android:inputType="text" />
-
-
-            </LinearLayout>
-
-
-        </net.cachapa.expandablelayout.ExpandableLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:gravity="bottom|end"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
 
-            <Button
-                android:id="@+id/psg_save_btn"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/ps_guide_save_btn"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/ps_guide_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/problem_solving_guide_intro" />
+
+        <TextView
+            android:id="@+id/psg_background_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/ps_guide_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/psg_background_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:lines="4"
+            />
 
             <Button
-                android:id="@+id/psg_previous"
-                android:layout_width="150dp"
+                android:id="@+id/expandableButton1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:text="View Previous"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton1"
+                android:text="@string/stop_focus"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        </android.support.constraint.ConstraintLayout>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                app:el_duration="1000"
+                app:el_expanded="false"
+                app:el_parallax="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/psGuideCollectDataTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/collect_data"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psGuideChildAgeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/age_of_child" />
+
+                    <EditText
+                        android:id="@+id/childAgeInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/psGuideLengthTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/LengthInput"
+                        android:text="@string/problem_length" />
+
+                    <EditText
+                        android:id="@+id/lengthInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgFrequencyTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/frequencyInput"
+                        android:text="@string/psgFrequencyTV" />
+
+                    <EditText
+                        android:id="@+id/frequencyInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgValuesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/psgValuesTV"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgValuesListTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/valuesInput1"
+                        android:text="@string/psgValuesListTV" />
+
+                    <EditText
+                        android:id="@+id/valuesInput1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/valuesInput2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/valuesInput3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgDevelopmentTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/psgDevelopmentTV"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgDevelopmentTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/developmentInput"
+                        android:text="@string/psgDevelopmentTV2" />
+
+                    <EditText
+                        android:id="@+id/developmentInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgTemperamentTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/psgTemperamentTV"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgTempListTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/temperamentInput1"
+                        android:text="@string/psgTempListTV" />
+
+                    <EditText
+                        android:id="@+id/temperamentInput1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/temperamentInput2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/temperamentInput3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgDesiredTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/psgDesiredTV"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgDesiredTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/desiredInput"
+                        android:text="@string/psgDesiredTV2" />
+
+                    <EditText
+                        android:id="@+id/desiredInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                </LinearLayout>
 
 
-    </LinearLayout>
+            </net.cachapa.expandablelayout.ExpandableLayout>
 
-</ScrollView>
+            <Button
+                android:id="@+id/expandableButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton2"
+                android:text="@string/think_of_ideas"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                app:el_duration="1000"
+                app:el_expanded="false"
+                app:el_parallax="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/psGuideAvoidTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avoid_the_problem"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psGuideChangeThingsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/change_things"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/changeThingsInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psGuideReduceStressTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/reduce_stress"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/reduceStressInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psGuideTwoYesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/two_yeses"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/twoYesInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/psRespondTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Respond to cooperation"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgAttentionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/attentionInput"
+                        android:text="Attention"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/attentionInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgPraiseTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/praiseInput"
+                        android:text="Praise"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/praiseInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgRewardsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/rewardsInput"
+                        android:text="Rewards"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/rewardsInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/psAckFeelingsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acknowledge Feelings"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgSimpleListenTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/simpleListenInput"
+                        android:text="Simple Listening"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/simpleListenInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgActListenTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/ActListenInput"
+                        android:text="Active Listening"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/ActListenInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgGrantFanTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/grantFanInput"
+                        android:text="Grant in fantasy"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/grantFanInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/psgSetLimitsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Limits"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgClearRulesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/clearRulesInput"
+                        android:text="Clear Rules"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/clearRulesInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgConsequencesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/consequencesInput"
+                        android:text="Consequences"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/consequencesInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgBetterWayTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/betterWayInput"
+                        android:text="A Better Way"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/betterWayInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/psgTeachSkillsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teach new skills"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgModelTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/modelInput"
+                        android:text="Model"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/modelInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgRedoTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/redoInput"
+                        android:text="Redo it right"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/redoInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/psgShapingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/shapingInput"
+                        android:text="Shaping"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/shapingInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+            <Button
+                android:id="@+id/expandableButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton3"
+                android:text="@string/act_effectively"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                app:el_duration="1000"
+                app:el_expanded="false"
+                app:el_parallax="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/psGuideIdeasTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ideas"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psGuideWhatChangeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/what_will_you_try_first"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/whatChangeInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                    <TextView
+                        android:id="@+id/psgRoadblocksTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roadblocks"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgRoadblocksTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/roadblocksInput"
+                        android:text="What might interfere with your success?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/roadblocksInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                    <TextView
+                        android:id="@+id/psgSupportTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Support"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgSupportTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/supportInput"
+                        android:text="How can you protect yourself from the problem?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/supportInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/psgMakePlanTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make a plan"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/psgMakePlanTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/makePlanInput"
+                        android:text="What will you need?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/makePlanInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/psgHowLongTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/howLongInput"
+                        android:text="How long will you continue this plan?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/howLongInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                </LinearLayout>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <Button
+                android:id="@+id/expandableButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:onClick="expandableButton4"
+                android:text="@string/review_and_revise"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                app:el_duration="1000"
+                app:el_expanded="false"
+                app:el_parallax="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/psGuideWentWellTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/childAgeInput"
+                        android:text="@string/what_went_well"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/wentWellInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                    <TextView
+                        android:id="@+id/psgWhoNeedsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/whoNeedsInput"
+                        android:text="Who needs to change?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/whoNeedsInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                    <TextView
+                        android:id="@+id/psgTryNextTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/tryNextInput"
+                        android:text="What will you try next? For how long?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/tryNextInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+
+                    <TextView
+                        android:id="@+id/psgFutureTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/futureInput"
+                        android:text="What have you learned for the future?"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/futureInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:ems="15"
+                        android:inputType="text" />
+
+
+                </LinearLayout>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="bottom|end"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/psg_save_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/ps_guide_save_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/psg_previous"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="View Previous"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
