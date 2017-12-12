@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -60,9 +61,9 @@ public class StarPointsActivity extends BaseNavigationDrawerActivity {
             final int index = (int)b.get("point");
             Log.d(TAG, points.toString());
 
-            lblPointTitle.setText(points.get(index).name);
-            lblGoal.setText(points.get(index).goal);
-            lblExplaination.setText(points.get(index).explanation);
+            lblPointTitle.setText(Html.fromHtml(points.get(index).name));
+            lblGoal.setText(Html.fromHtml(points.get(index).goal));
+            lblExplaination.setText(Html.fromHtml(points.get(index).explanation));
 
             String tool1 = points.get(index).tools.get(0).name;
             String tool2 = points.get(index).tools.get(1).name;

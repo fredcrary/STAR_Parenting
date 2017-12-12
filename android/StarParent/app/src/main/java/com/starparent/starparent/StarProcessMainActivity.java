@@ -2,6 +2,7 @@ package com.starparent.starparent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -56,8 +57,8 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
             Log.d(TAG, steps.toString());
             index = (int) b.get("step");
 
-            lblName.setText(steps.get(index).name);
-            lblDetail.setText(steps.get(index).detail);
+            lblName.setText(Html.fromHtml(steps.get(index).name));
+            lblDetail.setText(Html.fromHtml(steps.get(index).detail));
         }
 
         btnPrevious.setOnClickListener(new View.OnClickListener() {
@@ -65,12 +66,12 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
             public void onClick(View v) {
                 if (index == 0){
                     index = 3;
-                    lblName.setText(steps.get(index).name);
-                    lblDetail.setText(steps.get(index).detail);
+                    lblName.setText(Html.fromHtml(steps.get(index).name));
+                    lblDetail.setText(Html.fromHtml(steps.get(index).detail));
                 }else {
                     index--;
-                    lblName.setText(steps.get(index).name);
-                    lblDetail.setText(steps.get(index).detail);
+                    lblName.setText(Html.fromHtml(steps.get(index).name));
+                    lblDetail.setText(Html.fromHtml(steps.get(index).detail));
                 }
             }
         });
@@ -80,12 +81,12 @@ public class StarProcessMainActivity extends BaseNavigationDrawerActivity {
             public void onClick(View v) {
                 if (index == 3){
                     index = 0;
-                    lblName.setText(steps.get(index).name);
-                    lblDetail.setText(steps.get(index).detail);
+                    lblName.setText(Html.fromHtml(steps.get(index).name));
+                    lblDetail.setText(Html.fromHtml(steps.get(index).detail));
                 }else {
                     index++;
-                    lblName.setText(steps.get(index).name);
-                    lblDetail.setText(steps.get(index).detail);
+                    lblName.setText(Html.fromHtml(steps.get(index).name));
+                    lblDetail.setText(Html.fromHtml(steps.get(index).detail));
                 }
             }
         });

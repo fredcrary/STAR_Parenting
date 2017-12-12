@@ -2,6 +2,7 @@ package com.starparent.starparent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -50,11 +51,11 @@ public class StarPointTools extends BaseNavigationDrawerActivity {
             int point = (int)b.get("point");
             int tool = (int)b.get("tool");
 
-            lblTitle.setText(points.get(point).tools.get(tool).name);
-            lblGoal.setText(points.get(point).tools.get(tool).goal);
-            lblHowToTitle.setText(points.get(point).tools.get(tool).howToTitle);
-            lblHowToText.setText(points.get(point).tools.get(tool).howToText);
-            lblExample.setText(points.get(point).tools.get(tool).examples);
+            lblTitle.setText(Html.fromHtml(points.get(point).tools.get(tool).name));
+            lblGoal.setText(Html.fromHtml(points.get(point).tools.get(tool).goal));
+            lblHowToTitle.setText(Html.fromHtml(points.get(point).tools.get(tool).howToTitle));
+            lblHowToText.setText(Html.fromHtml(points.get(point).tools.get(tool).howToText));
+            lblExample.setText(Html.fromHtml(points.get(point).tools.get(tool).examples));
         }
     }
 
