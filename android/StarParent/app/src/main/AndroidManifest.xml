@@ -67,6 +67,7 @@
         <activity
             android:name=".StarPointsActivity"
             android:label="@string/title_activity_star_points"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".IdeaBankMainActivity"
@@ -102,6 +103,7 @@
         <activity
             android:name=".StarResourcesActivity"
             android:label="@string/title_activity_star_resources"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Currently only linked from drawer menu FIXME? -->
@@ -121,15 +123,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-        <activity android:name=".LearnAboutStarProcessActivity" />
-        <activity android:name=".LearnAboutStarPointsActivity" />
+
+        <activity
+            android:name=".LearnAboutStarProcessActivity"
+            android:label="@string/title_activity_learn_about_star_process"
+            />
+        <activity
+            android:name=".LearnAboutStarPointsActivity"
+            android:label="@string/title_activity_star_points"
+            />
         <activity
             android:name=".ListOfPreviousPSGuide"
             android:parentActivityName=".ProblemSolvingGuideActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DisplayPreviousPSGuide"></activity>
         <activity android:name=".StarPointsMainActivity" />
-        <activity android:name=".StarPointTools"></activity>
-    </application>
 
+        <activity
+            android:name=".StarPointTools"
+            android:label="@string/title_activity_star_points"
+            />
+        
+    </application>
 </manifest>
