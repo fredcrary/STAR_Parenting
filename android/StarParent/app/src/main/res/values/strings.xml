@@ -1,4 +1,5 @@
 <resources>
+    <string name="about_app_version">App Version: 1.5</string>
     <string name="app_name">StarParent</string>
     <string name="title_activity_star_process_main">STAR Process</string>
     <string name="title_activity_idea_bank_main">Ideas Bank</string>
@@ -18,7 +19,6 @@
     <string name="about_team_acknowledgement">This app was designed and developed by Jeremy Duke, Mark Pfaff, Mitch Thompson, Rasa Rasiulyte, Travis Kapirsky, and Justin Simmons in the Application Development Program at North Seattle College. </string>
     <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model</string>
     <string name="about_book_acknowledgement">This app is based on and a companion to the book STAR Parenting Tales and Tools by Elizabeth Crary.</string>
-    <string name="about_app_version">App Version: 1.0</string>
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points &amp; Tools</string>
     <string name="problem_solver_description">Tools to help you work through issues as they happen</string>
