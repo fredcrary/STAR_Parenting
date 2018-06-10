@@ -1,0 +1,6 @@
+Slide out menu drawer
+---------------------
+	Content:	android\StarParent\app\src\main\res\menu\activity_base_navigation_drawer_drawer.xml
+	Layout:		android\StarParent\app\src\main\res\layout\activity_base_navigation_drawer.xml
+	Handling:	android\StarParent\app\src\main\java\com\starparent\starparent\BaseNavigationDrawerActivity.java
+
