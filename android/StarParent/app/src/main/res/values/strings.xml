@@ -17,8 +17,8 @@
     <string name="title_activity_about_this_app">About This App</string>
     <string name="title_activity_learn_about_star_process">STAR Parenting Process</string>
     <string name="about_team_acknowledgement">This app was designed and developed by Jeremy Duke, Mark Pfaff, Mitch Thompson, Rasa Rasiulyte, Travis Kapirsky, and Justin Simmons in the Application Development Program at North Seattle College. </string>
-    <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model</string>
-    <string name="about_book_acknowledgement">This app is based on and a companion to the book STAR Parenting Tales and Tools by Elizabeth Crary.</string>
+    <string name="about_author_acknowledgement">This app is based on the work of Elizabeth Crary\'s STAR Parenting model.</string>
+    <string name="about_book_acknowledgement">This app is based on and a companion to the book <i>STAR Parenting Tales and Tools</i> by Elizabeth Crary.</string>
     <string name="title_activity_star_resources">Star Resources</string>
     <string name="title_activity_star_points">Star Points &amp; Tools</string>
     <string name="problem_solver_description">Tools to help you work through issues as they happen</string>
@@ -35,7 +35,7 @@
     <string name="problem_solving_btn">Problem Solving Buddy</string>
     <string name="learn_about_points_btn">Star Points</string>
     <string name="learn_about_resources_btn">STAR Resources</string>
-    <string name="learn_about_btn_description">We created some activites to help you get ideas about your child and common behaviors you are trying to understand and direct. Tap below to explore the STAR Parenting methods.</string>
+    <string name="learn_about_btn_description">We created some activities to help you get ideas about your child and common behaviors you are trying to understand and direct. Tap below to explore the STAR Parenting methods.</string>
     <string name="learn_about_process_title">The STAR Parenting Process</string>
     <string name="learn_about_process_desc">The process is based on the word S-T-A-R and helps you create a plan to resolve your problem. The process encourages you to consider: the child\'s developmental stage and experience, the child\'s temperament, your long-term goals for the child, and your values.</string>
     <string name="learn_about_points_title"><![CDATA[Star Points & Tools]]></string>
