@@ -19,7 +19,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
         android:fadeScrollbars="false"
-        android:gravity="center_horizontal"
         android:isScrollContainer="true"
         android:maxLines="1000"
         android:paddingLeft="5dp"
