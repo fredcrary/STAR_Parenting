@@ -91,19 +91,19 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         List<String> new_skills_detail = new ArrayList<>();
         List<String> ack_feelings_detail = new ArrayList<>();
         for (IdeasBankIdea idea : avoidProblems) {
-            avoid_problems_detail.add(idea.idea_text + "\n" + idea.star_point);
+            avoid_problems_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
         for (IdeasBankIdea idea : respondToCoop) {
-            respond_coop_detail.add(idea.idea_text + "\n" + idea.star_point);
+            respond_coop_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
         for (IdeasBankIdea idea : setReasLimits) {
-            reas_limits_detail.add(idea.idea_text + "\n" + idea.star_point);
+            reas_limits_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
         for (IdeasBankIdea idea : teachNewSkills) {
-            new_skills_detail.add(idea.idea_text + "\n" + idea.star_point);
+            new_skills_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
         for (IdeasBankIdea idea : ackFeelings) {
-            ack_feelings_detail.add(idea.idea_text + "\n" + idea.star_point);
+            ack_feelings_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
 
         final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
