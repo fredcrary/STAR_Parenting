@@ -67,7 +67,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
                     ackFeelings.add(idea);
                     break;
                 default:
-                    Log.d(TAG, "Un-known idea.star_point: " + idea.star_point);
+                    Log.d(TAG, "Unknown idea.star_point: " + idea.star_point);
                     break;
             }
         }
@@ -85,6 +85,9 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         ExpandableListAdapter expandableListAdapter;
         ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
 
+        // Build lists of ideas separated by STAR point
+        // The entries consist of the idea text followed by the associated tool name. These are
+        // HTML strings that will converted just before they are displayed.
         List<String> avoid_problems_detail = new ArrayList<>();
         List<String> respond_coop_detail = new ArrayList<>();
         List<String> reas_limits_detail = new ArrayList<>();
@@ -106,6 +109,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
             ack_feelings_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
         }
 
+        // Combine all the ideas into a single structure
         final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
         expandableListDetail.put("Avoid problems", avoid_problems_detail);
         expandableListDetail.put("Respond to cooperation", respond_coop_detail);

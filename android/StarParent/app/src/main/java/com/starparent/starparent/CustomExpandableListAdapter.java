@@ -54,19 +54,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public Object getGroup(int listPosition) {
-        return this.expandableListTitle.get(listPosition);
-    }
+    public Object getGroup(int listPosition) { return this.expandableListTitle.get(listPosition); }
 
     @Override
-    public int getGroupCount() {
-        return this.expandableListTitle.size();
-    }
+    public int getGroupCount() { return this.expandableListTitle.size(); }
 
     @Override
-    public long getGroupId(int listPosition) {
-        return listPosition;
-    }
+    public long getGroupId(int listPosition) { return listPosition; }
 
     @Override
     public View getGroupView(int listPosition, boolean isExpanded, View convertView, ViewGroup parent) {
