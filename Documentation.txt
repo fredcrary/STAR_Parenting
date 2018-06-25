@@ -4,3 +4,11 @@ Slide out menu drawer
 	Layout:		android\StarParent\app\src\main\res\layout\activity_base_navigation_drawer.xml
 	Handling:	android\StarParent\app\src\main\java\com\starparent\starparent\BaseNavigationDrawerActivity.java
 
+
+Ideas bank
+----------
+IdeaBankMainActivity -- Identifies the problem to display
+  ProblemActivity -- Groups the ideas by point; displays the description, etc.; sets up the ideas
+    CustomExpandableListAdapter -- Handles the expansion and contraction of the lists for each point
+
+

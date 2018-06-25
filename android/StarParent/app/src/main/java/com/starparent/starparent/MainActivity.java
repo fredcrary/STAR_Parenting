@@ -36,6 +36,7 @@ public class MainActivity extends BaseNavigationDrawerActivity {
 
         builder.show();
 
+        // Set the listeners for the buttons for the STAR process (located in the star)
         Button btnStopFocus = (Button)findViewById(R.id.btnStopFocus);
         btnStopFocus.setOnClickListener(new View.OnClickListener() {
             @Override

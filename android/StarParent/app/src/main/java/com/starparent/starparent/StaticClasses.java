@@ -90,7 +90,7 @@ public class StaticClasses {
     }
 
     //IdeasBankIdeas exist within the context of an IdeasBankProblem from ideas_bank.xml
-    public static class IdeasBankIdea {
+    public static class IdeasBankIdea implements Serializable {
         public final String idea_text;
         public final String star_point;
         protected IdeasBankIdea(String idea_text, String star_point) {
@@ -115,7 +115,7 @@ public class StaticClasses {
         public final String goal;
         public final String reality_check;
         public final String description;
-        public static transient List<IdeasBankIdea> ideas;
+        public final List<IdeasBankIdea> ideas;
         protected IdeasBankProblem(String title, List<String> ageGroups, String description, String goal, String reality_check, List<IdeasBankIdea> ideas) {
             this.title = title;
             this.ageGroups = ageGroups;

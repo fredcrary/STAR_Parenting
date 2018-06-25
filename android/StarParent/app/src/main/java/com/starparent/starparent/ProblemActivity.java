@@ -27,13 +27,15 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
 
         TextView textView = (TextView) findViewById(R.id.textView);
 
+        // Get the problem to work on
         Bundle b = getIntent().getExtras();
         if (b != null && b.getSerializable("problem") != null) {
             problem = (IdeasBankProblem) b.getSerializable("problem");
         }
         final String TAG = "Problem Activity: " + problem.title;
 
-        //Star point to idea lookups
+        // Separate the ideas for the selected problem into STAR points
+        // Note that the XML tag "star_point" is actually the tool so we need to do some grouping.
         List<IdeasBankIdea> avoidProblems  = new ArrayList<>();
         List<IdeasBankIdea> respondToCoop  = new ArrayList<>();
         List<IdeasBankIdea> setReasLimits  = new ArrayList<>();
@@ -72,7 +74,8 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
             }
         }
 
-        //Build the detailed TextView
+        // Build the detailed TextView
+        // This is the problem description, etc.
         StringBuilder htmlString = new StringBuilder();
         htmlString.append("<h2>" + problem.title + "</h2>");
         htmlString.append("<b>Description:</b>  " + problem.description + "<br /><br />");
@@ -80,7 +83,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         htmlString.append("<b>Reality Check:</b>  " + problem.reality_check + "<br /><br />");
         htmlString.append("<b>Ideas:</b>");
 
-        //Build the expandable TextViews
+        // Build the expandable TextViews
         final List<String> expandableListTitle;
         ExpandableListAdapter expandableListAdapter;
         ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
@@ -121,6 +124,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
 
+        // Show the problem description
         textView.setText(Html.fromHtml(htmlString.toString()));
         textView.setMovementMethod(new ScrollingMovementMethod());
     }
