@@ -20,7 +20,7 @@ import java.util.concurrent.ExecutionException;
 public class IdeaBankMainActivity extends BaseNavigationDrawerActivity {
     //Standard constants
     private static final String TAG = "IdeaBankMain";
-    private final String tag = "ideas_bank";
+    private final String tag = "ideas_bank2";
     private final String xmlFileName = tag + ".xml";
     private final String URL = "http://starparent.com/appdata/" + xmlFileName;
 

@@ -89,13 +89,13 @@ public class StaticClasses {
         }
     }
 
-    //IdeasBankIdeas exist within the context of an IdeasBankProblem from ideas_bank.xml
+    //IdeasBankIdeas exist within the context of an IdeasBankProblem from ideas_bank2.xml
     public static class IdeasBankIdea implements Serializable {
         public final String idea_text;
-        public final String star_point;
-        protected IdeasBankIdea(String idea_text, String star_point) {
-            this.idea_text  = idea_text;
-            this.star_point = star_point;
+        public final String star_tool;
+        protected IdeasBankIdea(String idea_text, String star_tool) {
+            this.idea_text = idea_text;
+            this.star_tool = star_tool;
         }
     }
 

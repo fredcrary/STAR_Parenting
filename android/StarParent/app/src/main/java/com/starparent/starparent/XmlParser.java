@@ -49,7 +49,7 @@ public class XmlParser {
 
             // Look at the parent tags and pass the xml to the appropriate 'read' method.
             switch (tag) {
-                case "ideas_bank":
+                case "ideas_bank2":
                     entries.add(readIdeasBank(parser));
                     break;
                 case "quick_ideas":
@@ -263,7 +263,7 @@ public class XmlParser {
     }
 
     private IdeasBankProblem readIdeasBank(XmlPullParser parser) throws XmlPullParserException, IOException {
-        Log.d(TAG, "Reading ideas_bank.xml");
+        Log.d(TAG, "Reading ideas_bank2.xml");
         String title      = null;
         String goal       = null;
         String reality    = null;
@@ -304,7 +304,7 @@ public class XmlParser {
     }
 
     private IdeasBankIdea readIdeaBankIdea(XmlPullParser parser)  throws XmlPullParserException, IOException {
-        String star_point  = null;
+        String star_tool  = null;
         String idea_text   = null;
         parser.require(XmlPullParser.START_TAG, ns, "idea");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -313,8 +313,8 @@ public class XmlParser {
             }
             String name = parser.getName();
             switch (name) {
-                case "star_point":
-                    star_point = readText(parser);
+                case "star_tool":
+                    star_tool = readText(parser);
                     break;
                 case "idea_text":
                     idea_text = readText(parser);
@@ -323,7 +323,7 @@ public class XmlParser {
                     skip(parser);
             }
         }
-        return new IdeasBankIdea(idea_text, star_point);
+        return new IdeasBankIdea(idea_text, star_tool);
     }
 
     private IdeasBankDescription readIdeasBankDescription(XmlPullParser parser) throws XmlPullParserException, IOException {

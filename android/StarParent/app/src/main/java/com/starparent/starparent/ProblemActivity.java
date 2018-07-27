@@ -42,7 +42,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         List<IdeasBankIdea> teachNewSkills = new ArrayList<>();
         List<IdeasBankIdea> ackFeelings    = new ArrayList<>();
         for (IdeasBankIdea idea : problem.ideas) {
-            switch (idea.star_point) {
+            switch (idea.star_tool) {
                 case "Change things":
                 case "Reduce stress":
                 case "Two yeses":
@@ -69,7 +69,7 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
                     ackFeelings.add(idea);
                     break;
                 default:
-                    Log.d(TAG, "Unknown idea.star_point: " + idea.star_point);
+                    Log.d(TAG, "Unknown idea.star_tool: " + idea.star_tool);
                     break;
             }
         }
@@ -97,19 +97,19 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         List<String> new_skills_detail = new ArrayList<>();
         List<String> ack_feelings_detail = new ArrayList<>();
         for (IdeasBankIdea idea : avoidProblems) {
-            avoid_problems_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
+            avoid_problems_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : respondToCoop) {
-            respond_coop_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
+            respond_coop_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : setReasLimits) {
-            reas_limits_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
+            reas_limits_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : teachNewSkills) {
-            new_skills_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
+            new_skills_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : ackFeelings) {
-            ack_feelings_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_point);
+            ack_feelings_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
         }
 
         // Combine all the ideas into a single structure
