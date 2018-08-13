@@ -35,7 +35,6 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         final String TAG = "Problem Activity: " + problem.title;
 
         // Separate the ideas for the selected problem into STAR points
-        // Note that the XML tag "star_point" is actually the tool so we need to do some grouping.
         List<IdeasBankIdea> avoidProblems  = new ArrayList<>();
         List<IdeasBankIdea> respondToCoop  = new ArrayList<>();
         List<IdeasBankIdea> setReasLimits  = new ArrayList<>();
@@ -84,9 +83,9 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         htmlString.append("<b>Ideas:</b>");
 
         // Build the expandable TextViews
-        final List<String> expandableListTitle;
-        ExpandableListAdapter expandableListAdapter;
-        ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
+        //final List<String> expandableListTitle;
+        //ExpandableListAdapter expandableListAdapter;
+        //ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
 
         // Build lists of ideas separated by STAR point
         // The entries consist of the idea text followed by the associated tool name. These are
@@ -97,35 +96,66 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         List<String> new_skills_detail = new ArrayList<>();
         List<String> ack_feelings_detail = new ArrayList<>();
         for (IdeasBankIdea idea : avoidProblems) {
-            avoid_problems_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
+            avoid_problems_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : respondToCoop) {
-            respond_coop_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
+            respond_coop_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : setReasLimits) {
-            reas_limits_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
+            reas_limits_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : teachNewSkills) {
-            new_skills_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
+            new_skills_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
         for (IdeasBankIdea idea : ackFeelings) {
-            ack_feelings_detail.add(idea.idea_text + "<br>&mdash;" + idea.star_tool);
+            ack_feelings_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
 
         // Combine all the ideas into a single structure
-        final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
-        expandableListDetail.put("Avoid problems", avoid_problems_detail);
-        expandableListDetail.put("Respond to cooperation", respond_coop_detail);
-        expandableListDetail.put("Set reasonable limits", reas_limits_detail);
-        expandableListDetail.put("Teach new skills", new_skills_detail);
-        expandableListDetail.put("Acknowledge feelings", ack_feelings_detail);
+        //final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
+        //expandableListDetail.put("Avoid problems", avoid_problems_detail);
+        //expandableListDetail.put("Respond to cooperation", respond_coop_detail);
+        //expandableListDetail.put("Set reasonable limits", reas_limits_detail);
+        //expandableListDetail.put("Teach new skills", new_skills_detail);
+        //expandableListDetail.put("Acknowledge feelings", ack_feelings_detail);
 
-        expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
-        expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
-        expandableListView.setAdapter(expandableListAdapter);
+        //expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
+        //expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
+        //expandableListView.setAdapter(expandableListAdapter);
 
         // Show the problem description
         textView.setText(Html.fromHtml(htmlString.toString()));
-        textView.setMovementMethod(new ScrollingMovementMethod());
+        //textView.setMovementMethod(new ScrollingMovementMethod());
+
+        // Show the ideas
+        showPointIdeas(R.id.avoid_title,"Avoid Problems",
+                R.id.avoid_list,avoid_problems_detail);
+        showPointIdeas(R.id.respond_title,"Respond to Cooperation",
+                R.id.respond_list,respond_coop_detail);
+        showPointIdeas(R.id.limits_title,"Set Reasonable Limits",
+                R.id.limits_list,reas_limits_detail);
+        showPointIdeas(R.id.skills_title,"Teach New Skills",
+                R.id.skills_list,new_skills_detail);
+        showPointIdeas(R.id.ack_title,"Acknowledge Feelings",
+                R.id.ack_list,ack_feelings_detail);
+    }
+
+    protected void showPointIdeas(int title_layout, String title_text,
+                                  int ideas_layout, List<String> ideas_list){
+        // Show the title
+        TextView titleView = (TextView) findViewById(title_layout);
+        //TextView titleView = (TextView) findViewById(R.id.avoid_title);
+        titleView.setText(Html.fromHtml(title_text));
+
+        // Build and show the list of ideas
+        StringBuilder ideas = new StringBuilder(100);
+        for (String idea : ideas_list) {
+            if(ideas.length() > 0) ideas.append("<br /><br />");
+            ideas.append(idea);
+        }
+
+        //TextView ideasView = (TextView) findViewById(R.id.avoid_list);
+        TextView ideasView = (TextView) findViewById(ideas_layout);
+        ideasView.setText(Html.fromHtml(ideas.toString()));
     }
 }
