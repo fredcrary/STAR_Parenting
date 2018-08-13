@@ -82,11 +82,6 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
         htmlString.append("<b>Reality Check:</b>  " + problem.reality_check + "<br /><br />");
         htmlString.append("<b>Ideas:</b>");
 
-        // Build the expandable TextViews
-        //final List<String> expandableListTitle;
-        //ExpandableListAdapter expandableListAdapter;
-        //ExpandableListView expandableListView = (ExpandableListView)findViewById(R.id.expandable_list);
-
         // Build lists of ideas separated by STAR point
         // The entries consist of the idea text followed by the associated tool name. These are
         // HTML strings that will converted just before they are displayed.
@@ -111,21 +106,8 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
             ack_feelings_detail.add(idea.idea_text + "<br />&mdash;" + idea.star_tool);
         }
 
-        // Combine all the ideas into a single structure
-        //final HashMap<String, List<String>> expandableListDetail = new HashMap<>();
-        //expandableListDetail.put("Avoid problems", avoid_problems_detail);
-        //expandableListDetail.put("Respond to cooperation", respond_coop_detail);
-        //expandableListDetail.put("Set reasonable limits", reas_limits_detail);
-        //expandableListDetail.put("Teach new skills", new_skills_detail);
-        //expandableListDetail.put("Acknowledge feelings", ack_feelings_detail);
-
-        //expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
-        //expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
-        //expandableListView.setAdapter(expandableListAdapter);
-
         // Show the problem description
         textView.setText(Html.fromHtml(htmlString.toString()));
-        //textView.setMovementMethod(new ScrollingMovementMethod());
 
         // Show the ideas
         showPointIdeas(R.id.avoid_title,"Avoid Problems",
@@ -142,9 +124,10 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
 
     protected void showPointIdeas(int title_layout, String title_text,
                                   int ideas_layout, List<String> ideas_list){
+        // Show the ideas for a single point.
+
         // Show the title
         TextView titleView = (TextView) findViewById(title_layout);
-        //TextView titleView = (TextView) findViewById(R.id.avoid_title);
         titleView.setText(Html.fromHtml(title_text));
 
         // Build and show the list of ideas
@@ -153,8 +136,6 @@ public class ProblemActivity extends BaseNavigationDrawerActivity {
             if(ideas.length() > 0) ideas.append("<br /><br />");
             ideas.append(idea);
         }
-
-        //TextView ideasView = (TextView) findViewById(R.id.avoid_list);
         TextView ideasView = (TextView) findViewById(ideas_layout);
         ideasView.setText(Html.fromHtml(ideas.toString()));
     }
