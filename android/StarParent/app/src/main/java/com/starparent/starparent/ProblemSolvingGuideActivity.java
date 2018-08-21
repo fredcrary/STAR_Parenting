@@ -292,7 +292,7 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
 
         //clear rules
         String rules;
-        EditText clearRulesInput = (EditText)findViewById(R.id.grantFanInput);
+        EditText clearRulesInput = (EditText)findViewById(R.id.clearRulesInput);
         if (TextUtils.isEmpty(clearRulesInput.getText())) {
             rules =
                     "Clear Rules\n\n" + "No answer " + "\n\n\n";
