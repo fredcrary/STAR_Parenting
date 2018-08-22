@@ -72,6 +72,7 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
 
         //Gathers form data and sets up data to written to textfile
+        String fileIdentifier = fetchField(R.id.psg_identifier_input, "Identifier");
         String background = fetchField(R.id.psg_background_input, "Background");
 
         //Collect data section
@@ -158,6 +159,7 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
 
         //Attempts to write data to text file
         try {
+            fos.write(fileIdentifier.getBytes());
             fos.write(background.getBytes());
 
             fos.write("\nStop and Focus\n\n".getBytes());
