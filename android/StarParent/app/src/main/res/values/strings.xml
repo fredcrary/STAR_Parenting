@@ -61,7 +61,7 @@
 
     <string name="problem_solving_guide_title">Problem Solving Guide</string>
     <string name="problem_solving_guide_intro">This is a place to record your progress in applying the full STAR Process to a problem. It is, basically, a form to fill out. The form guides you in considering the steps of the STAR Process and provides a place to record your observations, ideas, and plans. Start by writing a behavioral description of your problem, then continue through the following steps.</string>
-    <string name="ps_guide_background">Background: Describe last time the bahavior happened</string>
+    <string name="ps_guide_background">Background: Describe the last time the bahavior happened</string>
     <string name="ps_guide_stop_text"><![CDATA[Stop & Focus]]></string>
     <string name="ps_guide_next_btn">Next</string>
     <string name="ps_guide_save_btn">Save</string>

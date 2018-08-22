@@ -608,7 +608,6 @@
 
                 </LinearLayout>
 
-
             </net.cachapa.expandablelayout.ExpandableLayout>
 
 
@@ -774,8 +773,6 @@
                         android:ems="15"
                         android:inputType="text" />
 
-
-
                 </LinearLayout>
 
 
@@ -883,7 +880,6 @@
 
 
                 </LinearLayout>
-
 
             </net.cachapa.expandablelayout.ExpandableLayout>
 

@@ -243,7 +243,7 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         return filename;
     }
 
-    public String fetchField(int field_id, String label){
+    public String fetchField(int field_id, String label) {
         String result = label + ": ";
         EditText text_input = (EditText)findViewById(field_id);
         if (TextUtils.isEmpty(text_input.getText()))
@@ -252,7 +252,7 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
             result += text_input.getText();
         result += "\n\n\n";
         return result;
-        }
+    }
 
     public String readFile(String filename) throws FileNotFoundException {
         // Read File and Content
