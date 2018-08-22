@@ -24,7 +24,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:orientation="vertical">
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 app:el_duration="1000"
                 app:el_expanded="false"
                 app:el_parallax="0">
@@ -293,7 +293,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 app:el_duration="1000"
                 app:el_expanded="false"
                 app:el_parallax="0">
@@ -367,7 +367,7 @@
                         android:id="@+id/psRespondTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Respond to cooperation"
+                        android:text="@string/cooperation"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -378,7 +378,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/attentionInput"
-                        android:text="Attention"
+                        android:text="@string/attention"
                         android:textStyle="italic" />
 
                     <EditText
@@ -394,7 +394,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/praiseInput"
-                        android:text="Praise"
+                        android:text="@string/praise"
                         android:textStyle="italic" />
 
                     <EditText
@@ -410,7 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/rewardsInput"
-                        android:text="Rewards"
+                        android:text="@string/rewards"
                         android:textStyle="italic" />
 
                     <EditText
@@ -429,7 +429,7 @@
                         android:id="@+id/psAckFeelingsTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Acknowledge Feelings"
+                        android:text="@string/ack_feelings"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -440,7 +440,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/simpleListenInput"
-                        android:text="Simple Listening"
+                        android:text="@string/simple_listening"
                         android:textStyle="italic" />
 
                     <EditText
@@ -456,7 +456,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/ActListenInput"
-                        android:text="Active Listening"
+                        android:text="@string/active_listening"
                         android:textStyle="italic" />
 
                     <EditText
@@ -472,7 +472,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/grantFanInput"
-                        android:text="Grant in fantasy"
+                        android:text="@string/grant_fantasy"
                         android:textStyle="italic" />
 
                     <EditText
@@ -491,7 +491,7 @@
                         android:id="@+id/psgSetLimitsTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Set Limits"
+                        android:text="@string/set_limits"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -502,7 +502,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/clearRulesInput"
-                        android:text="Clear Rules"
+                        android:text="@string/clear_rules"
                         android:textStyle="italic" />
 
                     <EditText
@@ -518,7 +518,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/consequencesInput"
-                        android:text="Consequences"
+                        android:text="@string/consequences"
                         android:textStyle="italic" />
 
                     <EditText
@@ -534,7 +534,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/betterWayInput"
-                        android:text="A Better Way"
+                        android:text="@string/better_way"
                         android:textStyle="italic" />
 
                     <EditText
@@ -552,7 +552,7 @@
                         android:id="@+id/psgTeachSkillsTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Teach new skills"
+                        android:text="@string/teach_skills"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -563,7 +563,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/modelInput"
-                        android:text="Model"
+                        android:text="@string/model"
                         android:textStyle="italic" />
 
                     <EditText
@@ -579,7 +579,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/redoInput"
-                        android:text="Redo it right"
+                        android:text="@string/redo_right"
                         android:textStyle="italic" />
 
                     <EditText
@@ -595,7 +595,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/shapingInput"
-                        android:text="Shaping"
+                        android:text="@string/shaping"
                         android:textStyle="italic" />
 
                     <EditText
@@ -631,7 +631,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 app:el_duration="1000"
                 app:el_expanded="false"
                 app:el_parallax="0">
@@ -672,7 +672,7 @@
                         android:id="@+id/psgRoadblocksTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Roadblocks"
+                        android:text="@string/roadblocks"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -683,7 +683,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/roadblocksInput"
-                        android:text="What might interfere with your success?"
+                        android:text="@string/interfere"
                         android:textStyle="italic" />
 
                     <EditText
@@ -700,7 +700,7 @@
                         android:id="@+id/psgSupportTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Support"
+                        android:text="@string/support"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -711,7 +711,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/supportInput"
-                        android:text="How can you protect yourself from the problem?"
+                        android:text="@string/protect"
                         android:textStyle="italic" />
 
                     <EditText
@@ -730,7 +730,7 @@
                         android:id="@+id/psgMakePlanTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Make a plan"
+                        android:text="@string/plan"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:layout_marginBottom="16dp"
@@ -741,7 +741,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/makePlanInput"
-                        android:text="What will you need?"
+                        android:text="@string/what_you_need"
                         android:textStyle="italic" />
 
                     <EditText
@@ -762,7 +762,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/howLongInput"
-                        android:text="How long will you continue this plan?"
+                        android:text="@string/how_long"
                         android:textStyle="italic" />
 
                     <EditText
@@ -798,7 +798,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 app:el_duration="1000"
                 app:el_expanded="false"
                 app:el_parallax="0">
@@ -831,7 +831,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/whoNeedsInput"
-                        android:text="Who needs to change?"
+                        android:text="@string/who_changes"
                         android:textStyle="italic" />
 
                     <EditText
@@ -849,7 +849,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/tryNextInput"
-                        android:text="What will you try next? For how long?"
+                        android:text="@string/what_next"
                         android:textStyle="italic" />
 
                     <EditText
@@ -867,7 +867,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:labelFor="@+id/futureInput"
-                        android:text="What have you learned for the future?"
+                        android:text="@string/what_learned"
                         android:textStyle="italic" />
 
                     <EditText
@@ -910,7 +910,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
-                    android:text="View Previous"
+                    android:text="@string/ps_guide_previous_btn"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
