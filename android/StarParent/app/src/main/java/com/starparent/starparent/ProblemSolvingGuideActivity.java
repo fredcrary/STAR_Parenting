@@ -71,168 +71,89 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         String filename = new SimpleDateFormat("yyyy.MM.dd.HH:mm:ss").format(new Date());
         FileOutputStream fos = openFileOutput(filename, Context.MODE_PRIVATE);
 
-        //Gathers form data and sets up data to written to textfile
-        String fileIdentifier = fetchField(R.id.psg_identifier_input, "Identifier");
-        String background = fetchField(R.id.psg_background_input, "Background");
+        try{
+            //Gathers form data and sets up data to written to textfile
+            writeField(fos, R.id.psg_identifier_input);
+            writeField(fos, R.id.psg_background_input);
 
-        //Collect data section
-        String childAge  = fetchField(R.id.childAgeInput, "Child Age");
-        String length    = fetchField(R.id.lengthInput,   "Length of the problem");
-        String frequency = fetchField(R.id.frequencyInput,"Frequency of the Behavior");
+            //Collect data section
+            writeField(fos, R.id.childAgeInput);
+            writeField(fos, R.id.lengthInput);
+            writeField(fos, R.id.frequencyInput);
 
-        //Values
-        String values1 = fetchField(R.id.valuesInput1, "1:");
-        String values2 = fetchField(R.id.valuesInput2, "2:");
-        String values3 = fetchField(R.id.valuesInput3, "3:");
+            //Values
+            writeField(fos, R.id.valuesInput1);
+            writeField(fos, R.id.valuesInput2);
+            writeField(fos, R.id.valuesInput3);
 
-        //Development
-        String dev = fetchField(R.id.developmentInput,"What is the child's developmental task?");
+            //Development
+            writeField(fos, R.id.developmentInput);
 
-        //Temperament
-        String temperament1 = fetchField(R.id.temperamentInput1,"1:");
-        String temperament2 = fetchField(R.id.temperamentInput2,"2:");
-        String temperament3 = fetchField(R.id.temperamentInput3,"3:");
+            //Temperament
+            writeField(fos, R.id.temperamentInput1);
+            writeField(fos, R.id.temperamentInput2);
+            writeField(fos, R.id.temperamentInput3);
 
-        //Desired behavior
-        String desiredbeh = fetchField(R.id.desiredInput,"What you want the child to do instead of what they are doing:");
+            //Desired behavior
+            writeField(fos, R.id.desiredInput);
 
-        //Think of Ideas
-        //Change things
-        String changeThings = fetchField(R.id.changeThingsInput, "Change Things");
-        //Reduce Stress
-        String reduceStress = fetchField(R.id.reduceStressInput, "Reduce Stress");
-        //Two yeses
-        String twoYeses = fetchField(R.id.twoYesInput, "Two yeses");
+            //Think of Ideas
+            //Change things
+            writeField(fos, R.id.changeThingsInput);
+            //Reduce Stress
+            writeField(fos, R.id.reduceStressInput);
+            //Two yeses
+            writeField(fos, R.id.twoYesInput);
 
-        //Attention
-        String attention = fetchField(R.id.attentionInput,"Attention");
-        //Praise
-        String praise = fetchField(R.id.praiseInput, "Praise");
-        //Rewards
-        String rewards = fetchField(R.id.rewardsInput, "Rewards");
+            //Attention
+            writeField(fos, R.id.attentionInput);
+            //Praise
+            writeField(fos, R.id.praiseInput);
+            //Rewards
+            writeField(fos, R.id.rewardsInput);
 
-        //Simple Listening
-        String simple = fetchField(R.id.simpleListenInput, "Simple Listening");
-        //Active listening
-        String active = fetchField(R.id.ActListenInput, "Active Listening");
-        //Grant in fantasy
-        String grant = fetchField(R.id.grantFanInput, "Grant in fantasy");
+            //Simple Listening
+            writeField(fos, R.id.simpleListenInput);
+            //Active listening
+            writeField(fos, R.id.ActListenInput);
+            //Grant in fantasy
+            writeField(fos, R.id.grantFanInput);
 
-        //Clear rules
-        String rules = fetchField(R.id.clearRulesInput, "Clear Rules");
-        //Consequences
-        String consequences = fetchField(R.id.consequencesInput, "Consequences");
-        //betterWay
-        String betterWay = fetchField(R.id.betterWayInput, "A Better Way");
+            //Clear rules
+            writeField(fos, R.id.clearRulesInput);
+            //Consequences
+            writeField(fos, R.id.consequencesInput);
+            //A Better Way
+            writeField(fos, R.id.betterWayInput);
 
-        //Modeling
-        String model = fetchField(R.id.modelInput, "Model");
-        //Redo it right
-        String redo = fetchField(R.id.redoInput, "Redo it right");
-        //Shaping
-        String shaping = fetchField(R.id.shapingInput, "Shaping");
+            //Modeling
+            writeField(fos, R.id.modelInput);
+            //Redo it right
+            writeField(fos, R.id.redoInput);
+            //Shaping
+            writeField(fos, R.id.shapingInput);
 
-        //Act Effectively
-        //tryFirst
-        String tryFirst = fetchField(R.id.whatChangeInput, "What will you try first?");
-        //roadblocks
-        String roadblocks = fetchField(R.id.roadblocksInput, "What might interfere with your success?");
-        //support
-        String support = fetchField(R.id.supportInput, "How can you protect yourself from the problem?");
-        //make a plan
-        String makePlan = fetchField(R.id.makePlanInput, "What will you need?");
-        //how long
-        String howLong = fetchField(R.id.howLongInput, "How long will you contine this plan?");
+            //Act Effectively
+            //tryFirst
+            writeField(fos, R.id.whatChangeInput);
+            //roadblocks
+            writeField(fos, R.id.roadblocksInput);
+            //support
+            writeField(fos, R.id.supportInput);
+            //make a plan
+            writeField(fos, R.id.makePlanInput);
+            //how long
+            writeField(fos, R.id.howLongInput);
 
-        //Review and Revise
-        //wentWell
-        String wentWell = fetchField(R.id.wentWellInput, "What went well?");
-        //whoNeeds
-        String whoNeeds = fetchField(R.id.whoNeedsInput, "Who needs to change?");
-        //tryNext
-        String tryNext = fetchField(R.id.tryNextInput, "What will you try next? For how long?");
-        //wentWell
-        String future = fetchField(R.id.futureInput, "What have you learned for the future?");
-
-
-
-
-        //Attempts to write data to text file
-        try {
-            fos.write(fileIdentifier.getBytes());
-            fos.write(background.getBytes());
-
-            fos.write("\nStop and Focus\n\n".getBytes());
-
-            fos.write("\n\nCollect Data\n\n\n".getBytes());
-            fos.write(childAge.getBytes());
-            fos.write(length.getBytes());
-            fos.write(frequency.getBytes());
-
-            fos.write("\n\nValues\n".getBytes());
-            fos.write("\n\n\nList three that may be related to the behaviors\n\n\n".getBytes());
-            fos.write(values1.getBytes());
-            fos.write(values2.getBytes());
-            fos.write(values3.getBytes());
-
-            fos.write("\n\nDevelopment\n\n".getBytes());
-            fos.write(dev.getBytes());
-
-            fos.write("\n\nTemperament\n".getBytes());
-            fos.write("\n\n\nList three traits that might affect this behavior and how intense the traits are\n\n\n".getBytes());
-            fos.write(temperament1.getBytes());
-            fos.write(temperament2.getBytes());
-            fos.write(temperament3.getBytes());
-
-            fos.write("\n\nDesired Behavior\n\n".getBytes());
-            fos.write(desiredbeh.getBytes());
-
-            fos.write("\nThink of Ideas\n\n".getBytes());
-            fos.write("\n\nAvoid the Problem\n".getBytes());
-            fos.write(changeThings.getBytes());
-            fos.write(reduceStress.getBytes());
-            fos.write(twoYeses.getBytes());
-
-            fos.write("\n\nRespond to cooperation\n".getBytes());
-            fos.write(attention.getBytes());
-            fos.write(praise.getBytes());
-            fos.write(rewards.getBytes());
-
-            fos.write("\n\nAcknowledge Feelings\n".getBytes());
-            fos.write(simple.getBytes());
-            fos.write(active.getBytes());
-            fos.write(grant.getBytes());
-
-            fos.write("\n\nSet Limits\n".getBytes());
-            fos.write(rules.getBytes());
-            fos.write(consequences.getBytes());
-            fos.write(betterWay.getBytes());
-
-            fos.write("\n\nTeach New Skills\n".getBytes());
-            fos.write(model.getBytes());
-            fos.write(redo.getBytes());
-            fos.write(shaping.getBytes());
-
-            fos.write("\nAct Effectively\n\n".getBytes());
-            fos.write("\n\nIdeas\n".getBytes());
-            fos.write(tryFirst.getBytes());
-
-            fos.write("\n\nRoadblocks\n".getBytes());
-            fos.write(roadblocks.getBytes());
-
-            fos.write("\n\nSupport\n".getBytes());
-            fos.write(support.getBytes());
-
-            fos.write("\n\nMake a plan\n".getBytes());
-            fos.write(makePlan.getBytes());
-            fos.write(howLong.getBytes());
-
-            fos.write("\nReview and Revise\n\n".getBytes());;
-            fos.write(wentWell.getBytes());
-            fos.write(whoNeeds.getBytes());
-            fos.write(tryNext.getBytes());
-            fos.write(future.getBytes());
-
+            //Review and Revise
+            //wentWell
+            writeField(fos, R.id.wentWellInput);
+            //whoNeeds
+            writeField(fos, R.id.whoNeedsInput);
+            //tryNext
+            writeField(fos, R.id.tryNextInput);
+            //wentWell
+            writeField(fos, R.id.futureInput);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -242,18 +163,109 @@ public class ProblemSolvingGuideActivity extends BaseNavigationDrawerActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        /*
+            //Gathers form data and sets up data to written to textfile
+            String fileIdentifier = fetchField(R.id.psg_identifier_input, "Identifier");
+            String background = fetchField(R.id.psg_background_input, "Background");
+
+            //Collect data section
+            String childAge = fetchField(R.id.childAgeInput, "Child Age");
+            String length = fetchField(R.id.lengthInput, "Length of the problem");
+            String frequency = fetchField(R.id.frequencyInput, "Frequency of the Behavior");
+
+            //Values
+            String values1 = fetchField(R.id.valuesInput1, "1:");
+            String values2 = fetchField(R.id.valuesInput2, "2:");
+            String values3 = fetchField(R.id.valuesInput3, "3:");
+
+            //Development
+            String dev = fetchField(R.id.developmentInput, "What is the child's developmental task?");
+
+            //Temperament
+            String temperament1 = fetchField(R.id.temperamentInput1, "1:");
+            String temperament2 = fetchField(R.id.temperamentInput2, "2:");
+            String temperament3 = fetchField(R.id.temperamentInput3, "3:");
+
+            //Desired behavior
+            String desiredbeh = fetchField(R.id.desiredInput, "What you want the child to do instead of what they are doing:");
+
+            //Think of Ideas
+            //Change things
+            String changeThings = fetchField(R.id.changeThingsInput, "Change Things");
+            //Reduce Stress
+            String reduceStress = fetchField(R.id.reduceStressInput, "Reduce Stress");
+            //Two yeses
+            String twoYeses = fetchField(R.id.twoYesInput, "Two yeses");
+
+            //Attention
+            String attention = fetchField(R.id.attentionInput, "Attention");
+            //Praise
+            String praise = fetchField(R.id.praiseInput, "Praise");
+            //Rewards
+            String rewards = fetchField(R.id.rewardsInput, "Rewards");
+
+            //Simple Listening
+            String simple = fetchField(R.id.simpleListenInput, "Simple Listening");
+            //Active listening
+            String active = fetchField(R.id.ActListenInput, "Active Listening");
+            //Grant in fantasy
+            String grant = fetchField(R.id.grantFanInput, "Grant in fantasy");
+
+            //Clear rules
+            String rules = fetchField(R.id.clearRulesInput, "Clear Rules");
+            //Consequences
+            String consequences = fetchField(R.id.consequencesInput, "Consequences");
+            //betterWay
+            String betterWay = fetchField(R.id.betterWayInput, "A Better Way");
+
+            //Modeling
+            String model = fetchField(R.id.modelInput, "Model");
+            //Redo it right
+            String redo = fetchField(R.id.redoInput, "Redo it right");
+            //Shaping
+            String shaping = fetchField(R.id.shapingInput, "Shaping");
+
+            //Act Effectively
+            //tryFirst
+            String tryFirst = fetchField(R.id.whatChangeInput, "What will you try first?");
+            //roadblocks
+            String roadblocks = fetchField(R.id.roadblocksInput, "What might interfere with your success?");
+            //support
+            String support = fetchField(R.id.supportInput, "How can you protect yourself from the problem?");
+            //make a plan
+            String makePlan = fetchField(R.id.makePlanInput, "What will you need?");
+            //how long
+            String howLong = fetchField(R.id.howLongInput, "How long will you contine this plan?");
+
+            //Review and Revise
+            //wentWell
+            String wentWell = fetchField(R.id.wentWellInput, "What went well?");
+            //whoNeeds
+            String whoNeeds = fetchField(R.id.whoNeedsInput, "Who needs to change?");
+            //tryNext
+            String tryNext = fetchField(R.id.tryNextInput, "What will you try next? For how long?");
+            //wentWell
+            String future = fetchField(R.id.futureInput, "What have you learned for the future?");
+
+        */
+
         return filename;
     }
 
-    public String fetchField(int field_id, String label) {
-        String result = label + ": ";
+    public String fetchField(int field_id, String label){return "";}
+
+    public String fetchField(int field_id) {
         EditText text_input = (EditText)findViewById(field_id);
-        if (TextUtils.isEmpty(text_input.getText()))
-            result += "No answer";
-        else
-            result += text_input.getText();
-        result += "\n\n\n";
+        String result = text_input.getText().toString();
+        result = result.replace("\\", "\\\\").replace("|", "\\|");
+        result += "||";
         return result;
+    }
+
+    public void writeField(FileOutputStream fos, int fieldID) throws IOException {
+        fos.write(fetchField(fieldID).getBytes());
     }
 
     public String readFile(String filename) throws FileNotFoundException {
