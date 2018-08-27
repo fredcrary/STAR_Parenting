@@ -1,6 +1,6 @@
 <resources>
     <string name="about_app_version">App Version: 1.6</string>
-    <string name="app_name">StarParent</string>
+    <string name="app_name">Star Parenting</string>
     <string name="title_activity_star_process_main">STAR Process</string>
     <string name="title_activity_idea_bank_main">Ideas Bank</string>
     <string name="title_activity_quick_ideas_main">Quick Ideas</string>
