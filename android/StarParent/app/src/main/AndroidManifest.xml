@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.starparent.starparent">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,8 +24,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main_test"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".QuickIdeasMainActivity"
             android:label="@string/title_activity_quick_ideas_main"
@@ -117,6 +118,10 @@
             android:label="@string/title_activity_problem_solving_guide"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".ProblemSolvingGuideChooserActivity"
+            android:label="@string/title_activity_problem_solving_guide"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".AboutThisAppActivity"
             android:label="@string/title_activity_about_this_app"
             android:parentActivityName=".MainActivity">
@@ -124,26 +129,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.starparent.starparent.MainActivity" />
         </activity>
-
         <activity
             android:name=".LearnAboutStarProcessActivity"
-            android:label="@string/title_activity_learn_about_star_process"
-            />
+            android:label="@string/title_activity_learn_about_star_process" />
         <activity
             android:name=".LearnAboutStarPointsActivity"
-            android:label="@string/title_activity_star_points"
-            />
+            android:label="@string/title_activity_star_points" />
         <activity
             android:name=".ListOfPreviousPSGuide"
             android:parentActivityName=".ProblemSolvingGuideActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DisplayPreviousPSGuide"></activity>
+        <activity android:name=".DisplayPreviousPSGuide" />
         <activity android:name=".StarPointsMainActivity" />
-
         <activity
             android:name=".StarPointTools"
-            android:label="@string/title_activity_star_points"
-            />
-        
+            android:label="@string/title_activity_star_points" />
     </application>
+
 </manifest>

@@ -140,7 +140,7 @@ public abstract class BaseNavigationDrawerActivity extends AppCompatActivity
                 startActivity(new Intent(this, QuickIdeasMainActivity.class));
                 break;
             case R.id.nav_problem_solving_buddy:
-                startActivity(new Intent(this, ProblemSolvingGuideActivity.class));
+                startActivity(new Intent(this, ProblemSolvingGuideChooserActivity.class));
                 break;
             case R.id.nav_ideas_bank:
                 startActivity(new Intent(this, IdeaBankMainActivity.class));
