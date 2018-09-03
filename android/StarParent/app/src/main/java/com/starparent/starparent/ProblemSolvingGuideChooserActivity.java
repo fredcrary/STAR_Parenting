@@ -12,15 +12,12 @@ public class ProblemSolvingGuideChooserActivity extends BaseNavigationDrawerActi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_problem_solving_guide_chooser);
-
-        super.onCreate(savedInstanceState);
         onCreateDrawer();
-        getLayoutInflater().inflate(R.layout.activity_problem_solver, frameLayout);
+        getLayoutInflater().inflate(R.layout.activity_problem_solving_guide_chooser, frameLayout);
         setTitle("Problem Solving Buddy");
 
-        //Quick Ideas Button
-        Button btn_quick_ideas = (Button)findViewById(R.id.btn_new_problem);
+        //Start a new problem
+        Button btn_quick_ideas = (Button) findViewById(R.id.btn_new_problem);
         btn_quick_ideas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,16 +25,16 @@ public class ProblemSolvingGuideChooserActivity extends BaseNavigationDrawerActi
             }
         });
 
-        //Ideas Bank Button
-        Button btn_idea_bank = (Button)findViewById(R.id.btn_old_problem);
-        btn_idea_bank.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ProblemSolvingGuideChooserActivity.this, ListOfPreviousPSGuide.class));
-            }
-        });
+        //Continue/edit/view an old problem
+        //Button btn_idea_bank = (Button) findViewById(R.id.btn_old_problem);
+        //btn_idea_bank.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        startActivity(new Intent(ProblemSolvingGuideChooserActivity.this, this)); // temporary
+        //    }
+        //});
 
-        //Problem Solving Guide Button
+        //Share an old problem
         Button btn_problem_solving_guide = (Button)findViewById(R.id.btn_share_problem);
         btn_problem_solving_guide.setOnClickListener(new View.OnClickListener() {
             @Override
